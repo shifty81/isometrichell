@@ -1,2 +1,203 @@
-# isometrichell
-isometrichell
+# Isometric Hell - 2D Survival Game
+
+An isometric 2D survival game with building mechanics, water, and boats, built from scratch with a custom game engine.
+
+## 🎮 Features
+
+- **Custom Game Engine**: Built from ground up using HTML5 Canvas and vanilla JavaScript
+- **Isometric Rendering**: Beautiful isometric view with proper coordinate conversion
+- **Building System**: Place various buildings (houses, towers, warehouses)
+- **Water & Boats**: Dynamic water tiles with AI-controlled boats
+- **Camera System**: Smooth camera movement with WASD/Arrow keys
+- **Entity System**: Extensible entity framework for game objects
+- **Tile-Based World**: Procedurally generated world with varied terrain
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A local web server (optional, but recommended)
+
+### Running the Game
+
+#### Option 1: Simple HTTP Server (Python)
+
+```bash
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
+```
+
+Then open your browser to `http://localhost:8000`
+
+#### Option 2: Node.js HTTP Server
+
+```bash
+npx http-server
+```
+
+#### Option 3: Direct File Open
+
+You can also open `index.html` directly in your browser (though some features may be limited).
+
+## 🎯 Controls
+
+| Key | Action |
+|-----|--------|
+| WASD / Arrow Keys | Move camera |
+| B | Toggle building mode |
+| 1 | Select house (in building mode) |
+| 2 | Select tower (in building mode) |
+| 3 | Select warehouse (in building mode) |
+| Left Click | Place building |
+| Space | Spawn boat on water tile |
+| Mouse | Hover to preview placement |
+
+## 📁 Project Structure
+
+```
+isometrichell/
+├── index.html              # Main HTML entry point
+├── engine/                 # Core game engine
+│   ├── core/              # Core systems
+│   │   ├── Engine.js      # Main game loop
+│   │   ├── Time.js        # Time management
+│   │   └── Input.js       # Input handling
+│   └── rendering/         # Rendering systems
+│       ├── Renderer.js    # Base renderer
+│       ├── IsometricRenderer.js  # Isometric rendering
+│       └── Camera.js      # Camera system
+├── utils/                 # Utility functions
+│   ├── IsometricUtils.js  # Isometric coordinate conversion
+│   └── MathUtils.js       # Math helpers
+├── src/                   # Game-specific code
+│   ├── world/            # World management
+│   │   ├── Tile.js       # Tile class
+│   │   └── World.js      # World manager
+│   ├── entities/         # Game entities
+│   │   ├── Entity.js     # Base entity class
+│   │   └── Boat.js       # Boat entity
+│   ├── building/         # Building system
+│   │   ├── Building.js   # Building class
+│   │   └── BuildingSystem.js  # Building manager
+│   ├── Game.js           # Main game logic
+│   └── main.js           # Entry point
+└── assets/               # Game assets (ready for your uploads)
+    ├── sprites/          # Sprite images
+    ├── tiles/            # Tile images
+    └── audio/            # Sound effects and music
+```
+
+## 🏗️ Architecture
+
+### Engine Core
+
+The engine is built with a modular architecture:
+
+- **Engine**: Main game loop, manages update/render cycle
+- **Time**: Delta time and time scaling
+- **Input**: Keyboard and mouse input handling
+- **Renderer**: Canvas drawing abstraction
+- **Camera**: Viewport positioning and movement
+
+### Isometric System
+
+The isometric rendering system handles:
+
+- World-to-screen coordinate conversion
+- Screen-to-world coordinate conversion
+- Diamond-shaped tile rendering
+- 3D cube rendering for buildings
+
+### Game Systems
+
+- **World**: Manages the tile grid and terrain
+- **Entities**: Dynamic game objects (boats, future: player, NPCs)
+- **Buildings**: Placeable structures with collision
+- **Building System**: Handles placement logic and validation
+
+## 🎨 Adding Assets
+
+The `assets/` directory is ready for your game assets:
+
+1. **Sprites** (`assets/sprites/`): Character sprites, entity graphics
+2. **Tiles** (`assets/tiles/`): Terrain tiles, water animations
+3. **Audio** (`assets/audio/`): Sound effects, background music
+
+Once you upload your assets, we can integrate them into the rendering system.
+
+## 🔧 Extending the Engine
+
+### Adding a New Building Type
+
+```javascript
+Building.TYPES.CUSTOM = {
+    name: 'Custom Building',
+    width: 2,
+    height: 2,
+    buildHeight: 50,
+    topColor: '#ff0000',
+    leftColor: '#cc0000',
+    rightColor: '#dd0000'
+};
+```
+
+### Adding a New Entity
+
+```javascript
+class MyEntity extends Entity {
+    constructor(x, y) {
+        super(x, y);
+        // Custom properties
+    }
+    
+    update(deltaTime, world) {
+        // Custom update logic
+    }
+    
+    render(renderer, camera, isometricRenderer) {
+        // Custom rendering
+    }
+}
+```
+
+### Adding a New Tile Type
+
+```javascript
+Tile.TYPES.CUSTOM = {
+    name: 'custom',
+    color: '#ff00ff',
+    walkable: true
+};
+```
+
+## 🎯 Future Features
+
+- [ ] Player character with survival mechanics
+- [ ] Resource gathering and crafting
+- [ ] Health and hunger systems
+- [ ] Day/night cycle
+- [ ] Weather effects
+- [ ] Enemy NPCs
+- [ ] Inventory system
+- [ ] Save/load functionality
+- [ ] Multiplayer support
+- [ ] Custom asset loading system
+- [ ] Animation system
+- [ ] Particle effects
+- [ ] Sound system
+
+## 🤝 Contributing
+
+This is a custom game engine built from scratch. Contributions are welcome! The architecture is designed to be extensible and easy to understand.
+
+## 📝 License
+
+This project is open source and available for modification and use.
+
+## 🙏 Acknowledgments
+
+Built with passion for game development and the challenge of creating everything from scratch!
