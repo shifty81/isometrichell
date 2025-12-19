@@ -17,6 +17,7 @@ class Tile {
         this.type = type;
         this.building = null;
         this.entity = null;
+        this.decoration = null; // Can be 'tree_1', 'bush_1', 'rocks_1', 'pond', etc.
     }
     
     /**
@@ -56,5 +57,19 @@ class Tile {
      */
     getColor() {
         return this.type.color;
+    }
+    
+    /**
+     * Set decoration on this tile
+     */
+    setDecoration(decoration) {
+        this.decoration = decoration;
+    }
+    
+    /**
+     * Check if tile has decoration
+     */
+    hasDecoration() {
+        return this.decoration !== null;
     }
 }

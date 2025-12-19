@@ -137,7 +137,9 @@ class AssetLoader {
      */
     async loadBuildings() {
         const buildings = [
-            { name: 'building_iso', path: 'assets/iso-64x64-building (1).png' }
+            { name: 'building_iso', path: 'assets/iso-64x64-building (1).png' },
+            { name: 'house', path: 'assets/Sprites/house.png' },
+            { name: 'treehouse', path: 'assets/Sprites/treehouse.png' }
         ];
         
         this.totalAssets += buildings.length;

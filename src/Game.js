@@ -26,7 +26,7 @@ class Game {
         this.world = new World(30, 30, 64, 32, this.assetLoader);
         
         // Create building system
-        this.buildingSystem = new BuildingSystem(this.world, this.audioManager);
+        this.buildingSystem = new BuildingSystem(this.world, this.audioManager, this.assetLoader);
         
         // Add some boats to the world
         this.spawnBoats();

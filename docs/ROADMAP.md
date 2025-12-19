@@ -16,11 +16,11 @@ The Daily Grind is a deep life simulation game inspired by Project Zomboid and T
 
 ### 1.1 Asset Integration
 - [x] Create AssetLoader class
-- [ ] Update Tile rendering to use ground_tiles_sheets
-- [ ] Add tree decorations to world generation
-- [ ] Add bush/rock decorations for variety
-- [ ] Replace building cubes with building sprites
-- [ ] Add water decorations (pond sprites)
+- [x] Update Tile rendering to use ground_tiles_sheets
+- [x] Add tree decorations to world generation
+- [x] Add bush/rock decorations for variety
+- [x] Replace building cubes with building sprites
+- [x] Add water decorations (pond sprites)
 
 ### 1.2 Audio System
 - [ ] Create AudioManager class
