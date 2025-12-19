@@ -1,0 +1,31 @@
+CC-BY-SA 3.0
+
+trees 0 - 14:
+	https://www.blendswap.com/blends/view/78148
+	CC0, by RedFrost
+
+trees 15 - 20:
+
+	https://www.blendswap.com/blends/view/59269
+	CC0, by EugeneKiver
+
+trees 21 - 29:
+
+	https://opengameart.org/content/freebies-mundo-commissions
+	CC0, by yughues
+
+trees 30 - 69 and trees 76 - 84:
+	CC0, own creation
+
+trees 70 - 75:
+	from https://opengameart.org/content/grassland-tileset by, Clint Bellanger (CC-BY-SA 3.0) (models only)
+	original from https://opengameart.org/content/3-dead-trees, p0ss
+
+all textures are own or from one of these that are CC0
+
+
+
+
+	
+	
+
