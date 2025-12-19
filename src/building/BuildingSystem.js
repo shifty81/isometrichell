@@ -3,8 +3,9 @@
  * Manages building placement and construction
  */
 class BuildingSystem {
-    constructor(world) {
+    constructor(world, audioManager = null) {
         this.world = world;
+        this.audioManager = audioManager;
         this.buildMode = false;
         this.selectedBuildingType = Building.TYPES.HOUSE;
         this.previewTile = null;
@@ -68,6 +69,10 @@ class BuildingSystem {
      */
     placeBuilding(tile) {
         if (!this.canPlaceBuilding(tile)) {
+            // Play error sound if available
+            if (this.audioManager) {
+                this.audioManager.playSfx('sfx_womp', 0.5);
+            }
             return false;
         }
         
@@ -84,6 +89,11 @@ class BuildingSystem {
                     occupyTile.setBuilding(building);
                 }
             }
+        }
+        
+        // Play placement sound if available
+        if (this.audioManager) {
+            this.audioManager.playSfx('sfx_badadadink', 0.7);
         }
         
         return true;

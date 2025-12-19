@@ -1,16 +1,28 @@
-# Isometric Hell - 2D Survival Game
+# Isometric Hell - 2D Life Simulation Game
 
-An isometric 2D survival game with building mechanics, water, and boats, built from scratch with a custom game engine.
+An isometric 2D life simulation game inspired by Project Zomboid's systems, featuring deep survival mechanics, complex AI, and social interactions - all built from scratch with a custom game engine.
 
-## 🎮 Features
+## 🎮 Vision
+
+A rich life simulation game without zombies, focusing on:
+- **Deep Survival**: Manage hunger, thirst, energy, hygiene, and health
+- **Complex AI**: NPCs with daily routines, jobs, relationships, and personalities
+- **Social Simulation**: Build relationships, trade, and interact with a living community
+- **Skill Progression**: Practice-based skill system spanning multiple disciplines
+- **Dynamic World**: Seasons, weather, day/night cycles, and persistent infrastructure
+- **Sims-like Conversations**: Interactive dialogue system with emotional portraits and choices
+
+## 🎨 Current Features (v0.2 - Asset Integration Phase)
 
 - **Custom Game Engine**: Built from ground up using HTML5 Canvas and vanilla JavaScript
 - **Isometric Rendering**: Beautiful isometric view with proper coordinate conversion
+- **Asset System**: Professional asset loader with progress tracking
+- **Audio System**: Background music and sound effects
 - **Building System**: Place various buildings (houses, towers, warehouses)
-- **Water & Boats**: Dynamic water tiles with AI-controlled boats
 - **Camera System**: Smooth camera movement with WASD/Arrow keys
 - **Entity System**: Extensible entity framework for game objects
 - **Tile-Based World**: Procedurally generated world with varied terrain
+- **Rich Asset Library**: Ground tiles, trees, bushes, characters, vehicles, buildings, and audio
 
 ## 🚀 Getting Started
 
@@ -176,19 +188,55 @@ Tile.TYPES.CUSTOM = {
 
 ## 🎯 Future Features
 
-- [ ] Player character with survival mechanics
-- [ ] Resource gathering and crafting
-- [ ] Health and hunger systems
+### Phase 1: Asset Integration (Current)
+- [x] Asset loading system
+- [x] Audio system with music and SFX
+- [ ] Professional ground tiles
+- [ ] Tree and bush decorations
+- [ ] Character sprites
+
+### Phase 2: Core Survival (Next)
+- [ ] Player character with animations
+- [ ] Survival attributes (hunger, thirst, energy, health, hygiene)
 - [ ] Day/night cycle
-- [ ] Weather effects
-- [ ] Enemy NPCs
-- [ ] Inventory system
-- [ ] Save/load functionality
-- [ ] Multiplayer support
-- [ ] Custom asset loading system
-- [ ] Animation system
-- [ ] Particle effects
-- [ ] Sound system
+- [ ] Time management system
+
+### Phase 3: Inventory & Items
+- [ ] Weight/volume-based inventory
+- [ ] Item database
+- [ ] Container management
+- [ ] Crafting system
+
+### Phase 4: Skills & Progression
+- [ ] Practice-based skill system
+- [ ] Multiple skill categories
+- [ ] Profession system
+
+### Phase 5: Dynamic World
+- [ ] Weather and seasons
+- [ ] World persistence (save/load)
+- [ ] Infrastructure systems
+
+### Phase 6: AI & NPCs
+- [ ] Complex AI (Utility AI + GOAP)
+- [ ] NPC daily routines
+- [ ] NPC jobs and occupations
+- [ ] NPC needs and personalities
+
+### Phase 7: Social Simulation
+- [ ] Relationship system
+- [ ] Sims-like conversation system with portraits
+- [ ] Trading and economy
+- [ ] Factions
+
+### Phase 8+: Advanced Features
+- [ ] Health and medical system
+- [ ] Farming and animal husbandry
+- [ ] Vehicle system
+- [ ] Advanced building (electricity, plumbing)
+- [ ] Random events and challenges
+
+See [ROADMAP.md](ROADMAP.md) for detailed development plan.
 
 ## 🤝 Contributing
 

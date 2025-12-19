@@ -3,11 +3,12 @@
  * Manages the game world grid and tiles
  */
 class World {
-    constructor(width, height, tileWidth = 64, tileHeight = 32) {
+    constructor(width, height, tileWidth = 64, tileHeight = 32, assetLoader = null) {
         this.width = width;
         this.height = height;
         this.tileWidth = tileWidth;
         this.tileHeight = tileHeight;
+        this.assetLoader = assetLoader;
         this.tiles = [];
         this.entities = [];
         
@@ -135,15 +136,41 @@ class World {
                     this.tileHeight
                 );
                 
-                // Draw tile
-                isometricRenderer.drawIsometricTile(
-                    screenPos.x,
-                    screenPos.y,
-                    this.tileWidth,
-                    this.tileHeight,
-                    tile.getColor(),
-                    camera
-                );
+                // Try to use tile images if available
+                let tileImage = null;
+                if (this.assetLoader) {
+                    // Map tile types to asset names
+                    if (tile.type === Tile.TYPES.GRASS) {
+                        tileImage = this.assetLoader.getImage('grass_green');
+                    } else if (tile.type === Tile.TYPES.SAND) {
+                        tileImage = this.assetLoader.getImage('sand');
+                    } else if (tile.type === Tile.TYPES.DIRT) {
+                        tileImage = this.assetLoader.getImage('dirt');
+                    } else if (tile.type === Tile.TYPES.STONE) {
+                        tileImage = this.assetLoader.getImage('stone_path');
+                    }
+                }
+                
+                // Draw tile with image or fallback to solid color
+                if (tileImage) {
+                    renderer.drawImage(
+                        tileImage,
+                        screenPos.x - this.tileWidth / 2 - camera.x,
+                        screenPos.y - this.tileHeight / 2 - camera.y,
+                        this.tileWidth,
+                        this.tileHeight
+                    );
+                } else {
+                    // Fallback to solid color tiles
+                    isometricRenderer.drawIsometricTile(
+                        screenPos.x,
+                        screenPos.y,
+                        this.tileWidth,
+                        this.tileHeight,
+                        tile.getColor(),
+                        camera
+                    );
+                }
                 
                 // Draw building if present
                 if (tile.building) {
