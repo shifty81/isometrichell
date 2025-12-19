@@ -3,8 +3,10 @@
  * Manages game state and coordinates all systems
  */
 class Game {
-    constructor(engine) {
+    constructor(engine, assetLoader, audioManager) {
         this.engine = engine;
+        this.assetLoader = assetLoader;
+        this.audioManager = audioManager;
         this.world = null;
         this.buildingSystem = null;
         this.isometricRenderer = null;
@@ -20,11 +22,11 @@ class Game {
         // Create isometric renderer
         this.isometricRenderer = new IsometricRenderer(this.engine.renderer);
         
-        // Create world (30x30 tiles)
-        this.world = new World(30, 30, 64, 32);
+        // Create world (30x30 tiles) with asset loader
+        this.world = new World(30, 30, 64, 32, this.assetLoader);
         
         // Create building system
-        this.buildingSystem = new BuildingSystem(this.world);
+        this.buildingSystem = new BuildingSystem(this.world, this.audioManager);
         
         // Add some boats to the world
         this.spawnBoats();

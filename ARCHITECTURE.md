@@ -1,8 +1,8 @@
-# Game Engine Architecture
+# Game Engine Architecture - The Daily Grind
 
 ## Overview
 
-The Isometric Hell game engine is a lightweight, custom-built 2D game engine designed specifically for isometric games. It's built entirely in vanilla JavaScript without any external dependencies.
+The Daily Grind game engine is a lightweight, custom-built 2D game engine designed specifically for isometric life simulation games. It's built entirely in vanilla JavaScript without any external dependencies, focusing on performance and extensibility for complex AI and social simulation systems.
 
 ## Core Components
 
