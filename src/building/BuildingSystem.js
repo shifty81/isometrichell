@@ -3,9 +3,10 @@
  * Manages building placement and construction
  */
 class BuildingSystem {
-    constructor(world, audioManager = null) {
+    constructor(world, audioManager = null, assetLoader = null) {
         this.world = world;
         this.audioManager = audioManager;
+        this.assetLoader = assetLoader;
         this.buildMode = false;
         this.selectedBuildingType = Building.TYPES.HOUSE;
         this.previewTile = null;
@@ -76,7 +77,7 @@ class BuildingSystem {
             return false;
         }
         
-        const building = new Building(tile.x, tile.y, this.selectedBuildingType);
+        const building = new Building(tile.x, tile.y, this.selectedBuildingType, this.assetLoader);
         
         // Occupy all tiles
         const buildingWidth = this.selectedBuildingType.width;

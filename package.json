@@ -1,0 +1,22 @@
+{
+  "name": "the-daily-grind",
+  "version": "0.2.0",
+  "description": "A deep life simulation game inspired by Project Zomboid and The Sims",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1 -o",
+    "dev": "npx http-server -p 8000 -c-1",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "game",
+    "simulation",
+    "isometric",
+    "life-simulation"
+  ],
+  "author": "shifty81",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -27,6 +27,9 @@ class World {
                 this.tiles[y][x] = new Tile(x, y, type);
             }
         }
+        
+        // Add decorations after all tiles are created
+        this.generateDecorations();
     }
     
     /**
@@ -59,6 +62,48 @@ class World {
         }
         
         return Tile.TYPES.GRASS;
+    }
+    
+    /**
+     * Generate decorations for tiles
+     */
+    generateDecorations() {
+        // Decoration type counts - should match available assets
+        const TREE_TYPES = 3;
+        const BUSH_TYPES = 3;
+        const ROCK_TYPES = 2;
+        
+        for (let y = 0; y < this.height; y++) {
+            for (let x = 0; x < this.width; x++) {
+                const tile = this.tiles[y][x];
+                const random = Math.random();
+                
+                // Add decorations based on tile type
+                if (tile.type === Tile.TYPES.WATER) {
+                    // Add pond decorations to some water tiles
+                    if (random < 0.3) {
+                        tile.setDecoration('pond');
+                    }
+                } else if (tile.type === Tile.TYPES.GRASS) {
+                    // Add trees to grass tiles
+                    if (random < 0.15) {
+                        const treeType = Math.floor(Math.random() * TREE_TYPES) + 1;
+                        tile.setDecoration(`tree_${treeType}`);
+                    }
+                    // Add bushes
+                    else if (random < 0.25) {
+                        const bushType = Math.floor(Math.random() * BUSH_TYPES) + 1;
+                        tile.setDecoration(`bush_${bushType}`);
+                    }
+                } else if (tile.type === Tile.TYPES.DIRT || tile.type === Tile.TYPES.STONE) {
+                    // Add rocks to dirt/stone tiles
+                    if (random < 0.2) {
+                        const rockType = Math.floor(Math.random() * ROCK_TYPES) + 1;
+                        tile.setDecoration(`rocks_${rockType}`);
+                    }
+                }
+            }
+        }
     }
     
     /**
@@ -170,6 +215,23 @@ class World {
                         tile.getColor(),
                         camera
                     );
+                }
+                
+                // Draw decoration if present
+                if (tile.decoration && this.assetLoader) {
+                    const decorationImage = this.assetLoader.getImage(tile.decoration);
+                    if (decorationImage) {
+                        // Draw decoration centered on tile
+                        const decorX = screenPos.x - decorationImage.width / 2 - camera.x;
+                        const decorY = screenPos.y - decorationImage.height + this.tileHeight / 2 - camera.y;
+                        renderer.drawImage(
+                            decorationImage,
+                            decorX,
+                            decorY,
+                            decorationImage.width,
+                            decorationImage.height
+                        );
+                    }
                 }
                 
                 // Draw building if present
