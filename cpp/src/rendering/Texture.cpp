@@ -8,6 +8,7 @@ Texture::Texture()
     , width(0)
     , height(0)
     , channels(0)
+    , mipmapsEnabled(false)
 {
 }
 
@@ -32,6 +33,11 @@ bool Texture::loadFromFile(const char* path, bool generateMipmap) {
     
     if (success && generateMipmap) {
         glGenerateMipmap(GL_TEXTURE_2D);
+        mipmapsEnabled = true;
+        
+        // Use trilinear filtering for smooth scaling
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     }
     
     // Free image data
@@ -99,5 +105,57 @@ void Texture::setFilterMode(GLenum minFilter, GLenum magFilter) {
     glBindTexture(GL_TEXTURE_2D, textureID);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, minFilter);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, magFilter);
+    glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+void Texture::enableMipmapping(bool enable) {
+    if (enable && !mipmapsEnabled) {
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glGenerateMipmap(GL_TEXTURE_2D);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glBindTexture(GL_TEXTURE_2D, 0);
+        mipmapsEnabled = true;
+    } else if (!enable && mipmapsEnabled) {
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glBindTexture(GL_TEXTURE_2D, 0);
+        mipmapsEnabled = false;
+    }
+}
+
+void Texture::setQuality(Quality quality) {
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    
+    switch (quality) {
+        case Quality::LOW:
+            // Fastest, lowest quality
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+            break;
+            
+        case Quality::MEDIUM:
+            // Balanced
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            break;
+            
+        case Quality::HIGH:
+            // High quality, trilinear filtering
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            break;
+            
+        case Quality::ULTRA:
+            // Maximum quality with anisotropic filtering (if available)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            
+            // Enable anisotropic filtering if supported
+            GLfloat maxAnisotropy;
+            glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &maxAnisotropy);
+            glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, maxAnisotropy);
+            break;
+    }
+    
     glBindTexture(GL_TEXTURE_2D, 0);
 }

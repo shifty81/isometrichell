@@ -34,11 +34,28 @@ public:
     void setWrapMode(GLenum wrapS, GLenum wrapT);
     void setFilterMode(GLenum minFilter, GLenum magFilter);
     
+    // Enable/disable mipmapping
+    void enableMipmapping(bool enable = true);
+    
+    // Set texture quality level (for LOD control)
+    enum class Quality {
+        LOW,      // Use lower resolution mipmaps
+        MEDIUM,   // Standard quality
+        HIGH,     // High quality filtering
+        ULTRA     // Maximum quality
+    };
+    void setQuality(Quality quality);
+    
+    // Get actual loaded dimensions
+    int getActualWidth() const { return width; }
+    int getActualHeight() const { return height; }
+    
 private:
     GLuint textureID;
     int width;
     int height;
     int channels;
+    bool mipmapsEnabled;
 };
 
 #endif // TEXTURE_H
