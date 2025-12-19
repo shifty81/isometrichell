@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         }, { once: true });
         
         // Log startup
-        console.log('🎮 Isometric Hell - Life Simulation Game');
+        console.log('🎮 The Daily Grind - Life Simulation Game');
         console.log('📦 Assets Loaded:', assetLoader.loadProgress, '/', assetLoader.totalAssets);
         console.log('🗺️  World Size: 30x30 tiles');
         console.log('🏗️  Building system ready');

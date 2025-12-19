@@ -1,7 +1,7 @@
-# Life Simulation Game - Development Roadmap
+# The Daily Grind - Development Roadmap
 
 ## Vision
-Transform Isometric Hell into a deep life simulation game inspired by Project Zomboid's systems, focusing on survival mechanics, complex AI, and life simulation without zombies.
+The Daily Grind is a deep life simulation game inspired by Project Zomboid and The Sims, focusing on the reality of daily survival, work, relationships, and personal growth - without zombies. Players experience the authentic grind of maintaining life: working jobs, building relationships, managing survival needs, and growing as a person in a dynamic, living world.
 
 ## Current State (v0.1)
 - ✅ Custom isometric game engine

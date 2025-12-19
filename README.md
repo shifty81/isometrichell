@@ -1,6 +1,6 @@
-# Isometric Hell - 2D Life Simulation Game
+# The Daily Grind - 2D Life Simulation Game
 
-An isometric 2D life simulation game inspired by Project Zomboid's systems, featuring deep survival mechanics, complex AI, and social interactions - all built from scratch with a custom game engine.
+An isometric 2D life simulation game inspired by Project Zomboid and The Sims, featuring deep survival mechanics, complex AI, and social interactions. Experience the daily grind of life - work, relationships, survival, and personal growth - all built from scratch with a custom game engine.
 
 ## 🎮 Vision
 
@@ -71,13 +71,17 @@ You can also open `index.html` directly in your browser (though some features ma
 ## 📁 Project Structure
 
 ```
-isometrichell/
+thedailygrind/
 ├── index.html              # Main HTML entry point
 ├── engine/                 # Core game engine
 │   ├── core/              # Core systems
 │   │   ├── Engine.js      # Main game loop
 │   │   ├── Time.js        # Time management
 │   │   └── Input.js       # Input handling
+│   ├── assets/            # Asset management
+│   │   └── AssetLoader.js # Asset loading system
+│   ├── audio/             # Audio management
+│   │   └── AudioManager.js # Audio system
 │   └── rendering/         # Rendering systems
 │       ├── Renderer.js    # Base renderer
 │       ├── IsometricRenderer.js  # Isometric rendering
@@ -97,7 +101,13 @@ isometrichell/
 │   │   └── BuildingSystem.js  # Building manager
 │   ├── Game.js           # Main game logic
 │   └── main.js           # Entry point
-└── assets/               # Game assets (ready for your uploads)
+└── assets/               # Game assets
+    ├── ground_tiles_sheets/ # Terrain tiles
+    ├── isometric_trees_pack/ # Trees and vegetation
+    ├── Charachters/       # Character sprites
+    ├── MusicAndSFX/       # Audio files
+    └── [other asset folders]
+```
     ├── sprites/          # Sprite images
     ├── tiles/            # Tile images
     └── audio/            # Sound effects and music
