@@ -59,8 +59,9 @@ class Building {
         
         if (buildingSprite) {
             // Draw building sprite centered on tile
+            const GROUND_ALIGNMENT_OFFSET = 16; // Offset to align sprite base with ground
             const spriteX = tileScreenPos.x - buildingSprite.width / 2 - camera.x;
-            const spriteY = tileScreenPos.y - buildingSprite.height + 16 - camera.y; // Offset to align with ground
+            const spriteY = tileScreenPos.y - buildingSprite.height + GROUND_ALIGNMENT_OFFSET - camera.y;
             renderer.drawImage(
                 buildingSprite,
                 spriteX,

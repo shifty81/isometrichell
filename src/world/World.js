@@ -68,6 +68,11 @@ class World {
      * Generate decorations for tiles
      */
     generateDecorations() {
+        // Decoration type counts - should match available assets
+        const TREE_TYPES = 3;
+        const BUSH_TYPES = 3;
+        const ROCK_TYPES = 2;
+        
         for (let y = 0; y < this.height; y++) {
             for (let x = 0; x < this.width; x++) {
                 const tile = this.tiles[y][x];
@@ -82,18 +87,18 @@ class World {
                 } else if (tile.type === Tile.TYPES.GRASS) {
                     // Add trees to grass tiles
                     if (random < 0.15) {
-                        const treeType = Math.floor(Math.random() * 3) + 1;
+                        const treeType = Math.floor(Math.random() * TREE_TYPES) + 1;
                         tile.setDecoration(`tree_${treeType}`);
                     }
                     // Add bushes
                     else if (random < 0.25) {
-                        const bushType = Math.floor(Math.random() * 3) + 1;
+                        const bushType = Math.floor(Math.random() * BUSH_TYPES) + 1;
                         tile.setDecoration(`bush_${bushType}`);
                     }
                 } else if (tile.type === Tile.TYPES.DIRT || tile.type === Tile.TYPES.STONE) {
                     // Add rocks to dirt/stone tiles
                     if (random < 0.2) {
-                        const rockType = Math.floor(Math.random() * 2) + 1;
+                        const rockType = Math.floor(Math.random() * ROCK_TYPES) + 1;
                         tile.setDecoration(`rocks_${rockType}`);
                     }
                 }
