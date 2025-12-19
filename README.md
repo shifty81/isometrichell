@@ -29,31 +29,43 @@ A rich life simulation game without zombies, focusing on:
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- A local web server (optional, but recommended)
+- Node.js (optional, for npm scripts) or Python 3 (for simple HTTP server)
 
-### Running the Game
+### Quick Start
 
-#### Option 1: Simple HTTP Server (Python)
+#### Option 1: Using npm (Recommended)
+
+```bash
+# Install dependencies (only needed once)
+npm install
+
+# Start the development server and open in browser
+npm start
+
+# Or just start the server without opening browser
+npm run dev
+```
+
+#### Option 2: Using Python
 
 ```bash
 # Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
+npm run serve
+# Or directly:
+python3 -m http.server 8000
 ```
 
 Then open your browser to `http://localhost:8000`
 
-#### Option 2: Node.js HTTP Server
+#### Option 3: Using npx (No installation needed)
 
 ```bash
-npx http-server
+npx http-server -p 8000 -o
 ```
 
-#### Option 3: Direct File Open
+#### Option 4: Direct File Open
 
-You can also open `index.html` directly in your browser (though some features may be limited).
+You can also open `index.html` directly in your browser, though some features may be limited due to CORS restrictions.
 
 ## 🎯 Controls
 
@@ -246,11 +258,22 @@ Tile.TYPES.CUSTOM = {
 - [ ] Advanced building (electricity, plumbing)
 - [ ] Random events and challenges
 
-See [ROADMAP.md](ROADMAP.md) for detailed development plan.
+See [ROADMAP.md](docs/ROADMAP.md) for detailed development plan.
 
 ## 🤝 Contributing
 
 This is a custom game engine built from scratch. Contributions are welcome! The architecture is designed to be extensible and easy to understand.
+
+## 📚 Documentation
+
+Additional documentation is available in the [docs/](docs/) folder:
+
+- [ROADMAP.md](docs/ROADMAP.md) - Detailed development roadmap
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) - Technical architecture documentation
+- [ASSETS.md](docs/ASSETS.md) - Asset management and organization
+- [ASSET_USAGE.md](docs/ASSET_USAGE.md) - Guide to using game assets
+- [BRANDING.md](docs/BRANDING.md) - Branding guidelines and style
+- [CONVERSATION_SYSTEM.md](docs/CONVERSATION_SYSTEM.md) - Dialogue and conversation system design
 
 ## 📝 License
 
