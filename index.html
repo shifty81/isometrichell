@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isometric Hell - Survival Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+            color: #fff;
+        }
+
+        #gameContainer {
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #gameCanvas {
+            display: block;
+            background-color: #2a2a2a;
+            border: 2px solid #444;
+        }
+
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .control-line {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        <div id="ui">
+            <div>FPS: <span id="fps">0</span></div>
+            <div>Camera: <span id="camera">0, 0</span></div>
+            <div>Mouse: <span id="mouse">0, 0</span></div>
+            <div>Mode: <span id="mode">Normal</span></div>
+        </div>
+        <div id="controls">
+            <div class="control-line"><strong>Controls:</strong></div>
+            <div class="control-line">WASD / Arrow Keys - Move Camera</div>
+            <div class="control-line">Mouse - Hover over tiles</div>
+            <div class="control-line">B - Building Mode</div>
+            <div class="control-line">Left Click - Place Building</div>
+            <div class="control-line">Space - Place Boat</div>
+        </div>
+    </div>
+
+    <!-- Core Engine -->
+    <script src="engine/core/Engine.js"></script>
+    <script src="engine/core/Time.js"></script>
+    <script src="engine/core/Input.js"></script>
+    
+    <!-- Rendering -->
+    <script src="engine/rendering/Renderer.js"></script>
+    <script src="engine/rendering/IsometricRenderer.js"></script>
+    <script src="engine/rendering/Camera.js"></script>
+    
+    <!-- Utils -->
+    <script src="utils/IsometricUtils.js"></script>
+    <script src="utils/MathUtils.js"></script>
+    
+    <!-- Game Systems -->
+    <script src="src/world/Tile.js"></script>
+    <script src="src/world/World.js"></script>
+    <script src="src/entities/Entity.js"></script>
+    <script src="src/entities/Boat.js"></script>
+    <script src="src/building/Building.js"></script>
+    <script src="src/building/BuildingSystem.js"></script>
+    
+    <!-- Game Entry Point -->
+    <script src="src/Game.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
