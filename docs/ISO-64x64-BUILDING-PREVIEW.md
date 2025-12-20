@@ -32,10 +32,16 @@
 - **Wood Panel Walls:** Brown horizontal planked walls
 - **Stone/Brick Walls:** Textured masonry sections
 - **Mixed Pattern Walls:** Combination wood/stone designs
-- **Window Sections:** White/light colored window frames (various sizes)
-- **Door Openings:** Dark doorway sections
+- **Window Sections:** White/light colored window frames - allow line of sight through
+- **Door Openings:** Dark/yellow doorway sections - can be opened/closed, block line of sight when closed
 - **Corner Pieces:** Inside and outside corners
 - **Estimated Count:** 35-40 pieces
+
+**Collision & Vision Properties:**
+- **Walls:** Block movement and vision completely
+- **Windows:** Block movement but allow vision through (transparent)
+- **Doors:** Block movement and vision when closed, allow both when open (interactable)
+- **Corners:** Block movement and vision like walls
 
 **Wall Features:**
 - Multiple heights (1-story, 2-story sections)
@@ -93,9 +99,13 @@ assets/individual/buildings/iso-64x64/
 │   │   └── ...
 │   ├── stone-brick/
 │   │   └── ...
-│   └── windows/
-│       ├── single-window-000.png
-│       ├── double-window-001.png
+│   ├── windows/
+│   │   ├── single-window-000.png (transparent - allows vision)
+│   │   ├── double-window-001.png (transparent - allows vision)
+│   │   └── ...
+│   └── doors/
+│       ├── door-closed-000.png (interactable - blocks when closed)
+│       ├── door-with-frame-001.png (interactable)
 │       └── ...
 ├── floors/
 │   ├── foundation-000.png
@@ -114,7 +124,7 @@ assets/individual/buildings/iso-64x64/
 ```
 
 ## Metadata File Structure
-Each extracted asset will have corresponding metadata:
+Each extracted asset will have corresponding metadata with collision and vision properties:
 
 ```json
 {
@@ -130,6 +140,8 @@ Each extracted asset will have corresponding metadata:
         "walkable": false,
         "type": "roof",
         "blocks_vision": false,
+        "transparent": false,
+        "interactable": false,
         "layer": "roof"
       }
     },
@@ -142,6 +154,38 @@ Each extracted asset will have corresponding metadata:
         "walkable": false,
         "type": "wall",
         "blocks_vision": true,
+        "transparent": false,
+        "interactable": false,
+        "layer": "building"
+      }
+    },
+    {
+      "id": "window_single",
+      "position": [3, 3],
+      "category": "walls/windows",
+      "filename": "single-window-000.png",
+      "properties": {
+        "walkable": false,
+        "type": "window",
+        "blocks_vision": false,
+        "transparent": true,
+        "interactable": false,
+        "layer": "building"
+      }
+    },
+    {
+      "id": "door_closed",
+      "position": [2, 4],
+      "category": "walls/doors",
+      "filename": "door-closed-000.png",
+      "properties": {
+        "walkable": false,
+        "type": "door",
+        "blocks_vision": true,
+        "transparent": false,
+        "interactable": true,
+        "can_open": true,
+        "is_open": false,
         "layer": "building"
       }
     }
@@ -161,10 +205,26 @@ The dissected assets will be:
 
 ### Building a Simple House
 1. **Foundation:** Use teal blocks or foundation tiles
-2. **Walls:** Select wood panel or stone wall pieces
-3. **Windows:** Add window segments where desired
-4. **Roof:** Top with purple tiled roof or teal flat roof
-5. **Details:** Add furniture and decorative elements
+2. **Walls:** Select wood panel or stone wall pieces (block movement & vision)
+3. **Windows:** Add window segments for natural light (allow vision through)
+4. **Doors:** Place door pieces at entrances (can be opened/closed by player)
+5. **Roof:** Top with purple tiled roof or teal flat roof
+6. **Details:** Add furniture and decorative elements
+
+### Line of Sight System (Project Zomboid-style)
+- **Wide Arc Vision:** 180-degree field of view based on player facing direction
+- **Wall Occlusion:** Walls completely block line of sight
+- **Window Transparency:** Windows allow vision through but not movement
+- **Door States:** Closed doors block vision, open doors allow vision through
+- **Distance Falloff:** Vision clarity decreases with distance
+- **Ray Casting:** High-resolution ray casting for smooth, realistic vision
+
+### Collision Detection
+- **Walls:** Impassable, block movement and vision
+- **Doors:** Impassable when closed, can interact to open/close
+- **Windows:** Impassable but transparent for vision
+- **Furniture:** Impassable, can be interacted with
+- **Trees/Decorations:** Block movement but partially obscure vision
 
 ### Modular Building System
 - All wall pieces are designed to connect seamlessly

@@ -69,9 +69,10 @@ ROW 7 (Y: 448-511)
 - **TEAL/BLOK** - Teal/green building blocks (various sizes)
 - **PURP/ROOF** - Purple tiled roof pieces
 - **ROOF** - Roof components (peaks, edges, corners)
-- **WOOD/WALL** - Wood panel wall segments
-- **WIN/DOW** - Window sections (white frames)
-- **WALL/MIX** - Mixed material walls
+- **WOOD/WALL** - Wood panel wall segments (blocks movement & vision)
+- **WIN/DOW** - Window sections (white frames - transparent, allows vision)
+- **DOOR** - Door openings (yellow/dark frames - interactable, can open/close)
+- **WALL/MIX** - Mixed material walls (blocks movement & vision)
 - **WALL/CORN** - Corner wall pieces
 - **FLOR/TILE** - Floor/foundation tiles
 - **TABL/E** - Table furniture
@@ -93,8 +94,11 @@ ROW 7 (Y: 448-511)
 - **Mixed Walls:** (2,3), (6,3), (6,4)
 - **Corners:** (9,3), (1,4), (8,4)
 
-### WINDOWS (Rows 3-4)
-- **Window Sections:** (3,3)-(5,3), (2,4)-(5,4)
+### WINDOWS (Rows 3-4) - Transparent, Allow Vision Through
+- **Window Sections:** (3,3)-(5,3), (4,4)-(5,4)
+
+### DOORS (Row 4) - Interactable, Can Open/Close
+- **Door Openings:** (2,4), (3,4)
 
 ### BLOCKS (Rows 0-2, 5-6)
 - **Teal Blocks:** (0,0)-(1,0), (9,0), (0,1), (0,2), (1,2), (9,2), (9,4), (0,5)-(2,5), (9,5), (5,6)-(9,6)

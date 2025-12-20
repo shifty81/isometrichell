@@ -135,13 +135,34 @@ def analyze_spritesheet():
         },
         "Window Sections": {
             "subcategories": [
-                "Single Window Frames",
-                "Double Window Frames",
-                "Large Window Sections",
-                "Door Openings"
+                "Single Window Frames (transparent - allow vision)",
+                "Double Window Frames (transparent - allow vision)",
+                "Large Window Sections (transparent - allow vision)"
             ],
-            "estimated_count": "8-10 pieces",
-            "rows": [4, 5]
+            "estimated_count": "5-6 pieces",
+            "rows": [3, 4],
+            "properties": {
+                "walkable": False,
+                "blocks_vision": False,
+                "transparent": True,
+                "interactable": False
+            }
+        },
+        "Door Openings": {
+            "subcategories": [
+                "Single Door (interactable - can open/close)",
+                "Double Door (interactable - can open/close)",
+                "Door with Frame (interactable)"
+            ],
+            "estimated_count": "3-4 pieces",
+            "rows": [4],
+            "properties": {
+                "walkable": False,  # When closed
+                "blocks_vision": True,  # When closed
+                "transparent": False,
+                "interactable": True,
+                "can_open": True
+            }
         },
         "Foundation & Floors": {
             "subcategories": [
