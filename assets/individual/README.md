@@ -174,6 +174,19 @@ python3 utils/split_tilesheets.py
 
 This will re-extract all tiles from the source tilesheet files.
 
+## 🗺️ Professional Map Editor Integration
+
+These individual tiles can be used with professional map editing tools like **TileZed, WorldEd, and BuildingEd** (from Project Zomboid).
+
+**Benefits:**
+- Visual map editing instead of coding
+- Multi-floor building design
+- Scene creation (interiors that you enter through doors)
+- Large world map creation
+- Advanced tile placement tools
+
+**See**: [docs/TILEZED_INTEGRATION.md](../../docs/TILEZED_INTEGRATION.md) for complete integration guide.
+
 ## 📝 Original Source Files
 
 The individual tiles are extracted from:
