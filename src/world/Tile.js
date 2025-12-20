@@ -18,6 +18,9 @@ class Tile {
         this.building = null;
         this.entity = null;
         this.decoration = null; // Can be 'tree_1', 'bush_1', 'rocks_1', 'pond', etc.
+        this.isResource = false; // Whether this decoration can be gathered
+        // Store a random tile variation for visual variety (0-9)
+        this.tileVariation = Math.floor(Math.random() * 10);
     }
     
     /**

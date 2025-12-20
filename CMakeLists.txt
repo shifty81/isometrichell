@@ -105,6 +105,7 @@ set(ENGINE_SOURCES
     cpp/src/rendering/ShaderLibrary.cpp
     cpp/src/world/Tile.cpp
     cpp/src/world/World.cpp
+    cpp/src/world/Biome.cpp
     cpp/src/entities/Entity.cpp
     cpp/src/building/Building.cpp
     cpp/src/building/BuildingSystem.cpp
@@ -132,6 +133,7 @@ set(ENGINE_HEADERS
     cpp/include/rendering/ShaderLibrary.h
     cpp/include/world/Tile.h
     cpp/include/world/World.h
+    cpp/include/world/Biome.h
     cpp/include/entities/Entity.h
     cpp/include/building/Building.h
     cpp/include/building/BuildingSystem.h

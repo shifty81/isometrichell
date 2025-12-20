@@ -19,11 +19,15 @@ class World {
      * Generate the world
      */
     generate() {
+        // Generate biome map
+        this.biomeMap = this.generateBiomeMap();
+        
         for (let y = 0; y < this.height; y++) {
             this.tiles[y] = [];
             for (let x = 0; x < this.width; x++) {
-                // Create varied terrain
-                const type = this.generateTileType(x, y);
+                // Create varied terrain based on biome
+                const biome = this.biomeMap[y][x];
+                const type = this.generateTileType(x, y, biome);
                 this.tiles[y][x] = new Tile(x, y, type);
             }
         }
@@ -33,74 +37,89 @@ class World {
     }
     
     /**
-     * Generate tile type based on position
+     * Generate biome map using simple noise-like algorithm
      */
-    generateTileType(x, y) {
-        // Create water areas
-        const centerX = this.width / 2;
-        const centerY = this.height / 2;
-        const distFromCenter = Math.sqrt(
-            Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2)
-        );
+    generateBiomeMap() {
+        const biomeMap = [];
+        const biomeTypes = [
+            Biome.TYPES.FOREST,
+            Biome.TYPES.PLAINS,
+            Biome.TYPES.DESERT,
+            Biome.TYPES.MOUNTAINS,
+            Biome.TYPES.WETLANDS
+        ];
         
-        // Create a lake in the center area
-        if (distFromCenter < 5) {
+        for (let y = 0; y < this.height; y++) {
+            biomeMap[y] = [];
+            for (let x = 0; x < this.width; x++) {
+                // Use simple region-based biome assignment
+                const regionX = Math.floor(x / 10);
+                const regionY = Math.floor(y / 10);
+                const biomeIndex = (regionX + regionY * 3) % biomeTypes.length;
+                biomeMap[y][x] = new Biome(biomeTypes[biomeIndex]);
+            }
+        }
+        
+        return biomeMap;
+    }
+    
+    /**
+     * Generate tile type based on position and biome
+     */
+    generateTileType(x, y, biome) {
+        // Check for water first
+        if (biome.shouldSpawnWater()) {
             return Tile.TYPES.WATER;
         }
         
-        // Create beach around water
-        if (distFromCenter < 7) {
-            return Tile.TYPES.SAND;
-        }
-        
-        // Add some variation
+        // Use biome's primary or secondary tile
         const random = Math.random();
-        if (random < 0.05) {
-            return Tile.TYPES.STONE;
-        } else if (random < 0.1) {
-            return Tile.TYPES.DIRT;
+        if (random < 0.8) {
+            return biome.getPrimaryTile();
+        } else {
+            return biome.getSecondaryTile();
         }
-        
-        return Tile.TYPES.GRASS;
     }
     
     /**
      * Generate decorations for tiles
      */
     generateDecorations() {
-        // Decoration type counts - should match available assets
-        const TREE_TYPES = 3;
+        // Decoration type counts - now using more variations from individual assets
+        const TREE_TYPES = 20; // Using 20 tree variations
         const BUSH_TYPES = 3;
         const ROCK_TYPES = 2;
         
         for (let y = 0; y < this.height; y++) {
             for (let x = 0; x < this.width; x++) {
                 const tile = this.tiles[y][x];
-                const random = Math.random();
+                const biome = this.biomeMap[y][x];
                 
-                // Add decorations based on tile type
+                // Skip water tiles
                 if (tile.type === Tile.TYPES.WATER) {
                     // Add pond decorations to some water tiles
-                    if (random < 0.3) {
+                    if (Math.random() < 0.3) {
                         tile.setDecoration('pond');
                     }
-                } else if (tile.type === Tile.TYPES.GRASS) {
-                    // Add trees to grass tiles
-                    if (random < 0.15) {
-                        const treeType = Math.floor(Math.random() * TREE_TYPES) + 1;
-                        tile.setDecoration(`tree_${treeType}`);
-                    }
-                    // Add bushes
-                    else if (random < 0.25) {
-                        const bushType = Math.floor(Math.random() * BUSH_TYPES) + 1;
-                        tile.setDecoration(`bush_${bushType}`);
-                    }
-                } else if (tile.type === Tile.TYPES.DIRT || tile.type === Tile.TYPES.STONE) {
-                    // Add rocks to dirt/stone tiles
-                    if (random < 0.2) {
-                        const rockType = Math.floor(Math.random() * ROCK_TYPES) + 1;
-                        tile.setDecoration(`rocks_${rockType}`);
-                    }
+                    continue;
+                }
+                
+                // Add trees based on biome
+                if (biome.shouldSpawnTree() && tile.type.walkable) {
+                    const treeType = Math.floor(Math.random() * TREE_TYPES);
+                    tile.setDecoration(`tree_${treeType}`);
+                    tile.isResource = true; // Mark as gatherable resource
+                }
+                // Add bushes based on biome
+                else if (biome.shouldSpawnBush() && tile.type.walkable) {
+                    const bushType = Math.floor(Math.random() * BUSH_TYPES) + 1;
+                    tile.setDecoration(`bush_${bushType}`);
+                }
+                // Add rocks based on biome
+                else if (biome.shouldSpawnRock() && tile.type.walkable) {
+                    const rockType = Math.floor(Math.random() * ROCK_TYPES) + 1;
+                    tile.setDecoration(`rocks_${rockType}`);
+                    tile.isResource = true; // Mark as gatherable resource
                 }
             }
         }
@@ -184,15 +203,21 @@ class World {
                 // Try to use tile images if available
                 let tileImage = null;
                 if (this.assetLoader) {
-                    // Map tile types to asset names
+                    // Map tile types to asset names with variations
+                    let baseName = null;
                     if (tile.type === Tile.TYPES.GRASS) {
-                        tileImage = this.assetLoader.getImage('grass_green');
+                        baseName = 'grass_green';
                     } else if (tile.type === Tile.TYPES.SAND) {
-                        tileImage = this.assetLoader.getImage('sand');
+                        baseName = 'sand';
                     } else if (tile.type === Tile.TYPES.DIRT) {
-                        tileImage = this.assetLoader.getImage('dirt');
+                        baseName = 'dirt';
                     } else if (tile.type === Tile.TYPES.STONE) {
-                        tileImage = this.assetLoader.getImage('stone_path');
+                        baseName = 'stone_path';
+                    }
+                    
+                    // Use the tile's variation index for visual diversity
+                    if (baseName) {
+                        tileImage = this.assetLoader.getImage(`${baseName}_${tile.tileVariation}`);
                     }
                 }
                 

@@ -1,4 +1,5 @@
 #include "world/Tile.h"
+#include <cstdlib>
 
 Tile::Tile(int x, int y, TileType type)
     : x(x)
@@ -6,6 +7,9 @@ Tile::Tile(int x, int y, TileType type)
     , type(type)
     , walkable(isTypeWalkable(type))
     , occupied(false)
+    , decoration("")
+    , resource(false)
+    , tileVariation(std::rand() % 10)  // Random variation 0-9
 {
 }
 

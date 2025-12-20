@@ -96,4 +96,54 @@ class Renderer {
     setAlpha(alpha) {
         this.ctx.globalAlpha = alpha;
     }
+    
+    /**
+     * Set fill style
+     */
+    setFillStyle(color) {
+        this.ctx.fillStyle = color;
+    }
+    
+    /**
+     * Set stroke style
+     */
+    setStrokeStyle(color) {
+        this.ctx.strokeStyle = color;
+    }
+    
+    /**
+     * Fill rectangle
+     */
+    fillRect(x, y, width, height) {
+        this.ctx.fillRect(x, y, width, height);
+    }
+    
+    /**
+     * Fill circle
+     */
+    fillCircle(x, y, radius) {
+        this.ctx.beginPath();
+        this.ctx.arc(x, y, radius, 0, Math.PI * 2);
+        this.ctx.fill();
+    }
+    
+    /**
+     * Fill ellipse
+     */
+    fillEllipse(x, y, radiusX, radiusY) {
+        this.ctx.beginPath();
+        this.ctx.ellipse(x, y, radiusX, radiusY, 0, 0, Math.PI * 2);
+        this.ctx.fill();
+    }
+    
+    /**
+     * Stroke line
+     */
+    strokeLine(x1, y1, x2, y2, lineWidth = 1) {
+        this.ctx.lineWidth = lineWidth;
+        this.ctx.beginPath();
+        this.ctx.moveTo(x1, y1);
+        this.ctx.lineTo(x2, y2);
+        this.ctx.stroke();
+    }
 }

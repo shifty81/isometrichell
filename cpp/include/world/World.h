@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include "Tile.h"
+#include "Biome.h"
 
 // Forward declarations
 class Renderer;
@@ -50,9 +51,16 @@ private:
     int width;
     int height;
     std::vector<std::vector<std::unique_ptr<Tile>>> tiles;
+    std::vector<std::vector<std::unique_ptr<Biome>>> biomeMap;
+    
+    // Generate biome map
+    void generateBiomeMap();
     
     // Generate terrain
     void generateTerrain();
+    
+    // Generate decorations (trees, rocks, bushes)
+    void generateDecorations();
 };
 
 #endif // WORLD_H
