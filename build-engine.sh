@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Build script for Isometric Hell C++ Engine
+# Build script for The Daily Grind C++ Engine
 
 # Enable strict error handling:
 # -e: Exit on any command failure
@@ -26,7 +26,7 @@ log() {
 }
 
 log "========================================"
-log "  Building Isometric Hell C++ Engine"
+log "  Building The Daily Grind C++ Engine"
 log "========================================"
 log "Build started at: $(date)"
 log ""
@@ -94,7 +94,7 @@ log "========================================"
 log "Build finished at: $(date)"
 log ""
 log "To run the game:"
-log "  ./build/IsometricHell"
+log "  ./build/TheDailyGrind"
 log ""
 log "Or use the launch script:"
 log "  ./launch-engine.sh"
