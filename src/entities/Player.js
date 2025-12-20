@@ -3,7 +3,7 @@
  * Represents the player character
  */
 class Player extends Entity {
-    constructor(x, y) {
+    constructor(x, y, assetLoader = null) {
         super(x, y);
         this.speed = 4; // tiles per second
         this.inventory = {
@@ -16,6 +16,44 @@ class Player extends Entity {
         
         // Initialize survival attributes
         this.survival = new SurvivalAttributes();
+        
+        // Initialize sprite animation system
+        this.animation = null;
+        if (assetLoader && typeof SpriteAnimation !== 'undefined') {
+            this.animation = new SpriteAnimation(assetLoader);
+            this._setupAnimations();
+        }
+    }
+    
+    /**
+     * Setup player animations
+     */
+    _setupAnimations() {
+        if (!this.animation) return;
+        
+        // Register Idle animation (10 frames)
+        const idleFrames = [];
+        for (let i = 0; i < 10; i++) {
+            idleFrames.push(`player_idle_${i}`);
+        }
+        this.animation.registerAnimation('idle', idleFrames, 8); // 8 fps for idle
+        
+        // Register Walk animation (10 frames)
+        const walkFrames = [];
+        for (let i = 0; i < 10; i++) {
+            walkFrames.push(`player_walk_${i}`);
+        }
+        this.animation.registerAnimation('walk', walkFrames, 10); // 10 fps for walk
+        
+        // Register Run animation (10 frames)
+        const runFrames = [];
+        for (let i = 0; i < 10; i++) {
+            runFrames.push(`player_run_${i}`);
+        }
+        this.animation.registerAnimation('run', runFrames, 12); // 12 fps for run
+        
+        // Start with idle animation
+        this.animation.play('idle');
     }
     
     /**
@@ -25,6 +63,11 @@ class Player extends Entity {
         // Update survival attributes if time system is available
         if (this.survival && timeSystem) {
             this.survival.update(deltaTime, timeSystem);
+        }
+        
+        // Update animation
+        if (this.animation) {
+            this.animation.update(deltaTime);
         }
         
         // If no input provided, skip movement (entity is being updated by world)
@@ -68,6 +111,15 @@ class Player extends Entity {
         // Set activity multiplier based on movement
         if (this.survival) {
             this.survival.setActivity(this.isMoving ? 1.3 : 1.0);
+        }
+        
+        // Update animation based on movement
+        if (this.animation) {
+            if (this.isMoving) {
+                this.animation.play('walk');
+            } else {
+                this.animation.play('idle');
+            }
         }
         
         // Apply movement
@@ -151,12 +203,35 @@ class Player extends Entity {
      */
     render(renderer, camera, isometricRenderer) {
         const screenPos = this.getScreenPosition(64, 32);
-        
-        // Draw simple player representation
-        // TODO: Replace with sprite animation
         const x = screenPos.x - camera.x;
         const y = screenPos.y - camera.y;
         
+        // Try to render sprite animation first
+        if (this.animation) {
+            const frame = this.animation.getCurrentFrame();
+            if (frame) {
+                // Draw character shadow
+                renderer.setFillStyle('rgba(0, 0, 0, 0.3)');
+                renderer.fillEllipse(x - 16, y + 5, 32, 10);
+                
+                // Draw sprite frame (256x256 frames, scale down to ~64px width)
+                const scale = 0.25; // Scale down 256px to 64px
+                const frameWidth = frame.width * scale;
+                const frameHeight = frame.height * scale;
+                
+                // Center the sprite
+                renderer.ctx.drawImage(
+                    frame,
+                    x - frameWidth / 2,
+                    y - frameHeight + 10, // Offset to align with ground
+                    frameWidth,
+                    frameHeight
+                );
+                return;
+            }
+        }
+        
+        // Fallback: Draw simple player representation if sprite not available
         // Draw character shadow
         renderer.setFillStyle('rgba(0, 0, 0, 0.3)');
         renderer.fillEllipse(x - 12, y + 5, 24, 8);
