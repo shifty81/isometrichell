@@ -158,6 +158,7 @@ class AssetLoader {
                 const idx = String(i).padStart(3, '0');
                 playerFrames.push({
                     name: `player_${animation.toLowerCase()}_${i}`,
+                    // Note: Directory name is 'charachter' (typo in asset structure)
                     path: `assets/individual/charachter/player/${animation}/${animation}-${idx}.png`
                 });
             }

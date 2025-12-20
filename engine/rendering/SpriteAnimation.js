@@ -63,10 +63,15 @@ class SpriteAnimation {
         
         this.frameTime += deltaTime;
         
+        // Cap frame advances to prevent performance issues with large deltaTime
+        const maxFrameAdvances = 5;
+        let frameAdvances = 0;
+        
         // Check if we need to advance to next frame
-        while (this.frameTime >= animation.frameDuration) {
+        while (this.frameTime >= animation.frameDuration && frameAdvances < maxFrameAdvances) {
             this.frameTime -= animation.frameDuration;
             this.currentFrame++;
+            frameAdvances++;
             
             // Handle animation end
             if (this.currentFrame >= animation.frames.length) {
@@ -78,6 +83,13 @@ class SpriteAnimation {
                     break;
                 }
             }
+        }
+        
+        // If we hit the limit, jump to appropriate frame instead
+        if (frameAdvances >= maxFrameAdvances && this.frameTime >= animation.frameDuration) {
+            const skippedFrames = Math.floor(this.frameTime / animation.frameDuration);
+            this.currentFrame = (this.currentFrame + skippedFrames) % animation.frames.length;
+            this.frameTime = 0;
         }
     }
     

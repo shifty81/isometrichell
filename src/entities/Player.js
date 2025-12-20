@@ -3,6 +3,9 @@
  * Represents the player character
  */
 class Player extends Entity {
+    // Constants
+    static SPRITE_SCALE = 0.25; // Scale 256px sprite frames down to 64px
+    
     constructor(x, y, assetLoader = null) {
         super(x, y);
         this.speed = 4; // tiles per second
@@ -214,10 +217,9 @@ class Player extends Entity {
                 renderer.setFillStyle('rgba(0, 0, 0, 0.3)');
                 renderer.fillEllipse(x - 16, y + 5, 32, 10);
                 
-                // Draw sprite frame (256x256 frames, scale down to ~64px width)
-                const scale = 0.25; // Scale down 256px to 64px
-                const frameWidth = frame.width * scale;
-                const frameHeight = frame.height * scale;
+                // Draw sprite frame using defined scale constant
+                const frameWidth = frame.width * Player.SPRITE_SCALE;
+                const frameHeight = frame.height * Player.SPRITE_SCALE;
                 
                 // Center the sprite
                 renderer.ctx.drawImage(
