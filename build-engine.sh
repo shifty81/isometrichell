@@ -31,6 +31,17 @@ log "========================================"
 log "Build started at: $(date)"
 log ""
 
+# Check if editors should be set up
+if [ "$1" = "--setup-editors" ] || [ "$1" = "-e" ]; then
+    log "Setting up external map editors..."
+    if [ -f "$ROOT_DIR/tools/setup-editors.sh" ]; then
+        bash "$ROOT_DIR/tools/setup-editors.sh" 2>&1 | tee -a "$LOG_FILE" || log "Warning: Editor setup failed"
+    else
+        log "Warning: Editor setup script not found"
+    fi
+    log ""
+fi
+
 # Create build directory if it doesn't exist
 if [ ! -d "$ROOT_DIR/build" ]; then
     log "Creating build directory..."

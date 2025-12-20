@@ -28,12 +28,21 @@ This architecture allows for rapid level design in the web editor while maintain
 - **Entity System**: Extensible framework for game objects
 - **Tile-Based World**: Procedurally generated worlds with varied terrain
 
-### Map Editor (Web-based)
+### Map Editors
+
+#### Web-based Editor
 - **Visual Scene Builder**: Create levels visually in your browser
 - **Asset System**: Professional asset loader with progress tracking
 - **Audio System**: Background music and sound effects
 - **Rich Asset Library**: Ground tiles, trees, bushes, characters, vehicles, buildings
 - **Export Functionality**: Save scenes as JSON for C++ engine
+
+#### WorldEd & TileZed (Professional Tools)
+- **WorldEd**: Create large outdoor maps with neighborhoods, towns, and cities
+- **TileZed/BuildingEd**: Design detailed building interiors with multi-floor support
+- **Professional Features**: Zone management, road tools, advanced tile painting
+- **TMX Export**: Export maps in Tiled Map XML format for use in both engines
+- **See**: [WorldEdit/TileZed Setup Guide](docs/WORLDEDIT_TILEZED_SETUP.md)
 
 ## 🚀 Getting Started
 
@@ -70,6 +79,27 @@ For other platforms and detailed dependency information, see [docs/BUILD_DEPENDE
 #### For Web Editor:
 - Node.js (recommended) or Python 3
 - Modern web browser
+
+#### For WorldEd/TileZed (Optional):
+- p7zip-full (for .7z extraction) or unzip (for .zip files)
+- Java Runtime Environment (required by the tools)
+
+**Quick Install:**
+```bash
+# Ubuntu/Debian
+sudo apt-get install p7zip-full default-jre
+
+# macOS
+brew install p7zip openjdk
+```
+
+**Setup WorldEd/TileZed:**
+1. Download worlded.7z and tilezed.7z from [The Indie Stone Forums](https://theindiestone.com/forums/index.php?/topic/59675-latest-tilezed-worlded-and-tilesets-september-8-2022/)
+2. Place the .7z files in the project root directory
+3. Run: `./tools/setup-editors.sh`
+4. Launch with: `./launch-tilezed.sh` or `./launch-worlded.sh`
+
+See [docs/WORLDEDIT_TILEZED_SETUP.md](docs/WORLDEDIT_TILEZED_SETUP.md) for complete setup guide.
 
 ### Detailed Setup
 
