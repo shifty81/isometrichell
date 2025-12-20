@@ -6,13 +6,22 @@ class Player extends Entity {
     // Constants
     static SPRITE_SCALE = 0.25; // Scale 256px sprite frames down to 64px
     
-    constructor(x, y, assetLoader = null) {
+    constructor(x, y, assetLoader = null, characterAppearance = null) {
         super(x, y);
         this.speed = 4; // tiles per second
+        
+        // Legacy simple inventory (keep for backward compatibility)
         this.inventory = {
             wood: 0,
             stone: 0
         };
+        
+        // New inventory system
+        this.inventorySystem = new InventorySystem(this);
+        
+        // Character appearance
+        this.appearance = characterAppearance || new CharacterAppearance();
+        
         this.interactionRange = 1.5; // tiles
         this.isMoving = false;
         this.direction = { x: 0, y: 0 }; // Current movement direction

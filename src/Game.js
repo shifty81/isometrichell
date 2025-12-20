@@ -12,6 +12,12 @@ class Game {
         this.isometricRenderer = null;
         this.hoveredTile = null;
         this.timeSystem = null;
+        this.player = null;
+        
+        // UI systems
+        this.characterSelectionUI = null;
+        this.inventoryUI = null;
+        this.gameStarted = false;
         
         this.initialize();
     }
@@ -30,9 +36,17 @@ class Game {
         // Create world (50x50 tiles) with asset loader
         this.world = new World(50, 50, 64, 32, this.assetLoader);
         
-        // Create player at center of world with asset loader for animations
-        this.player = new Player(25, 25, this.assetLoader);
-        this.world.addEntity(this.player);
+        // Create character selection UI
+        this.characterSelectionUI = new CharacterSelectionUI(
+            this.engine.canvas,
+            this.engine.ctx,
+            this.assetLoader
+        );
+        
+        // Show character selection screen
+        this.characterSelectionUI.show((characterData) => {
+            this._onCharacterCreated(characterData);
+        });
         
         // Create building system
         this.buildingSystem = new BuildingSystem(this.world, this.audioManager, this.assetLoader);
@@ -42,6 +56,31 @@ class Game {
         
         // Add some boats to the world
         this.spawnBoats();
+    }
+    
+    /**
+     * Called when character is created
+     */
+    _onCharacterCreated(characterData) {
+        console.log('✅ Character created:', characterData);
+        
+        // Create character appearance object
+        const appearance = new CharacterAppearance();
+        appearance.fromJSON(characterData);
+        
+        // Create player at center of world with character appearance
+        this.player = new Player(25, 25, this.assetLoader, appearance);
+        this.world.addEntity(this.player);
+        
+        // Give player some starting items
+        this._giveStartingItems();
+        
+        // Create inventory UI
+        this.inventoryUI = new InventoryUI(
+            this.engine.canvas,
+            this.engine.ctx,
+            this.player.inventorySystem
+        );
         
         // Center camera on player
         const centerScreen = IsometricUtils.tileToScreen(this.player.x, this.player.y, 64, 32);
@@ -49,6 +88,31 @@ class Game {
             centerScreen.x - this.engine.canvas.width / 2,
             centerScreen.y - this.engine.canvas.height / 2
         );
+        
+        this.gameStarted = true;
+        console.log('🎮 Game started!');
+    }
+    
+    /**
+     * Give player starting items
+     */
+    _giveStartingItems() {
+        if (!this.player) return;
+        
+        // Create and equip a small backpack
+        const backpack = ITEM_DB.createItem('backpack_small');
+        if (backpack) {
+            this.player.inventorySystem.equip(backpack, 'back');
+        }
+        
+        // Add water bottle to pocket
+        const waterBottle = ITEM_DB.createItem('water_bottle');
+        if (waterBottle) {
+            waterBottle.fill('fountain'); // Start with full, safe water
+            this.player.inventorySystem.addToPocket(waterBottle);
+        }
+        
+        console.log('🎁 Starting items given to player');
     }
     
     /**
@@ -96,6 +160,28 @@ class Game {
      * Update game
      */
     update(deltaTime) {
+        // If character selection is active, don't update game
+        if (this.characterSelectionUI && this.characterSelectionUI.isActive) {
+            return;
+        }
+        
+        // Don't update if game hasn't started yet
+        if (!this.gameStarted || !this.player) {
+            return;
+        }
+        
+        // Handle inventory toggle (I key)
+        if (this.engine.input.isKeyPressed('KeyI')) {
+            if (this.inventoryUI) {
+                this.inventoryUI.toggle();
+            }
+        }
+        
+        // If inventory is open, don't process game input
+        if (this.inventoryUI && this.inventoryUI.isOpen) {
+            return;
+        }
+        
         // Update time system
         if (this.timeSystem) {
             this.timeSystem.update(deltaTime);
@@ -206,6 +292,17 @@ class Game {
      * Render game
      */
     render(renderer, camera) {
+        // Render character selection UI if active
+        if (this.characterSelectionUI && this.characterSelectionUI.isActive) {
+            this.characterSelectionUI.render();
+            return;
+        }
+        
+        // Don't render game if not started yet
+        if (!this.gameStarted || !this.player) {
+            return;
+        }
+        
         // Render world
         this.world.render(renderer, camera, this.isometricRenderer);
         
@@ -256,6 +353,11 @@ class Game {
                 camera,
                 1
             );
+        }
+        
+        // Render inventory UI on top
+        if (this.inventoryUI) {
+            this.inventoryUI.render();
         }
     }
     
