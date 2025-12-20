@@ -1,0 +1,123 @@
+cmake_minimum_required(VERSION 3.10)
+project(IsometricHell VERSION 1.0)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add compile options
+if(MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -pedantic)
+endif()
+
+# Find OpenGL
+find_package(OpenGL REQUIRED)
+
+# GLFW
+find_package(glfw3 3.3 QUIET)
+if(NOT glfw3_FOUND)
+    message(STATUS "GLFW not found, will be fetched from source")
+    include(FetchContent)
+    FetchContent_Declare(
+        glfw
+        GIT_REPOSITORY https://github.com/glfw/glfw.git
+        GIT_TAG 3.3.8
+    )
+    set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+    set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+    set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(glfw)
+endif()
+
+# GLAD (will be included in source)
+set(GLAD_SOURCES
+    cpp/external/glad/src/glad.c
+    cpp/external/glad/include/glad/glad.h
+    cpp/external/glad/include/KHR/khrplatform.h
+)
+
+# GLM
+find_package(glm QUIET)
+if(NOT glm_FOUND)
+    message(STATUS "GLM not found, will be fetched from source")
+    include(FetchContent)
+    FetchContent_Declare(
+        glm
+        GIT_REPOSITORY https://github.com/g-truc/glm.git
+        GIT_TAG 0.9.9.8
+    )
+    FetchContent_MakeAvailable(glm)
+endif()
+
+# stb_image (header-only, included in source)
+set(STB_IMAGE_INCLUDE cpp/external/stb)
+
+# Include directories
+include_directories(
+    ${OPENGL_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/cpp/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/cpp/external/glad/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/cpp/external/stb
+)
+
+# Source files
+set(ENGINE_SOURCES
+    cpp/src/main.cpp
+    cpp/src/engine/Engine.cpp
+    cpp/src/engine/Time.cpp
+    cpp/src/engine/Input.cpp
+    cpp/src/rendering/Renderer.cpp
+    cpp/src/rendering/Shader.cpp
+    cpp/src/rendering/Texture.cpp
+    cpp/src/rendering/Camera.cpp
+    cpp/src/rendering/IsometricRenderer.cpp
+    cpp/src/world/Tile.cpp
+    cpp/src/world/World.cpp
+    cpp/src/entities/Entity.cpp
+    cpp/src/building/Building.cpp
+    cpp/src/building/BuildingSystem.cpp
+    cpp/src/game/Game.cpp
+    cpp/src/utils/IsometricUtils.cpp
+    ${GLAD_SOURCES}
+)
+
+# Header files
+set(ENGINE_HEADERS
+    cpp/include/engine/Engine.h
+    cpp/include/engine/Time.h
+    cpp/include/engine/Input.h
+    cpp/include/rendering/Renderer.h
+    cpp/include/rendering/Shader.h
+    cpp/include/rendering/Texture.h
+    cpp/include/rendering/Camera.h
+    cpp/include/rendering/IsometricRenderer.h
+    cpp/include/world/Tile.h
+    cpp/include/world/World.h
+    cpp/include/entities/Entity.h
+    cpp/include/building/Building.h
+    cpp/include/building/BuildingSystem.h
+    cpp/include/game/Game.h
+    cpp/include/utils/IsometricUtils.h
+)
+
+# Create executable
+add_executable(${PROJECT_NAME} ${ENGINE_SOURCES} ${ENGINE_HEADERS})
+
+# Link libraries
+target_link_libraries(${PROJECT_NAME}
+    OpenGL::GL
+    glfw
+    glm::glm
+)
+
+# Copy assets to build directory
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets
+)
+
+# Install target
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(DIRECTORY assets DESTINATION bin)

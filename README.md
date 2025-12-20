@@ -1,74 +1,103 @@
 # The Daily Grind - 2D Life Simulation Game
 
-An isometric 2D life simulation game inspired by Project Zomboid and The Sims, featuring deep survival mechanics, complex AI, and social interactions. Experience the daily grind of life - work, relationships, survival, and personal growth - all built from scratch with a custom game engine.
+An isometric 2D life simulation game inspired by Project Zomboid and The Sims, featuring deep survival mechanics, complex AI, and social interactions. Experience the daily grind of life - work, relationships, survival, and personal growth - all built with custom technology.
 
-## 🎮 Vision
+## 🎮 Dual Architecture
 
-A rich life simulation game without zombies, focusing on:
-- **Deep Survival**: Manage hunger, thirst, energy, hygiene, and health
-- **Complex AI**: NPCs with daily routines, jobs, relationships, and personalities
-- **Social Simulation**: Build relationships, trade, and interact with a living community
-- **Skill Progression**: Practice-based skill system spanning multiple disciplines
-- **Dynamic World**: Seasons, weather, day/night cycles, and persistent infrastructure
-- **Sims-like Conversations**: Interactive dialogue system with emotional portraits and choices
+This project features a unique **dual-system architecture**:
 
-## 🎨 Current Features (v0.2 - Asset Integration Phase)
+1. **🎮 C++ OpenGL Game Engine** - High-performance game runtime
+   - Native C++ with OpenGL rendering
+   - Optimized for gameplay performance
+   - Cross-platform (Windows, Linux, macOS)
+   
+2. **🗺️ Web-based Map Editor** - Scene creation and level design tool
+   - Browser-based editor for creating game levels
+   - Visual tileset assembly
+   - Export scenes for the C++ engine to load
 
-- **Custom Game Engine**: Built from ground up using HTML5 Canvas and vanilla JavaScript
-- **Isometric Rendering**: Beautiful isometric view with proper coordinate conversion
+This architecture allows for rapid level design in the web editor while maintaining high performance in the game engine.
+
+## 🎨 Features
+
+### Game Engine (C++ OpenGL)
+- **Native Performance**: C++ OpenGL rendering at 60+ FPS
+- **Isometric Rendering**: Proper diamond-shaped tile rendering with depth sorting
+- **Building System**: Place houses, towers, and warehouses
+- **Camera System**: Smooth camera movement with WASD controls
+- **Entity System**: Extensible framework for game objects
+- **Tile-Based World**: Procedurally generated worlds with varied terrain
+
+### Map Editor (Web-based)
+- **Visual Scene Builder**: Create levels visually in your browser
 - **Asset System**: Professional asset loader with progress tracking
 - **Audio System**: Background music and sound effects
-- **Building System**: Place various buildings (houses, towers, warehouses)
-- **Camera System**: Smooth camera movement with WASD/Arrow keys
-- **Entity System**: Extensible entity framework for game objects
-- **Tile-Based World**: Procedurally generated world with varied terrain
-- **Rich Asset Library**: Ground tiles, trees, bushes, characters, vehicles, buildings, and audio
+- **Rich Asset Library**: Ground tiles, trees, bushes, characters, vehicles, buildings
+- **Export Functionality**: Save scenes as JSON for C++ engine
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Quick Launch (Recommended)
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Node.js (optional, for npm scripts) or Python 3 (for simple HTTP server)
-
-### Quick Start
-
-#### Option 1: Using npm (Recommended)
-
+#### Run the C++ Game Engine:
 ```bash
-# Install dependencies (only needed once)
-npm install
-
-# Start the development server and open in browser
-npm start
-
-# Or just start the server without opening browser
-npm run dev
+./launch-engine.sh
 ```
 
-#### Option 2: Using Python
+#### Run the Web Map Editor:
+```bash
+./launch-editor.sh
+```
+
+### Prerequisites
+
+#### For C++ Engine:
+- CMake 3.10+
+- C++17 compatible compiler
+- OpenGL 3.3+
+- Development libraries: GLFW, GLM
+  - Ubuntu/Debian: `sudo apt-get install cmake libglfw3-dev libglm-dev`
+  - macOS: `brew install cmake glfw glm`
+  - Windows: Visual Studio 2017+ (libraries auto-fetched)
+
+#### For Web Editor:
+- Node.js (recommended) or Python 3
+- Modern web browser
+
+### Detailed Setup
+
+#### C++ Engine - Manual Build:
 
 ```bash
-# Python 3
-npm run serve
-# Or directly:
+# Build the engine
+./build-engine.sh
+
+# Or manually:
+mkdir build && cd build
+cmake ..
+cmake --build .
+
+# Run
+./build/IsometricHell
+```
+
+See [docs/CPP_BUILD.md](docs/CPP_BUILD.md) for detailed build instructions.
+
+#### Web Editor - Manual Start:
+
+```bash
+# Using npm
+npm start
+
+# Or using Python
 python3 -m http.server 8000
 ```
 
 Then open your browser to `http://localhost:8000`
 
-#### Option 3: Using npx (No installation needed)
-
-```bash
-npx http-server -p 8000 -o
-```
-
-#### Option 4: Direct File Open
-
-You can also open `index.html` directly in your browser, though some features may be limited due to CORS restrictions.
-
 ## 🎯 Controls
 
+### C++ Engine (Game):
 | Key | Action |
 |-----|--------|
 | WASD / Arrow Keys | Move camera |
@@ -77,55 +106,75 @@ You can also open `index.html` directly in your browser, though some features ma
 | 2 | Select tower (in building mode) |
 | 3 | Select warehouse (in building mode) |
 | Left Click | Place building |
+| ESC | Exit game |
+
+### Web Editor:
+| Key | Action |
+|-----|--------|
+| WASD / Arrow Keys | Move camera |
+| B | Toggle building mode |
+| 1/2/3 | Select building type |
+| Left Click | Place building |
 | Space | Spawn boat on water tile |
 | Mouse | Hover to preview placement |
 
 ## 📁 Project Structure
 
 ```
-thedailygrind/
-├── index.html              # Main HTML entry point
-├── engine/                 # Core game engine
-│   ├── core/              # Core systems
-│   │   ├── Engine.js      # Main game loop
-│   │   ├── Time.js        # Time management
-│   │   └── Input.js       # Input handling
-│   ├── assets/            # Asset management
-│   │   └── AssetLoader.js # Asset loading system
-│   ├── audio/             # Audio management
-│   │   └── AudioManager.js # Audio system
-│   └── rendering/         # Rendering systems
-│       ├── Renderer.js    # Base renderer
-│       ├── IsometricRenderer.js  # Isometric rendering
-│       └── Camera.js      # Camera system
-├── utils/                 # Utility functions
-│   ├── IsometricUtils.js  # Isometric coordinate conversion
-│   └── MathUtils.js       # Math helpers
-├── src/                   # Game-specific code
-│   ├── world/            # World management
-│   │   ├── Tile.js       # Tile class
-│   │   └── World.js      # World manager
-│   ├── entities/         # Game entities
-│   │   ├── Entity.js     # Base entity class
-│   │   └── Boat.js       # Boat entity
-│   ├── building/         # Building system
-│   │   ├── Building.js   # Building class
-│   │   └── BuildingSystem.js  # Building manager
-│   ├── Game.js           # Main game logic
-│   └── main.js           # Entry point
-└── assets/               # Game assets
-    ├── ground_tiles_sheets/ # Terrain tiles
-    ├── isometric_trees_pack/ # Trees and vegetation
-    ├── Charachters/       # Character sprites
-    ├── MusicAndSFX/       # Audio files
-    └── [other asset folders]
-```
-    ├── sprites/          # Sprite images
-    ├── tiles/            # Tile images
-    └── audio/            # Sound effects and music
-```
+isometrichell/
+├── cpp/                        # C++ Engine Source
+│   ├── include/               # Header files
+│   │   ├── engine/           # Core engine systems
+│   │   ├── rendering/        # OpenGL rendering
+│   │   ├── world/            # Game world
+│   │   ├── entities/         # Game entities
+│   │   ├── building/         # Building system
+│   │   └── utils/            # Utilities
+│   ├── src/                  # Implementation files
+│   ├── external/             # Third-party libraries
+│   │   ├── glad/            # OpenGL loader
+│   │   └── stb/             # Image loading
+│   └── shaders/              # GLSL shaders
+│
+├── engine/                    # Web Editor - Engine
+│   ├── core/                 # Core systems
+│   │   ├── Engine.js        # Main game loop
+│   │   ├── Time.js          # Time management
+│   │   └── Input.js         # Input handling
+│   ├── assets/               # Asset management
+│   │   └── AssetLoader.js   # Asset loading system
+│   ├── audio/                # Audio management
+│   │   └── AudioManager.js  # Audio system
+│   └── rendering/            # Rendering systems
+│       ├── Renderer.js      # Base renderer
+│       ├── IsometricRenderer.js # Isometric rendering
+│       └── Camera.js        # Camera system
+│
+├── src/                      # Web Editor - Game Code
+│   ├── world/               # World management
+│   ├── entities/            # Game entities
+│   ├── building/            # Building system
+│   └── Game.js              # Main game logic
+│
+├── assets/                   # Shared Game Assets
+│   ├── ground_tiles_sheets/ # Terrain tiles
+│   ├── isometric_trees_pack/# Trees and vegetation
+│   ├── Charachters/         # Character sprites
+│   ├── MusicAndSFX/         # Audio files
+│   └── [other asset folders]
+│
+├── docs/                     # Documentation
+│   ├── CPP_BUILD.md         # C++ build instructions
+│   ├── ROADMAP.md           # Development roadmap
+│   └── [other docs]
+│
+├── CMakeLists.txt            # CMake configuration
+├── build-engine.sh           # Build script for C++ engine
+├── launch-engine.sh          # Launch C++ engine
+├── launch-editor.sh          # Launch web editor
+├── index.html                # Web editor entry point
 
-## 🏗️ Architecture
+## 🔧 Development Workflow
 
 ### Engine Core
 
