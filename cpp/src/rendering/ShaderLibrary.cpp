@@ -4,7 +4,7 @@
 // Built-in shader sources
 
 // Default sprite shader
-const char* defaultVertexShader = R"(
+static const char* defaultVertexShader = R"(
 #version 330 core
 layout (location = 0) in vec2 aPos;
 layout (location = 1) in vec2 aTexCoord;
@@ -21,7 +21,7 @@ void main() {
 }
 )";
 
-const char* defaultFragmentShader = R"(
+static const char* defaultFragmentShader = R"(
 #version 330 core
 out vec4 FragColor;
 

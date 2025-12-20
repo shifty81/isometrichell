@@ -54,6 +54,16 @@ PFNGLGETFLOATVPROC glGetFloatv;
 PFNGLTEXPARAMETERFPROC glTexParameterf;
 PFNGLCULLFACEPROC glCullFace;
 PFNGLFRONTFACEPROC glFrontFace;
+PFNGLGENFRAMEBUFFERSPROC glGenFramebuffers;
+PFNGLDELETEFRAMEBUFFERSPROC glDeleteFramebuffers;
+PFNGLBINDFRAMEBUFFERPROC glBindFramebuffer;
+PFNGLCHECKFRAMEBUFFERSTATUSPROC glCheckFramebufferStatus;
+PFNGLFRAMEBUFFERTEXTURE2DPROC glFramebufferTexture2D;
+PFNGLGENRENDERBUFFERSPROC glGenRenderbuffers;
+PFNGLDELETERENDERBUFFERSPROC glDeleteRenderbuffers;
+PFNGLBINDRENDERBUFFERPROC glBindRenderbuffer;
+PFNGLRENDERBUFFERSTORAGEPROC glRenderbufferStorage;
+PFNGLFRAMEBUFFERRENDERBUFFERPROC glFramebufferRenderbuffer;
 PFNGLGENTEXTURESPROC glGenTextures;
 PFNGLDELETETEXTURESPROC glDeleteTextures;
 PFNGLBINDTEXTUREPROC glBindTexture;
@@ -158,6 +168,16 @@ static void load_GL_VERSION_3_0(GLADloadproc load) {
     glBindVertexArray = (PFNGLBINDVERTEXARRAYPROC)load("glBindVertexArray");
     glGenerateMipmap = (PFNGLGENERATEMIPMAPPROC)load("glGenerateMipmap");
     glActiveTexture = (PFNGLACTIVETEXTUREPROC)load("glActiveTexture");
+    glGenFramebuffers = (PFNGLGENFRAMEBUFFERSPROC)load("glGenFramebuffers");
+    glDeleteFramebuffers = (PFNGLDELETEFRAMEBUFFERSPROC)load("glDeleteFramebuffers");
+    glBindFramebuffer = (PFNGLBINDFRAMEBUFFERPROC)load("glBindFramebuffer");
+    glCheckFramebufferStatus = (PFNGLCHECKFRAMEBUFFERSTATUSPROC)load("glCheckFramebufferStatus");
+    glFramebufferTexture2D = (PFNGLFRAMEBUFFERTEXTURE2DPROC)load("glFramebufferTexture2D");
+    glGenRenderbuffers = (PFNGLGENRENDERBUFFERSPROC)load("glGenRenderbuffers");
+    glDeleteRenderbuffers = (PFNGLDELETERENDERBUFFERSPROC)load("glDeleteRenderbuffers");
+    glBindRenderbuffer = (PFNGLBINDRENDERBUFFERPROC)load("glBindRenderbuffer");
+    glRenderbufferStorage = (PFNGLRENDERBUFFERSTORAGEPROC)load("glRenderbufferStorage");
+    glFramebufferRenderbuffer = (PFNGLFRAMEBUFFERRENDERBUFFERPROC)load("glFramebufferRenderbuffer");
 }
 
 static void* glad_get_proc_from_userptr(void* userptr, const char *name) {
