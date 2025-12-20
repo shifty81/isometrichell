@@ -120,10 +120,11 @@ Create `tools/zomboid_editors/Tilesets/DailyGrind_Trees.tiles`:
 <?xml version="1.0" encoding="UTF-8"?>
 <tilesets>
   <tileset name="DailyGrind_Trees_64x64">
+    <!-- Note: File is named "64x32" for the tile base, but sprites are 64x64 -->
     <image source="../../../assets/isometric_trees_pack/sheets/trees_64x32_shaded.png" 
-           width="640" height="448"/>
+           width="1536" height="4224"/>
     <tile width="64" height="64"/>
-    <grid width="10" height="7"/>
+    <grid width="24" height="66"/>
     <properties>
       <property name="walkable" value="false"/>
       <property name="type" value="decoration"/>

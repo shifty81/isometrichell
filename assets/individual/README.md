@@ -67,10 +67,14 @@ Tree sprites for vegetation and decoration in both standard and high-resolution 
 - `trees_64x32_no_shadow/` - Trees without shadows (for custom lighting)
 - `trees_64x32_cloudy/` - Trees with overcast/cloudy lighting
 
+**Note**: The "64x32" in the name refers to the isometric tile base size these trees are designed for, but the actual sprite dimensions are 64×64 pixels to accommodate tree height.
+
 #### High Resolution (128×128 pixels)
 - `trees_128x64_shaded/` - High-res trees with shadows
 - `trees_128x64_no_shadow/` - High-res trees without shadows
 - `trees_128x64_cloudy/` - High-res trees with cloudy lighting
+
+**Note**: Similarly, "128x64" refers to the tile base, but sprites are 128×128 pixels.
 
 ### Tree Varieties Included
 
