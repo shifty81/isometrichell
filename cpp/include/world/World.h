@@ -5,6 +5,7 @@
 #include <memory>
 #include "Tile.h"
 #include "Biome.h"
+#include "../utils/NoiseGenerator.h"
 
 // Forward declarations
 class Renderer;
@@ -52,15 +53,19 @@ private:
     int height;
     std::vector<std::vector<std::unique_ptr<Tile>>> tiles;
     std::vector<std::vector<std::unique_ptr<Biome>>> biomeMap;
+    std::unique_ptr<NoiseGenerator> noiseGen;
     
-    // Generate biome map
+    // Generate biome map using noise
     void generateBiomeMap();
     
-    // Generate terrain
+    // Generate terrain based on biomes and noise
     void generateTerrain();
     
-    // Generate decorations (trees, rocks, bushes)
+    // Generate decorations (trees, rocks, bushes) using noise for distribution
     void generateDecorations();
+    
+    // Helper: Get biome type from noise values
+    BiomeType getBiomeFromNoise(float temperature, float moisture) const;
 };
 
 #endif // WORLD_H
