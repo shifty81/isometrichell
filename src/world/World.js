@@ -242,6 +242,12 @@ class World {
         const endX = Math.min(this.width, startX + 40);
         const endY = Math.min(this.height, startY + 40);
         
+        // Depth sorting constants for z-ordering
+        const SORT_KEY_Y_MULTIPLIER = 1000; // Multiplier for Y coordinate in sort key
+        const LAYER_OFFSET_DECORATION = 0.5; // Decorations render above tiles
+        const LAYER_OFFSET_BUILDING = 0.6;   // Buildings render above decorations
+        const LAYER_OFFSET_ENTITY = 0.7;     // Entities render above buildings
+        
         // Collect all renderable objects with their Y positions for depth sorting
         const renderQueue = [];
         
@@ -254,7 +260,7 @@ class World {
                     y: y,
                     x: x,
                     tile: tile,
-                    sortKey: y * 1000 + x // Tiles sorted by position
+                    sortKey: y * SORT_KEY_Y_MULTIPLIER + x // Tiles sorted by position
                 });
             }
         }
@@ -269,7 +275,7 @@ class World {
                         y: y,
                         x: x,
                         tile: tile,
-                        sortKey: y * 1000 + x + 0.5 // Decorations on top of tiles
+                        sortKey: y * SORT_KEY_Y_MULTIPLIER + x + LAYER_OFFSET_DECORATION
                     });
                 }
                 if (tile.building) {
@@ -278,19 +284,26 @@ class World {
                         y: y,
                         x: x,
                         tile: tile,
-                        sortKey: y * 1000 + x + 0.6 // Buildings slightly above decorations
+                        sortKey: y * SORT_KEY_Y_MULTIPLIER + x + LAYER_OFFSET_BUILDING
                     });
                 }
             }
         }
         
-        // Add entities to render queue
+        // Add entities to render queue (only if within visible range)
         for (const entity of this.entities) {
-            renderQueue.push({
-                type: 'entity',
-                entity: entity,
-                sortKey: entity.y * 1000 + entity.x + 0.7 // Entities use their exact position
-            });
+            const entityTileX = Math.floor(entity.x);
+            const entityTileY = Math.floor(entity.y);
+            
+            // Check if entity is within visible range (with some padding)
+            if (entityTileX >= startX - 2 && entityTileX <= endX + 2 &&
+                entityTileY >= startY - 2 && entityTileY <= endY + 2) {
+                renderQueue.push({
+                    type: 'entity',
+                    entity: entity,
+                    sortKey: entity.y * SORT_KEY_Y_MULTIPLIER + entity.x + LAYER_OFFSET_ENTITY
+                });
+            }
         }
         
         // Sort by sortKey (Y position primarily, with slight offsets for layering)
