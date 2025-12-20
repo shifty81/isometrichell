@@ -98,6 +98,11 @@ set(ENGINE_SOURCES
     cpp/src/rendering/Texture.cpp
     cpp/src/rendering/Camera.cpp
     cpp/src/rendering/IsometricRenderer.cpp
+    cpp/src/rendering/OpenGLBackend.cpp
+    cpp/src/rendering/DirectXBackend.cpp
+    cpp/src/rendering/BatchRenderer.cpp
+    cpp/src/rendering/Framebuffer.cpp
+    cpp/src/rendering/ShaderLibrary.cpp
     cpp/src/world/Tile.cpp
     cpp/src/world/World.cpp
     cpp/src/entities/Entity.cpp
@@ -119,6 +124,12 @@ set(ENGINE_HEADERS
     cpp/include/rendering/Texture.h
     cpp/include/rendering/Camera.h
     cpp/include/rendering/IsometricRenderer.h
+    cpp/include/rendering/RenderBackend.h
+    cpp/include/rendering/OpenGLBackend.h
+    cpp/include/rendering/DirectXBackend.h
+    cpp/include/rendering/BatchRenderer.h
+    cpp/include/rendering/Framebuffer.h
+    cpp/include/rendering/ShaderLibrary.h
     cpp/include/world/Tile.h
     cpp/include/world/World.h
     cpp/include/entities/Entity.h
