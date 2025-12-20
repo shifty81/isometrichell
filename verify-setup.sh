@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Verification Script for The Daily Grind
 # Tests that all required files and dependencies are present
@@ -122,7 +122,11 @@ echo ""
 
 echo "7. Checking Documentation..."
 echo "-------------------------------------------"
-check_exists "docs/README.md" "Docs index" || check_exists "docs" "Docs directory"
+if check_exists "docs/README.md" "Docs index"; then
+    :
+else
+    check_exists "docs" "Docs directory"
+fi
 check_exists "docs/TESTING_GUIDE.md" "Testing guide"
 check_exists "docs/CPP_BUILD.md" "C++ build guide"
 check_exists "docs/PROJECT_SUMMARY.md" "Project summary"
@@ -173,7 +177,7 @@ if command -v pkg-config &> /dev/null; then
         echo -e "${GREEN}✓${NC} OpenGL development libraries found"
     else
         echo -e "${YELLOW}⚠${NC} OpenGL development libraries not found (needed for C++ engine)"
-        echo "  Install with: sudo apt-get install libopengl-dev libgl-dev libglu1-mesa-dev"
+        echo "  See docs/BUILD_DEPENDENCIES.md for installation instructions"
     fi
 else
     echo -e "${YELLOW}⚠${NC} pkg-config not found (cannot check OpenGL)"

@@ -239,9 +239,7 @@ This will verify:
 To test the C++ engine:
 
 ```bash
-# Install dependencies first (Ubuntu/Debian)
-sudo apt-get install libopengl-dev libgl-dev libglu1-mesa-dev \
-    libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
+# Install dependencies first - see docs/BUILD_DEPENDENCIES.md for your platform
 
 # Build and launch
 ./launch-engine.sh
@@ -279,7 +277,7 @@ If tests fail:
 2. Check [BUILD_DEPENDENCIES.md](BUILD_DEPENDENCIES.md) for setup issues
 3. View browser console for specific errors
 4. Download logs with Ctrl+Shift+L
-5. Check GitHub issues for known problems
+5. Open an issue in the project repository with your error logs
 
 ## Summary
 
