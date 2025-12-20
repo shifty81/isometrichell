@@ -22,11 +22,11 @@ class Game {
         // Create isometric renderer
         this.isometricRenderer = new IsometricRenderer(this.engine.renderer);
         
-        // Create world (30x30 tiles) with asset loader
-        this.world = new World(30, 30, 64, 32, this.assetLoader);
+        // Create world (50x50 tiles) with asset loader
+        this.world = new World(50, 50, 64, 32, this.assetLoader);
         
         // Create player at center of world
-        this.player = new Player(15, 15);
+        this.player = new Player(25, 25);
         this.world.addEntity(this.player);
         
         // Create building system

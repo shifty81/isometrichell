@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.log('');
         console.log('✅ Game startup complete!');
         console.log('📦 Assets Loaded:', assetLoader.loadProgress, '/', assetLoader.totalAssets);
-        console.log('🗺️  World Size: 30x30 tiles');
+        console.log('🗺️  World Size: 50x50 tiles');
         console.log('🏗️  Building system ready');
         console.log('🎨 Asset Editor ready');
         console.log('');

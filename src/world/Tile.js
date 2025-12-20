@@ -27,7 +27,12 @@ class Tile {
      * Check if tile is walkable
      */
     isWalkable() {
-        return this.type.walkable && !this.building;
+        // Tiles with trees or resource decorations block movement
+        const hasBlockingDecoration = this.decoration && (
+            this.decoration.startsWith('tree_') || 
+            this.decoration.startsWith('rocks_')
+        );
+        return this.type.walkable && !this.building && !hasBlockingDecoration;
     }
     
     /**
