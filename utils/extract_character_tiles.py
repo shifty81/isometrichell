@@ -3,8 +3,8 @@
 Character Tile Extractor Utility
 
 This script extracts individual character frames from sprite sheets in
-assets/Charachters/Player/ and saves them to assets/individual/charachter/player/
-for easy use in the game.
+assets/Charachters/Player/ (note: original folder has typo in name) and saves 
+them to assets/individual/charachter/player/ for easy use in the game.
 
 Each sprite sheet is a 7x4 grid of 256x256 tiles (28 frames per animation).
 """
@@ -74,10 +74,10 @@ def main():
     project_root = script_dir.parent
     assets_dir = project_root / 'assets'
     
-    # Input: assets/Charachters/Player/
+    # Input: assets/Charachters/Player/ (note: original folder has typo in name)
     input_dir = assets_dir / 'Charachters' / 'Player'
     
-    # Output: assets/individual/charachter/player/
+    # Output: assets/individual/charachter/player/ (note: kept original naming)
     output_base_dir = assets_dir / 'individual' / 'charachter' / 'player'
     
     print("=" * 70)
