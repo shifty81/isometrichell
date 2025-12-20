@@ -194,6 +194,8 @@ window.addEventListener('DOMContentLoaded', async () => {
             if (!audioManager.currentMusic) {
                 audioManager.playMusic('music');
                 console.log('🎵 Background music started');
+                // Start ambient sounds after user interaction
+                game.startAmbientSounds();
             }
         }, { once: true });
         
