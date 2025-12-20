@@ -2,8 +2,11 @@
 
 # Build script for Isometric Hell C++ Engine
 
-# Enable pipefail to catch errors in pipes
-set -o pipefail
+# Enable strict error handling:
+# -e: Exit on any command failure
+# -o pipefail: Exit code of pipe is the exit code of the last failing command (not just the last command)
+# This ensures we properly detect failures in commands piped to tee
+set -eo pipefail
 
 # Save the root directory first
 ROOT_DIR=$(pwd)
