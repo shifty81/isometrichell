@@ -352,7 +352,7 @@ class CharacterSelectionUI {
             this.ctx.strokeRect(this.layout.optionsX, y, width, this.layout.optionHeight);
 
             // Skin tone preview
-            this.ctx.fillStyle = this.customization.getSkinToneColor();
+            this.ctx.fillStyle = this.customization.getSkinToneColor(i);
             this.ctx.fillRect(this.layout.optionsX + 10, y + 10, 40, 40);
             this.ctx.strokeStyle = '#FFFFFF';
             this.ctx.strokeRect(this.layout.optionsX + 10, y + 10, 40, 40);

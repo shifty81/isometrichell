@@ -118,9 +118,14 @@ class InventoryUI {
      * Move item between slots
      */
     _moveItem(source, target) {
-        // TODO: Implement full drag-and-drop item movement
-        // This requires more complex logic to handle different slot types,
-        // container transfers, and item swapping
+        // NOTE: Drag-and-drop functionality is intentionally not fully implemented
+        // to keep changes minimal. The visual feedback (dragging items) works,
+        // but actual item movement requires more complex logic including:
+        // - Slot type compatibility checking
+        // - Container transfers with capacity validation
+        // - Item swapping between slots
+        // - Equipment requirement verification
+        // This will be implemented in a future enhancement.
         console.log('Move item from', source, 'to', target);
         console.log('Note: Full drag-and-drop will be implemented in future update');
     }

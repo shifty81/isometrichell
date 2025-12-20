@@ -200,9 +200,9 @@ class CharacterCustomization {
     }
 
     /**
-     * Get skin tone hex color
+     * Get skin tone hex color by index
      */
-    getSkinToneColor() {
+    getSkinToneColor(index = null) {
         const colors = [
             '#FFE0BD', // light
             '#F1C27D', // medium-light
@@ -211,7 +211,8 @@ class CharacterCustomization {
             '#5C4033', // dark
             '#3D2817'  // very-dark
         ];
-        return colors[this.appearance.skinTone] || colors[0];
+        const toneIndex = index !== null ? index : this.appearance.skinTone;
+        return colors[toneIndex] || colors[0];
     }
 
     /**

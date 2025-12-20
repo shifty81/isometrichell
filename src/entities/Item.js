@@ -39,21 +39,12 @@ class Item {
     }
 
     /**
-     * Clone this item
+     * Clone this item - override in subclasses for proper cloning
      */
     clone() {
-        const ItemClass = this.constructor;
-        const cloned = new ItemClass();
-        cloned.id = this.id;
-        cloned.name = this.name;
-        cloned.description = this.description;
-        cloned.type = this.type;
-        cloned.weight = this.weight;
-        cloned.volume = this.volume;
-        cloned.icon = this.icon;
-        cloned.stackable = this.stackable;
-        cloned.stackSize = this.stackSize;
-        cloned.quality = this.quality;
+        // Default implementation for base Item class
+        const cloned = Object.create(Object.getPrototypeOf(this));
+        Object.assign(cloned, this);
         return cloned;
     }
 }
