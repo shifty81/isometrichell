@@ -10,12 +10,12 @@ int main() {
     Logger::getInstance().initialize("logs/engine.log");
     
     LOG_INFO("=================================");
-    LOG_INFO("  Isometric Hell - Game Engine");
+    LOG_INFO("  The Daily Grind - Game Engine");
     LOG_INFO("  C++ OpenGL Implementation");
     LOG_INFO("=================================");
     
     std::cout << "==================================" << std::endl;
-    std::cout << "  Isometric Hell - Game Engine" << std::endl;
+    std::cout << "  The Daily Grind - Game Engine" << std::endl;
     std::cout << "  C++ OpenGL Implementation" << std::endl;
     std::cout << "==================================" << std::endl;
     std::cout << std::endl;
@@ -23,7 +23,7 @@ int main() {
     try {
         // Create engine
         LOG_INFO("Creating engine...");
-        std::unique_ptr<Engine> engine = std::make_unique<Engine>(1280, 720, "Isometric Hell");
+        std::unique_ptr<Engine> engine = std::make_unique<Engine>(1280, 720, "The Daily Grind");
         
         // Initialize engine
         LOG_INFO("Initializing engine...");

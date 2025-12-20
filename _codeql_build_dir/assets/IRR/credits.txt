@@ -1,0 +1,45 @@
+it's CC0 - no need to credit!
+
+
+Layer 1:
+extracted from my animated fountain
+https://opengameart.org/content/animated-fountain-isometric
+
+Layer 2:
+created for my isometric ruin tileset
+https://opengameart.org/content/old-ruins-tileset
+(Note: the ruin tileset is CC-BY-SA 3.0 because it contains art from other artists under this license which are NOT part of this resource set. It only contains elements created by me including own textures only)
+
+Layer 3:
+based on my mine asset pack
+https://opengameart.org/content/free-mine-assets-pack
+
+Layer 4: Big Rock *
+
+based on Kenney's nature kit
+https://opengameart.org/content/nature-kit
+
+Layer 4: Rock *
+based on https://www.blendswap.com/blends/view/60436 by therealmarkehlen
+
+Layer 5:
+
+created by me from own photoscanned textures
+
+
+CC0 HDRIs:
+
+shady patch:
+https://cloud.blender.org/p/hdri/57ff6a49e5e20f05e23ba15b
+
+outside roof 2
+https://cloud.blender.org/p/hdri/5790fb54c379cf38661521d6
+
+cave
+https://cloud.blender.org/p/hdri/585ab78f1f47427f2541f8ed
+
+falls sunrise dim
+https://cloud.blender.org/p/hdri/585c05401f474201dd289fdd
+
+field 1
+https://cloud.blender.org/p/hdri/585c05c31f474201d3acb912

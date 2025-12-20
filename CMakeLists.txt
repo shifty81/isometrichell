@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(IsometricHell VERSION 1.0)
+project(TheDailyGrind VERSION 1.0)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -71,7 +71,7 @@ if(NOT glm_FOUND)
     FetchContent_Declare(
         glm
         GIT_REPOSITORY https://github.com/g-truc/glm.git
-        GIT_TAG 0.9.9.8
+        GIT_TAG 1.0.1  # Use newer version with CMake 3.10+ support
     )
     FetchContent_MakeAvailable(glm)
 endif()

@@ -1,6 +1,7 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <memory>
 #include "Time.h"

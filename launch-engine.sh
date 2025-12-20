@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Launch script for Isometric Hell C++ Engine
+# Launch script for The Daily Grind C++ Engine
 
 echo "========================================"
-echo "  Launching Isometric Hell C++ Engine"
+echo "  Launching The Daily Grind C++ Engine"
 echo "========================================"
 echo ""
 echo "📋 Error Logging is enabled:"
@@ -12,7 +12,7 @@ echo "   - Check logs for crash information"
 echo ""
 
 # Check if build exists
-if [ ! -f "build/IsometricHell" ]; then
+if [ ! -f "build/TheDailyGrind" ]; then
     echo "Engine not built yet. Building now..."
     ./build-engine.sh
     
@@ -24,4 +24,4 @@ fi
 
 # Run the engine
 cd build
-./IsometricHell
+./TheDailyGrind
