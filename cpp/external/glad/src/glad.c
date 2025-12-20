@@ -48,6 +48,12 @@ PFNGLVIEWPORTPROC glViewport;
 PFNGLENABLEPROC glEnable;
 PFNGLDISABLEPROC glDisable;
 PFNGLBLENDFUNCPROC glBlendFunc;
+PFNGLDEPTHFUNCPROC glDepthFunc;
+PFNGLACTIVETEXTUREPROC glActiveTexture;
+PFNGLGETFLOATVPROC glGetFloatv;
+PFNGLTEXPARAMETERFPROC glTexParameterf;
+PFNGLCULLFACEPROC glCullFace;
+PFNGLFRONTFACEPROC glFrontFace;
 PFNGLGENTEXTURESPROC glGenTextures;
 PFNGLDELETETEXTURESPROC glDeleteTextures;
 PFNGLBINDTEXTUREPROC glBindTexture;
@@ -95,7 +101,10 @@ static void load_GL_VERSION_1_0(GLADloadproc load) {
     glEnable = (PFNGLENABLEPROC)load("glEnable");
     glDisable = (PFNGLDISABLEPROC)load("glDisable");
     glBlendFunc = (PFNGLBLENDFUNCPROC)load("glBlendFunc");
+    glDepthFunc = (PFNGLDEPTHFUNCPROC)load("glDepthFunc");
     glGetString = (PFNGLGETSTRINGPROC)load("glGetString");
+    glCullFace = (PFNGLCULLFACEPROC)load("glCullFace");
+    glFrontFace = (PFNGLFRONTFACEPROC)load("glFrontFace");
 }
 
 static void load_GL_VERSION_1_1(GLADloadproc load) {
@@ -103,9 +112,11 @@ static void load_GL_VERSION_1_1(GLADloadproc load) {
     glDeleteTextures = (PFNGLDELETETEXTURESPROC)load("glDeleteTextures");
     glBindTexture = (PFNGLBINDTEXTUREPROC)load("glBindTexture");
     glTexParameteri = (PFNGLTEXPARAMETERIPROC)load("glTexParameteri");
+    glTexParameterf = (PFNGLTEXPARAMETERFPROC)load("glTexParameterf");
     glTexImage2D = (PFNGLTEXIMAGE2DPROC)load("glTexImage2D");
     glDrawArrays = (PFNGLDRAWARRAYSPROC)load("glDrawArrays");
     glDrawElements = (PFNGLDRAWELEMENTSPROC)load("glDrawElements");
+    glGetFloatv = (PFNGLGETFLOATVPROC)load("glGetFloatv");
 }
 
 static void load_GL_VERSION_1_5(GLADloadproc load) {
@@ -146,6 +157,7 @@ static void load_GL_VERSION_3_0(GLADloadproc load) {
     glDeleteVertexArrays = (PFNGLDELETEVERTEXARRAYSPROC)load("glDeleteVertexArrays");
     glBindVertexArray = (PFNGLBINDVERTEXARRAYPROC)load("glBindVertexArray");
     glGenerateMipmap = (PFNGLGENERATEMIPMAPPROC)load("glGenerateMipmap");
+    glActiveTexture = (PFNGLACTIVETEXTUREPROC)load("glActiveTexture");
 }
 
 static void* glad_get_proc_from_userptr(void* userptr, const char *name) {

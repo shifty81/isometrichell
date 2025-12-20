@@ -7,7 +7,6 @@
 #include "world/World.h"
 #include "building/BuildingSystem.h"
 #include "entities/Entity.h"
-#include <GLFW/glfw3.h>
 #include <iostream>
 
 Game::Game(Engine* engine)

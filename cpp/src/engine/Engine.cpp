@@ -3,7 +3,6 @@
 #include "rendering/Camera.h"
 #include "game/Game.h"
 #include "utils/Logger.h"
-#include <glad/glad.h>
 #include <iostream>
 
 Engine::Engine(int width, int height, const char* title)
