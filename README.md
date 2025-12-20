@@ -54,11 +54,18 @@ This architecture allows for rapid level design in the web editor while maintain
 #### For C++ Engine:
 - CMake 3.10+
 - C++17 compatible compiler
-- OpenGL 3.3+
-- Development libraries: GLFW, GLM
-  - Ubuntu/Debian: `sudo apt-get install cmake libglfw3-dev libglm-dev`
-  - macOS: `brew install cmake glfw glm`
-  - Windows: Visual Studio 2017+ (libraries auto-fetched)
+- OpenGL 3.3+ with development headers
+- X11 development libraries (Linux)
+
+**Quick Install (Ubuntu/Debian):**
+```bash
+sudo apt-get update && sudo apt-get install -y \
+    build-essential cmake git \
+    libopengl-dev libgl-dev libglu1-mesa-dev \
+    libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
+```
+
+For other platforms and detailed dependency information, see [docs/BUILD_DEPENDENCIES.md](docs/BUILD_DEPENDENCIES.md)
 
 #### For Web Editor:
 - Node.js (recommended) or Python 3
@@ -318,6 +325,7 @@ This is a custom game engine built from scratch. Contributions are welcome! The 
 Additional documentation is available in the [docs/](docs/) folder:
 
 - [ROADMAP.md](docs/ROADMAP.md) - Detailed development roadmap
+- [BUILD_DEPENDENCIES.md](docs/BUILD_DEPENDENCIES.md) - Required dependencies and installation guide
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md) - Technical architecture documentation
 - [ASSETS.md](docs/ASSETS.md) - Asset management and organization
 - [ASSET_USAGE.md](docs/ASSET_USAGE.md) - Guide to using game assets

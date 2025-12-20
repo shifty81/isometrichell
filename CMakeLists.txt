@@ -14,6 +14,15 @@ endif()
 
 # Find OpenGL
 find_package(OpenGL REQUIRED)
+if(NOT OPENGL_FOUND)
+    message(FATAL_ERROR 
+        "OpenGL not found!\n"
+        "Please install OpenGL development libraries:\n"
+        "  Ubuntu/Debian: sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev\n"
+        "  Fedora/RHEL: sudo dnf install mesa-libGL-devel mesa-libGLU-devel\n"
+        "  Arch: sudo pacman -S mesa glu\n"
+    )
+endif()
 
 # GLFW
 find_package(glfw3 3.3 QUIET)
