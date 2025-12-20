@@ -18,6 +18,9 @@ class Tile {
         this.building = null;
         this.entity = null;
         this.decoration = null; // Can be 'tree_1', 'bush_1', 'rocks_1', 'pond', etc.
+        this.isResource = false; // Whether this decoration can be gathered
+        // Store a random tile variation for visual variety (0-9)
+        this.tileVariation = Math.floor(Math.random() * 10);
     }
     
     /**
@@ -67,9 +70,16 @@ class Tile {
     }
     
     /**
-     * Check if tile has decoration
+     * Check if tile has a resource decoration
      */
     hasDecoration() {
         return this.decoration !== null;
+    }
+    
+    /**
+     * Check if tile is a gatherable resource
+     */
+    isGatherableResource() {
+        return this.isResource && this.decoration !== null;
     }
 }

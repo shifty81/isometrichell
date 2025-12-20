@@ -105,12 +105,15 @@ set(ENGINE_SOURCES
     cpp/src/rendering/ShaderLibrary.cpp
     cpp/src/world/Tile.cpp
     cpp/src/world/World.cpp
+    cpp/src/world/Biome.cpp
     cpp/src/entities/Entity.cpp
+    cpp/src/entities/Player.cpp
     cpp/src/building/Building.cpp
     cpp/src/building/BuildingSystem.cpp
     cpp/src/game/Game.cpp
     cpp/src/utils/IsometricUtils.cpp
     cpp/src/utils/Logger.cpp
+    cpp/src/utils/NoiseGenerator.cpp
     ${GLAD_SOURCES}
 )
 
@@ -132,12 +135,15 @@ set(ENGINE_HEADERS
     cpp/include/rendering/ShaderLibrary.h
     cpp/include/world/Tile.h
     cpp/include/world/World.h
+    cpp/include/world/Biome.h
     cpp/include/entities/Entity.h
+    cpp/include/entities/Player.h
     cpp/include/building/Building.h
     cpp/include/building/BuildingSystem.h
     cpp/include/game/Game.h
     cpp/include/utils/IsometricUtils.h
     cpp/include/utils/Logger.h
+    cpp/include/utils/NoiseGenerator.h
 )
 
 # Create executable

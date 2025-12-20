@@ -68,12 +68,12 @@
         </div>
         <div id="controls">
             <div class="control-line"><strong>Controls:</strong></div>
-            <div class="control-line">WASD / Arrow Keys - Move Camera</div>
-            <div class="control-line">Mouse - Hover over tiles</div>
+            <div class="control-line">WASD - Move Player</div>
+            <div class="control-line">Mouse - Hover over tiles / Interact</div>
+            <div class="control-line">Left Click - Gather Resources / Place Building</div>
             <div class="control-line">E - Toggle Asset Editor</div>
             <div class="control-line">B - Building Mode</div>
-            <div class="control-line">Left Click - Place Building</div>
-            <div class="control-line">Space - Place Boat</div>
+            <div class="control-line">1/2/3 - Select Building Type</div>
         </div>
     </div>
 
@@ -95,11 +95,14 @@
     <!-- Utils -->
     <script src="utils/IsometricUtils.js"></script>
     <script src="utils/MathUtils.js"></script>
+    <script src="utils/NoiseGenerator.js"></script>
     
     <!-- Game Systems -->
     <script src="src/world/Tile.js"></script>
+    <script src="src/world/Biome.js"></script>
     <script src="src/world/World.js"></script>
     <script src="src/entities/Entity.js"></script>
+    <script src="src/entities/Player.js"></script>
     <script src="src/entities/Boat.js"></script>
     <script src="src/building/Building.js"></script>
     <script src="src/building/BuildingSystem.js"></script>

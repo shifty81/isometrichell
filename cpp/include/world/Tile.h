@@ -30,10 +30,15 @@ public:
     TileType getType() const { return type; }
     bool isWalkable() const { return walkable; }
     bool isOccupied() const { return occupied; }
+    std::string getDecoration() const { return decoration; }
+    bool isResource() const { return resource; }
+    int getTileVariation() const { return tileVariation; }
     
     // Setters
     void setType(TileType type);
     void setOccupied(bool occupied) { this->occupied = occupied; }
+    void setDecoration(const std::string& deco) { decoration = deco; }
+    void setResource(bool res) { resource = res; }
     
     // Get color based on tile type (for rendering without textures)
     glm::vec4 getColor() const;
@@ -49,6 +54,9 @@ private:
     TileType type;
     bool walkable;
     bool occupied;
+    std::string decoration;  // e.g., "tree_1", "bush_2", "rocks_1"
+    bool resource;           // Whether this decoration can be gathered
+    int tileVariation;       // Visual variation (0-9) for tile diversity
 };
 
 #endif // TILE_H

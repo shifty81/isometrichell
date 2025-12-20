@@ -53,9 +53,14 @@ public:
     
     // Convert grid coordinates to screen position
     glm::vec2 gridToScreen(int gridX, int gridY) const;
+    glm::vec2 tileToScreen(float x, float y) const; // For float positions (entities)
     
     // Convert screen position to grid coordinates
     glm::ivec2 screenToGrid(const glm::vec2& screenPos, float screenWidth, float screenHeight) const;
+    
+    // Draw simple shapes in isometric space
+    void drawCircle(float screenX, float screenY, float radius, const glm::vec4& color);
+    void drawEllipse(float screenX, float screenY, float radiusX, float radiusY, const glm::vec4& color);
     
 private:
     Renderer* renderer;

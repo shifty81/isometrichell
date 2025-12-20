@@ -49,6 +49,10 @@ public:
         float rotation = 0.0f
     );
     
+    // Draw simple shapes (convenience methods)
+    void drawRect(float x, float y, float width, float height, const glm::vec4& color);
+    void drawLine(float x1, float y1, float x2, float y2, const glm::vec4& color, float thickness = 1.0f);
+    
     // Get default shader
     Shader* getShader() { return shader.get(); }
     

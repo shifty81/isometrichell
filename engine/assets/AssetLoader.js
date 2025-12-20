@@ -50,19 +50,23 @@ class AssetLoader {
     }
     
     /**
-     * Load all tile assets
+     * Load all tile assets from individual directory
      */
     async loadTiles() {
-        const tileAssets = [
-            { name: 'grass_green', path: 'assets/ground_tiles_sheets/grass_green_64x32.png' },
-            { name: 'grass_dry', path: 'assets/ground_tiles_sheets/grass_dry_64x32.png' },
-            { name: 'grass_medium', path: 'assets/ground_tiles_sheets/grass_medium_64x32.png' },
-            { name: 'dirt', path: 'assets/ground_tiles_sheets/dirt_64x32.png' },
-            { name: 'dirt_dark', path: 'assets/ground_tiles_sheets/dirt_dark_64x32.png' },
-            { name: 'sand', path: 'assets/ground_tiles_sheets/sand_64x32.png' },
-            { name: 'stone_path', path: 'assets/ground_tiles_sheets/stone_path_64x32.png' },
-            { name: 'forest_ground', path: 'assets/ground_tiles_sheets/forest_ground_64x32.png' }
-        ];
+        const tileAssets = [];
+        const tileTypes = ['grass_green', 'grass_dry', 'grass_medium', 'dirt', 'dirt_dark', 'sand', 'stone_path', 'forest_ground'];
+        const tilesPerType = 10; // Load first 10 variations of each tile type for variety
+        
+        // Load multiple variations of each tile type
+        for (const tileType of tileTypes) {
+            for (let i = 0; i < tilesPerType; i++) {
+                const idx = String(i).padStart(3, '0');
+                tileAssets.push({
+                    name: `${tileType}_${i}`,
+                    path: `assets/individual/ground_tiles/${tileType}_64x32/${tileType}_64x32-${idx}.png`
+                });
+            }
+        }
         
         this.totalAssets += tileAssets.length;
         
@@ -77,27 +81,36 @@ class AssetLoader {
     }
     
     /**
-     * Load decoration assets (trees, bushes, rocks)
+     * Load decoration assets (trees, bushes, rocks) from individual directory
      */
     async loadDecorations() {
-        const decorations = [
-            // Trees
-            { name: 'tree_1', path: 'assets/isometric_trees_pack/single/trees_64x32_shaded/trees_64x32_shaded-1.png' },
-            { name: 'tree_2', path: 'assets/isometric_trees_pack/single/trees_64x32_shaded/trees_64x32_shaded-5.png' },
-            { name: 'tree_3', path: 'assets/isometric_trees_pack/single/trees_64x32_shaded/trees_64x32_shaded-18.png' },
-            
-            // Bushes
+        const decorations = [];
+        
+        // Load tree variations from individual directory
+        const treeCount = 20; // Load 20 different tree variations
+        for (let i = 0; i < treeCount; i++) {
+            const idx = String(i).padStart(3, '0');
+            decorations.push({
+                name: `tree_${i}`,
+                path: `assets/individual/trees/trees_64x32_shaded/trees_64x32_shaded-${idx}.png`
+            });
+        }
+        
+        // Bushes (from main assets directory)
+        decorations.push(
             { name: 'bush_1', path: 'assets/hjm-bushes_01-alpha.png' },
             { name: 'bush_2', path: 'assets/hjm-bushes_02-alpha.png' },
-            { name: 'bush_3', path: 'assets/hjm-bushes_03-alpha.png' },
-            
-            // Rocks
+            { name: 'bush_3', path: 'assets/hjm-bushes_03-alpha.png' }
+        );
+        
+        // Rocks (from main assets directory)
+        decorations.push(
             { name: 'rocks_1', path: 'assets/hjm-assorted_rocks_1.png' },
-            { name: 'rocks_2', path: 'assets/hjm-assorted_rocks_2.png' },
-            
-            // Water decoration
-            { name: 'pond', path: 'assets/hjm-pond_1.png' }
-        ];
+            { name: 'rocks_2', path: 'assets/hjm-assorted_rocks_2.png' }
+        );
+        
+        // Water decoration
+        decorations.push({ name: 'pond', path: 'assets/hjm-pond_1.png' });
         
         this.totalAssets += decorations.length;
         
