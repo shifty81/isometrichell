@@ -233,7 +233,7 @@ class CharacterCustomization {
      */
     randomize() {
         // Random gender
-        this.appearance.gender = this.options.genders[Math.floor(Math.random() * 2)];
+        this.appearance.gender = this.options.genders[Math.floor(Math.random() * this.options.genders.length)];
         
         // Random skin tone
         this.appearance.skinTone = Math.floor(Math.random() * this.options.skinTones.length);

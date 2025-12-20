@@ -520,8 +520,10 @@ class CharacterSelectionUI {
         const isHover = this.mousePos.x >= x && this.mousePos.x <= x + width &&
                        this.mousePos.y >= y && this.mousePos.y <= y + height;
 
-        // Button background
-        this.ctx.fillStyle = isHover ? color : color + 'CC';
+        // Button background with proper alpha
+        const alpha = isHover ? '1.0' : '0.8';
+        this.ctx.fillStyle = color.startsWith('#') ? 
+            this._hexToRgba(color, parseFloat(alpha)) : color;
         this.ctx.fillRect(x, y, width, height);
 
         // Button border
@@ -534,5 +536,15 @@ class CharacterSelectionUI {
         this.ctx.font = 'bold 18px Arial';
         this.ctx.textAlign = 'center';
         this.ctx.fillText(text, x + width / 2, y + height / 2 + 6);
+    }
+
+    /**
+     * Convert hex color to rgba
+     */
+    _hexToRgba(hex, alpha) {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
     }
 }

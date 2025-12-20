@@ -43,7 +43,18 @@ class Item {
      */
     clone() {
         const ItemClass = this.constructor;
-        return new ItemClass();
+        const cloned = new ItemClass();
+        cloned.id = this.id;
+        cloned.name = this.name;
+        cloned.description = this.description;
+        cloned.type = this.type;
+        cloned.weight = this.weight;
+        cloned.volume = this.volume;
+        cloned.icon = this.icon;
+        cloned.stackable = this.stackable;
+        cloned.stackSize = this.stackSize;
+        cloned.quality = this.quality;
+        return cloned;
     }
 }
 

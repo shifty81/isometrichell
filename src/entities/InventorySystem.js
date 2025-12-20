@@ -111,14 +111,14 @@ class InventorySystem {
         }
 
         // Special handling for tools requiring toolbox
-        if (item instanceof ToolItem && item.requiresToolbox && !this.toolbox) {
+        if (item.type === 'tool' && item.requiresToolbox && !this.toolbox) {
             return { success: false, message: 'Requires toolbox to carry' };
         }
 
         slot.place(item);
         
         // If it's a container on back, add to containers list
-        if (slotName === 'back' && item instanceof ContainerItem) {
+        if (slotName === 'back' && item.type === 'container') {
             this.containers.push(item);
             item.isEquipped = true;
             
@@ -147,7 +147,7 @@ class InventorySystem {
         const item = slot.remove();
 
         // Remove from containers if it was on back
-        if (slotName === 'back' && item instanceof ContainerItem) {
+        if (slotName === 'back' && item.type === 'container') {
             const index = this.containers.indexOf(item);
             if (index !== -1) {
                 this.containers.splice(index, 1);

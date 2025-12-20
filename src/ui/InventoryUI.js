@@ -58,6 +58,30 @@ class InventoryUI {
             const y = e.clientY - rect.top;
             this._handleMouseUp(x, y);
         });
+
+        this.canvas.addEventListener('click', (e) => {
+            if (!this.isOpen) return;
+            const rect = this.canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            this._handleClick(x, y);
+        });
+    }
+
+    /**
+     * Handle click events
+     */
+    _handleClick(x, y) {
+        // Check close button
+        const buttonSize = 30;
+        const buttonX = this.panel.x + this.panel.width - buttonSize - 10;
+        const buttonY = this.panel.y + 10;
+        
+        if (x >= buttonX && x <= buttonX + buttonSize &&
+            y >= buttonY && y <= buttonY + buttonSize) {
+            this.close();
+            return;
+        }
     }
 
     /**
@@ -94,9 +118,11 @@ class InventoryUI {
      * Move item between slots
      */
     _moveItem(source, target) {
-        // This is simplified - in a real implementation, you'd need to handle
-        // the specific logic for moving between different inventory locations
+        // TODO: Implement full drag-and-drop item movement
+        // This requires more complex logic to handle different slot types,
+        // container transfers, and item swapping
         console.log('Move item from', source, 'to', target);
+        console.log('Note: Full drag-and-drop will be implemented in future update');
     }
 
     /**
@@ -539,10 +565,5 @@ class InventoryUI {
         this.ctx.moveTo(x + buttonSize - 8, y + 8);
         this.ctx.lineTo(x + 8, y + buttonSize - 8);
         this.ctx.stroke();
-
-        // Handle click
-        if (isHover && this.mousePos.clicked) {
-            this.close();
-        }
     }
 }
