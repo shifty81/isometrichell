@@ -193,11 +193,118 @@
             display: flex;
             margin-top: 8px;
         }
+
+        /* Loading Screen Styles */
+        #loadingScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loadingScreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+        }
+
+        .loading-subtitle {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+        }
+
+        .loading-bar-container {
+            width: 400px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 100%);
+            width: 0%;
+            transition: width 0.3s ease-out;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8);
+            position: relative;
+        }
+
+        .loading-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .loading-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #e0e0e0;
+        }
+
+        .loading-percentage {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .loading-tips {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #888;
+            max-width: 500px;
+            text-align: center;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <div id="gameContainer">
         <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        
+        <!-- Loading Screen -->
+        <div id="loadingScreen">
+            <div class="loading-title">The Daily Grind</div>
+            <div class="loading-subtitle">Life Simulation Game</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <div class="loading-percentage" id="loadingPercentage">0%</div>
+            <div class="loading-text" id="loadingText">Initializing...</div>
+            <div class="loading-tips" id="loadingTip">
+                Tip: Press E to toggle the asset editor while playing
+            </div>
+        </div>
         <div id="ui">
             <div>FPS: <span id="fps">0</span></div>
             <div>Camera: <span id="camera">0, 0</span></div>
