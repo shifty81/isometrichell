@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tilesets>
+  <!-- Building tiles and structures -->
+  <tileset name="DailyGrind_Buildings">
+    <properties>
+      <property name="walkable" value="false"/>
+      <property name="type" value="building"/>
+      <property name="blocks_vision" value="true"/>
+    </properties>
+  </tileset>
+  
+  <!-- Walls -->
+  <tileset name="DailyGrind_Walls">
+    <properties>
+      <property name="walkable" value="false"/>
+      <property name="type" value="wall"/>
+      <property name="blocks_vision" value="true"/>
+    </properties>
+  </tileset>
+  
+  <!-- Doors -->
+  <tileset name="DailyGrind_Doors">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="door"/>
+      <property name="interactable" value="true"/>
+    </properties>
+  </tileset>
+</tilesets>

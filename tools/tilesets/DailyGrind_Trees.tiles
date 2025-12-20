@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tilesets>
+  <!-- Trees - Note: sprites are 64x64 with 64x32 base -->
+  <tileset name="DailyGrind_Trees">
+    <image source="../../assets/isometric_trees_pack/sheets/trees_64x32_shaded.png"/>
+    <properties>
+      <property name="walkable" value="false"/>
+      <property name="type" value="decoration"/>
+      <property name="category" value="tree"/>
+      <property name="blocks_vision" value="true"/>
+    </properties>
+  </tileset>
+  
+  <!-- Bushes if available -->
+  <tileset name="DailyGrind_Bushes">
+    <image source="../../assets/isometric_trees_pack/sheets/bushes_64x32_shaded.png"/>
+    <properties>
+      <property name="walkable" value="false"/>
+      <property name="type" value="decoration"/>
+      <property name="category" value="bush"/>
+    </properties>
+  </tileset>
+</tilesets>

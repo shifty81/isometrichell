@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tilesets>
+  <!-- Character sprites -->
+  <!-- Note: Directory is spelled "Charachters" in assets/ -->
+  <tileset name="DailyGrind_Characters">
+    <directory source="../../assets/Charachters/"/>
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="character"/>
+      <property name="entity" value="true"/>
+    </properties>
+  </tileset>
+</tilesets>

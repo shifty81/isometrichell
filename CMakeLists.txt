@@ -12,6 +12,22 @@ else()
     add_compile_options(-Wall -Wextra -pedantic)
 endif()
 
+# Optional: Setup external map editors (TileZed/WorldEd) if archives are present
+option(SETUP_EDITORS "Automatically setup TileZed/WorldEd from archives" OFF)
+if(SETUP_EDITORS)
+    message(STATUS "Checking for editor archives...")
+    execute_process(
+        COMMAND ${CMAKE_SOURCE_DIR}/tools/setup-editors.sh
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        RESULT_VARIABLE SETUP_RESULT
+    )
+    if(SETUP_RESULT EQUAL 0)
+        message(STATUS "Editor setup complete")
+    else()
+        message(WARNING "Editor setup failed or archives not found")
+    endif()
+endif()
+
 # Find OpenGL
 find_package(OpenGL REQUIRED)
 if(NOT OPENGL_FOUND)

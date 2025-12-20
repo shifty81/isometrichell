@@ -6,7 +6,10 @@
   "scripts": {
     "start": "npx http-server -p 8000 -c-1 -o",
     "dev": "npx http-server -p 8000 -c-1",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "setup:editors": "./tools/setup-editors.sh",
+    "setup:tilesets": "./tools/setup-tilesets.sh",
+    "setup:all": "./tools/setup-editors.sh && ./tools/setup-tilesets.sh"
   },
   "keywords": [
     "game",

@@ -6,6 +6,16 @@
 *~
 .DS_Store
 
+# External editor tools (extracted)
+tools/zomboid_editors/
+
+# External editor archives (keep for setup)
+# Uncomment to exclude from git:
+# *.7z
+# tilezed.7z
+# worlded.7z
+# zomboid_editors.7z
+
 # Logs
 logs/*.log
 logs/*.txt
