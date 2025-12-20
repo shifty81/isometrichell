@@ -36,24 +36,162 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.85));
+            padding: 15px;
+            border-radius: 8px;
             font-size: 14px;
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            backdrop-filter: blur(5px);
+            min-width: 250px;
+        }
+
+        #ui > div {
+            margin: 5px 0;
+            color: #e0e0e0;
+        }
+
+        #ui > div:first-child {
+            color: #4CAF50;
+            font-weight: bold;
         }
 
         #controls {
             position: absolute;
             bottom: 10px;
             left: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.85));
+            padding: 12px 15px;
+            border-radius: 8px;
             font-size: 12px;
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            backdrop-filter: blur(5px);
         }
 
         .control-line {
-            margin: 3px 0;
+            margin: 4px 0;
+            color: #d0d0d0;
+        }
+
+        .control-line:first-child {
+            color: #64B5F6;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        #audioControls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.85));
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            backdrop-filter: blur(5px);
+            min-width: 220px;
+        }
+
+        .audio-section {
+            margin-bottom: 12px;
+        }
+
+        .audio-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .audio-title {
+            color: #FFA726;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            margin: 6px 0;
+        }
+
+        .volume-label {
+            width: 80px;
+            color: #b0b0b0;
+            font-size: 11px;
+        }
+
+        .volume-slider {
+            flex: 1;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            border-radius: 2px;
+            margin-right: 8px;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: #FFA726;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .volume-slider::-webkit-slider-thumb:hover {
+            background: #FFB74D;
+        }
+
+        .volume-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: #FFA726;
+            cursor: pointer;
+            border-radius: 50%;
+            border: none;
+            transition: background 0.2s;
+        }
+
+        .volume-slider::-moz-range-thumb:hover {
+            background: #FFB74D;
+        }
+
+        .volume-value {
+            width: 35px;
+            text-align: right;
+            color: #e0e0e0;
+            font-size: 11px;
+        }
+
+        .mute-button {
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color: #e0e0e0;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            transition: all 0.2s;
+            margin-right: 6px;
+        }
+
+        .mute-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .mute-button.muted {
+            background: rgba(244, 67, 54, 0.3);
+            border-color: rgba(244, 67, 54, 0.5);
+            color: #ffcdd2;
+        }
+
+        .button-row {
+            display: flex;
+            margin-top: 8px;
         }
     </style>
 </head>
@@ -74,6 +212,32 @@
             <div class="control-line">E - Toggle Asset Editor</div>
             <div class="control-line">B - Building Mode</div>
             <div class="control-line">1/2/3 - Select Building Type</div>
+        </div>
+        <div id="audioControls">
+            <div class="audio-title">🔊 Audio Controls</div>
+            
+            <div class="audio-section">
+                <div class="volume-control">
+                    <span class="volume-label">Master</span>
+                    <input type="range" class="volume-slider" id="masterVolume" min="0" max="100" value="100">
+                    <span class="volume-value" id="masterVolumeValue">100%</span>
+                </div>
+                <div class="volume-control">
+                    <span class="volume-label">Music</span>
+                    <input type="range" class="volume-slider" id="musicVolume" min="0" max="100" value="50">
+                    <span class="volume-value" id="musicVolumeValue">50%</span>
+                </div>
+                <div class="volume-control">
+                    <span class="volume-label">SFX</span>
+                    <input type="range" class="volume-slider" id="sfxVolume" min="0" max="100" value="100">
+                    <span class="volume-value" id="sfxVolumeValue">100%</span>
+                </div>
+            </div>
+            
+            <div class="button-row">
+                <button class="mute-button" id="muteMusic">🎵 Mute Music</button>
+                <button class="mute-button" id="muteSfx">🔔 Mute SFX</button>
+            </div>
         </div>
     </div>
 
