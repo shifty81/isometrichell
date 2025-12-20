@@ -117,6 +117,15 @@ class NoiseGenerator {
     }
     
     /**
+     * Get a seeded random value (0.0 to 1.0) based on coordinates
+     * Useful for deterministic decoration placement
+     */
+    seededRandom(x, y) {
+        // Use noise as deterministic random
+        return this.noise2D(x * 12.9898, y * 78.233);
+    }
+    
+    /**
      * Set new seed
      */
     setSeed(seed) {

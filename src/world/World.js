@@ -162,6 +162,7 @@ class World {
                 
                 // Place decorations (priority: trees > rocks > bushes)
                 if (shouldPlaceTree) {
+                    // Tree types are 0-19, map to asset names
                     const treeType = Math.floor(treeNoise * TREE_TYPES) % TREE_TYPES;
                     tile.setDecoration(`tree_${treeType}`);
                     tile.isResource = true; // Mark as gatherable resource

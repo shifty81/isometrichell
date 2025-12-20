@@ -86,15 +86,17 @@ class Player extends Entity {
         
         // Check if tile has a resource decoration
         if (tile.decoration) {
-            if (tile.decoration.startsWith('tree_')) {
+            if (tile.decoration.startsWith('tree_') && tile.isResource) {
                 // Gather wood
                 this.inventory.wood += 1;
                 tile.setDecoration(null); // Remove the tree
+                tile.isResource = false;
                 return true;
-            } else if (tile.decoration.startsWith('rocks_')) {
+            } else if (tile.decoration.startsWith('rocks_') && tile.isResource) {
                 // Gather stone
                 this.inventory.stone += 1;
                 tile.setDecoration(null); // Remove the rocks
+                tile.isResource = false;
                 return true;
             }
         }

@@ -70,9 +70,16 @@ class Tile {
     }
     
     /**
-     * Check if tile has decoration
+     * Check if tile has a resource decoration
      */
     hasDecoration() {
         return this.decoration !== null;
+    }
+    
+    /**
+     * Check if tile is a gatherable resource
+     */
+    isGatherableResource() {
+        return this.isResource && this.decoration !== null;
     }
 }

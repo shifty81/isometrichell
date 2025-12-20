@@ -77,28 +77,40 @@ class Biome {
     /**
      * Determine if a tree should spawn at this location
      */
-    shouldSpawnTree() {
+    shouldSpawnTree(noiseGen = null, x = 0, y = 0) {
+        if (noiseGen) {
+            return noiseGen.seededRandom(x, y) < this.type.treeChance;
+        }
         return Math.random() < this.type.treeChance;
     }
     
     /**
      * Determine if a bush should spawn at this location
      */
-    shouldSpawnBush() {
+    shouldSpawnBush(noiseGen = null, x = 0, y = 0) {
+        if (noiseGen) {
+            return noiseGen.seededRandom(x + 1000, y + 1000) < this.type.bushChance;
+        }
         return Math.random() < this.type.bushChance;
     }
     
     /**
      * Determine if a rock should spawn at this location
      */
-    shouldSpawnRock() {
+    shouldSpawnRock(noiseGen = null, x = 0, y = 0) {
+        if (noiseGen) {
+            return noiseGen.seededRandom(x + 2000, y + 2000) < this.type.rockChance;
+        }
         return Math.random() < this.type.rockChance;
     }
     
     /**
      * Determine if water should be at this location
      */
-    shouldSpawnWater() {
+    shouldSpawnWater(noiseGen = null, x = 0, y = 0) {
+        if (noiseGen) {
+            return noiseGen.seededRandom(x + 3000, y + 3000) < this.type.waterChance;
+        }
         return Math.random() < this.type.waterChance;
     }
 }
