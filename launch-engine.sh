@@ -6,6 +6,10 @@ echo "========================================"
 echo "  Launching Isometric Hell C++ Engine"
 echo "========================================"
 echo ""
+echo "📋 Error Logging is enabled:"
+echo "   - Logs saved to logs/engine.log"
+echo "   - Check logs for crash information"
+echo ""
 
 # Check if build exists
 if [ ! -f "build/IsometricHell" ]; then

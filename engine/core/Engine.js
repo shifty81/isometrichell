@@ -47,32 +47,73 @@ class Engine {
     gameLoop() {
         if (!this.running) return;
         
-        const currentTime = performance.now();
-        const deltaTime = (currentTime - this.lastFrameTime) / 1000; // Convert to seconds
-        this.lastFrameTime = currentTime;
-        
-        // Update time
-        this.time.update(deltaTime);
-        
-        // Update FPS counter
-        this.frameCount++;
-        if (currentTime - this.fpsUpdateTime >= 1000) {
-            this.fps = this.frameCount;
-            this.frameCount = 0;
-            this.fpsUpdateTime = currentTime;
+        try {
+            const currentTime = performance.now();
+            const deltaTime = (currentTime - this.lastFrameTime) / 1000; // Convert to seconds
+            this.lastFrameTime = currentTime;
+            
+            // Update time
+            this.time.update(deltaTime);
+            
+            // Update FPS counter
+            this.frameCount++;
+            if (currentTime - this.fpsUpdateTime >= 1000) {
+                this.fps = this.frameCount;
+                this.frameCount = 0;
+                this.fpsUpdateTime = currentTime;
+            }
+            
+            // Update phase
+            this.update(deltaTime);
+            
+            // Render phase
+            this.render();
+            
+            // Reset input state for next frame
+            this.input.update();
+            
+            // Continue loop
+            requestAnimationFrame(() => this.gameLoop());
+        } catch (error) {
+            console.error('Critical error in game loop:', error);
+            console.error('Stack:', error.stack);
+            this.stop();
+            
+            // Display error to user
+            const errorDiv = document.createElement('div');
+            errorDiv.style.position = 'fixed';
+            errorDiv.style.top = '50%';
+            errorDiv.style.left = '50%';
+            errorDiv.style.transform = 'translate(-50%, -50%)';
+            errorDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.9)';
+            errorDiv.style.color = 'white';
+            errorDiv.style.padding = '20px';
+            errorDiv.style.borderRadius = '10px';
+            errorDiv.style.zIndex = '10000';
+            errorDiv.style.fontFamily = 'monospace';
+            
+            const heading = document.createElement('h3');
+            heading.textContent = 'Game Crashed';
+            errorDiv.appendChild(heading);
+            
+            const errorMsg = document.createElement('p');
+            errorMsg.textContent = `Error: ${error.message}`;
+            errorDiv.appendChild(errorMsg);
+            
+            const reloadBtn = document.createElement('button');
+            reloadBtn.textContent = 'Reload Game';
+            reloadBtn.style.cssText = 'margin-top: 10px; padding: 10px; cursor: pointer;';
+            reloadBtn.onclick = () => location.reload();
+            errorDiv.appendChild(reloadBtn);
+            
+            const downloadBtn = document.createElement('button');
+            downloadBtn.textContent = 'Download Error Log';
+            downloadBtn.style.cssText = 'margin-top: 10px; margin-left: 10px; padding: 10px; cursor: pointer;';
+            downloadBtn.onclick = () => window.GameLogger && window.GameLogger.downloadLogs();
+            errorDiv.appendChild(downloadBtn);
+            
+            document.body.appendChild(errorDiv);
         }
-        
-        // Update phase
-        this.update(deltaTime);
-        
-        // Render phase
-        this.render();
-        
-        // Reset input state for next frame
-        this.input.update();
-        
-        // Continue loop
-        requestAnimationFrame(() => this.gameLoop());
     }
     
     /**

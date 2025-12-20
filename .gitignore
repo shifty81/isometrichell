@@ -7,8 +7,9 @@
 .DS_Store
 
 # Logs
-logs
-*.log
+logs/*.log
+logs/*.txt
+!logs/README.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

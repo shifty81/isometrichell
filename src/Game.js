@@ -28,6 +28,9 @@ class Game {
         // Create building system
         this.buildingSystem = new BuildingSystem(this.world, this.audioManager, this.assetLoader);
         
+        // Create editor UI
+        this.editorUI = new EditorUI(this.assetLoader, this.world, this.engine.camera);
+        
         // Add some boats to the world
         this.spawnBoats();
         
@@ -65,6 +68,11 @@ class Game {
     update(deltaTime) {
         // Update camera
         this.engine.camera.update(deltaTime, this.engine.input);
+        
+        // Handle editor toggle (E key)
+        if (this.engine.input.isKeyPressed('KeyE')) {
+            this.editorUI.toggle();
+        }
         
         // Update world
         this.world.update(deltaTime);
@@ -164,9 +172,12 @@ class Game {
         }
         
         // Update mode
-        const mode = this.buildingSystem.buildMode 
-            ? `Building: ${this.buildingSystem.selectedBuildingType.name}` 
-            : 'Normal';
+        let mode = 'Normal';
+        if (this.editorUI && this.editorUI.isVisible()) {
+            mode = '🎨 Editor Mode';
+        } else if (this.buildingSystem.buildMode) {
+            mode = `Building: ${this.buildingSystem.selectedBuildingType.name}`;
+        }
         document.getElementById('mode').textContent = mode;
     }
 }

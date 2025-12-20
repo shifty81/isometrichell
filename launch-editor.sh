@@ -6,6 +6,11 @@ echo "========================================"
 echo "  Launching Map Editor (Web Version)"
 echo "========================================"
 echo ""
+echo "📋 Error Logging is enabled:"
+echo "   - Logs are captured automatically"
+echo "   - Press Ctrl+Shift+L to download logs"
+echo "   - Logs saved to browser localStorage"
+echo ""
 
 # Check if npm is available
 if command -v npm &> /dev/null; then
