@@ -30,8 +30,8 @@ class Game {
         // Create world (50x50 tiles) with asset loader
         this.world = new World(50, 50, 64, 32, this.assetLoader);
         
-        // Create player at center of world
-        this.player = new Player(25, 25);
+        // Create player at center of world with asset loader for animations
+        this.player = new Player(25, 25, this.assetLoader);
         this.world.addEntity(this.player);
         
         // Create building system

@@ -146,6 +146,37 @@ class AssetLoader {
     }
     
     /**
+     * Load player animation frames
+     */
+    async loadPlayerAnimations() {
+        const animations = ['Idle', 'Walk', 'Run'];
+        const framesPerAnimation = 10; // Load first 10 frames of each animation for performance
+        const playerFrames = [];
+        
+        for (const animation of animations) {
+            for (let i = 0; i < framesPerAnimation; i++) {
+                const idx = String(i).padStart(3, '0');
+                playerFrames.push({
+                    name: `player_${animation.toLowerCase()}_${i}`,
+                    // Note: Directory name is 'charachter' (typo in asset structure)
+                    path: `assets/individual/charachter/player/${animation}/${animation}-${idx}.png`
+                });
+            }
+        }
+        
+        this.totalAssets += playerFrames.length;
+        
+        const promises = playerFrames.map(asset => 
+            this.loadImage(asset.name, asset.path).catch(err => {
+                console.warn(`Skipping ${asset.name}: ${err.message}`);
+                return null;
+            })
+        );
+        
+        await Promise.all(promises);
+    }
+    
+    /**
      * Load building assets
      */
     async loadBuildings() {
@@ -200,6 +231,7 @@ class AssetLoader {
             await this.loadTiles();
             await this.loadDecorations();
             await this.loadCharacters();
+            await this.loadPlayerAnimations();
             await this.loadBuildings();
             await this.loadAudioAssets();
             
