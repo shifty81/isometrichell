@@ -204,6 +204,10 @@ bool Engine::initOpenGL() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
+    // Enable depth testing for proper 3D rendering
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
+    
     LOG_INFO("OpenGL initialized");
     return true;
 }
