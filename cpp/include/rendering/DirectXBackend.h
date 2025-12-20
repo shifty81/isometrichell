@@ -8,6 +8,19 @@
     #include <wrl/client.h>
     using Microsoft::WRL::ComPtr;
     #define DIRECTX_AVAILABLE
+    // Undefine Windows macros that conflict with our code
+    #ifdef ERROR
+        #undef ERROR
+    #endif
+    #ifdef WARNING
+        #undef WARNING
+    #endif
+    #ifdef DEBUG
+        #undef DEBUG
+    #endif
+    #ifdef INFO
+        #undef INFO
+    #endif
 #endif
 
 /**
