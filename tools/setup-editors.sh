@@ -72,7 +72,9 @@ TILEZED_FILES=(
     "$ROOT_DIR/TileZed.7z"
     "$TOOLS_DIR/tilezed.7z"
     "$TOOLS_DIR/TileZed.7z"
+    "$ROOT_DIR/tilezed.zip"
     "$ROOT_DIR/TileZed.zip"
+    "$TOOLS_DIR/tilezed.zip"
     "$TOOLS_DIR/TileZed.zip"
 )
 
@@ -81,7 +83,9 @@ WORLDED_FILES=(
     "$ROOT_DIR/WorldEd.7z"
     "$TOOLS_DIR/worlded.7z"
     "$TOOLS_DIR/WorldEd.7z"
+    "$ROOT_DIR/worlded.zip"
     "$ROOT_DIR/WorldEd.zip"
+    "$TOOLS_DIR/worlded.zip"
     "$TOOLS_DIR/WorldEd.zip"
 )
 

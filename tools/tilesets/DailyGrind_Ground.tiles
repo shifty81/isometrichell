@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tilesets>
+  <!-- High-resolution ground tiles (64x32) -->
+  <tileset name="DailyGrind_Ground_64x32">
+    <image source="../../assets/ground_tiles_sheets/grass_green_64x32.png"/>
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="ground"/>
+      <property name="terrain" value="grass"/>
+    </properties>
+  </tileset>
+  
+  <!-- Standard resolution ground tiles if available -->
+  <tileset name="DailyGrind_Ground_32x16">
+    <image source="../../assets/ground_tiles_sheets/grass_green_32x16.png"/>
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="ground"/>
+      <property name="terrain" value="grass"/>
+    </properties>
+  </tileset>
+</tilesets>

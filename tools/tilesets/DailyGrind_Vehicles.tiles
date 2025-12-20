@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tilesets>
+  <!-- Vehicle sprites -->
+  <tileset name="DailyGrind_Vehicles">
+    <directory source="../../assets/Vehicles/"/>
+    <properties>
+      <property name="walkable" value="false"/>
+      <property name="type" value="vehicle"/>
+      <property name="entity" value="true"/>
+    </properties>
+  </tileset>
+</tilesets>
