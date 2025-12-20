@@ -140,6 +140,7 @@ cat > "$TILESETS_DIR/DailyGrind_Characters.tiles" << 'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
 <tilesets>
   <!-- Character sprites -->
+  <!-- Note: Directory is spelled "Charachters" in assets/ -->
   <tileset name="DailyGrind_Characters">
     <directory source="../../assets/Charachters/"/>
     <properties>
