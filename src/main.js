@@ -85,9 +85,11 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.log('📦 Assets Loaded:', assetLoader.loadProgress, '/', assetLoader.totalAssets);
         console.log('🗺️  World Size: 30x30 tiles');
         console.log('🏗️  Building system ready');
+        console.log('🎨 Asset Editor ready');
         console.log('');
         console.log('Controls:');
         console.log('  WASD/Arrows - Move camera');
+        console.log('  E - Toggle Asset Editor');
         console.log('  B - Toggle building mode');
         console.log('  1/2/3 - Select building type (in build mode)');
         console.log('  Left Click - Place building');
