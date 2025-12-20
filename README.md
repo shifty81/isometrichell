@@ -46,17 +46,29 @@ This architecture allows for rapid level design in the web editor while maintain
 
 ## 🚀 Getting Started
 
-### Quick Launch (Recommended)
+### Quick Start & Testing
 
-#### Run the C++ Game Engine:
+#### 1. Verify Setup (Recommended First Step):
 ```bash
-./launch-engine.sh
+npm test
+# or
+./verify-setup.sh
 ```
 
-#### Run the Web Map Editor:
+#### 2. Run the Web Map Editor:
 ```bash
 ./launch-editor.sh
 ```
+Then open `http://localhost:8000` in your browser.
+
+#### 3. Test Features:
+See [QUICK_TEST.md](QUICK_TEST.md) for a 2-minute feature test, or [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md) for comprehensive testing.
+
+#### 4. Run the C++ Game Engine (Optional):
+```bash
+./launch-engine.sh
+```
+Note: Requires OpenGL dependencies. See [Prerequisites](#prerequisites) below.
 
 ### Prerequisites
 
