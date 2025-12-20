@@ -242,10 +242,64 @@ class World {
         const endX = Math.min(this.width, startX + 40);
         const endY = Math.min(this.height, startY + 40);
         
-        // Render tiles
+        // Collect all renderable objects with their Y positions for depth sorting
+        const renderQueue = [];
+        
+        // Add tiles (ground layer - always render first)
         for (let y = startY; y < endY; y++) {
             for (let x = startX; x < endX; x++) {
                 const tile = this.tiles[y][x];
+                renderQueue.push({
+                    type: 'tile',
+                    y: y,
+                    x: x,
+                    tile: tile,
+                    sortKey: y * 1000 + x // Tiles sorted by position
+                });
+            }
+        }
+        
+        // Add decorations to render queue
+        for (let y = startY; y < endY; y++) {
+            for (let x = startX; x < endX; x++) {
+                const tile = this.tiles[y][x];
+                if (tile.decoration) {
+                    renderQueue.push({
+                        type: 'decoration',
+                        y: y,
+                        x: x,
+                        tile: tile,
+                        sortKey: y * 1000 + x + 0.5 // Decorations on top of tiles
+                    });
+                }
+                if (tile.building) {
+                    renderQueue.push({
+                        type: 'building',
+                        y: y,
+                        x: x,
+                        tile: tile,
+                        sortKey: y * 1000 + x + 0.6 // Buildings slightly above decorations
+                    });
+                }
+            }
+        }
+        
+        // Add entities to render queue
+        for (const entity of this.entities) {
+            renderQueue.push({
+                type: 'entity',
+                entity: entity,
+                sortKey: entity.y * 1000 + entity.x + 0.7 // Entities use their exact position
+            });
+        }
+        
+        // Sort by sortKey (Y position primarily, with slight offsets for layering)
+        renderQueue.sort((a, b) => a.sortKey - b.sortKey);
+        
+        // Render everything in sorted order
+        for (const item of renderQueue) {
+            if (item.type === 'tile') {
+                const tile = item.tile;
                 const screenPos = IsometricUtils.tileToScreen(
                     tile.x,
                     tile.y,
@@ -294,6 +348,14 @@ class World {
                         camera
                     );
                 }
+            } else if (item.type === 'decoration') {
+                const tile = item.tile;
+                const screenPos = IsometricUtils.tileToScreen(
+                    tile.x,
+                    tile.y,
+                    this.tileWidth,
+                    this.tileHeight
+                );
                 
                 // Draw decoration if present
                 if (tile.decoration && this.assetLoader) {
@@ -311,18 +373,24 @@ class World {
                         );
                     }
                 }
+            } else if (item.type === 'building') {
+                const tile = item.tile;
+                const screenPos = IsometricUtils.tileToScreen(
+                    tile.x,
+                    tile.y,
+                    this.tileWidth,
+                    this.tileHeight
+                );
                 
                 // Draw building if present
                 if (tile.building) {
                     tile.building.render(renderer, camera, isometricRenderer, screenPos);
                 }
-            }
-        }
-        
-        // Render entities
-        for (const entity of this.entities) {
-            if (entity.render) {
-                entity.render(renderer, camera, isometricRenderer);
+            } else if (item.type === 'entity') {
+                const entity = item.entity;
+                if (entity.render) {
+                    entity.render(renderer, camera, isometricRenderer);
+                }
             }
         }
     }
