@@ -193,16 +193,217 @@
             display: flex;
             margin-top: 8px;
         }
+
+        /* Survival Stats Panel */
+        #survivalStats {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.85));
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            backdrop-filter: blur(5px);
+            min-width: 200px;
+        }
+
+        .survival-title {
+            color: #64B5F6;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .stat-row {
+            margin: 8px 0;
+        }
+
+        .stat-label {
+            color: #b0b0b0;
+            font-size: 11px;
+            margin-bottom: 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stat-bar-container {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stat-bar {
+            height: 100%;
+            transition: width 0.3s ease-out, background-color 0.3s ease-out;
+            border-radius: 6px;
+        }
+
+        .stat-bar.excellent {
+            background: linear-gradient(90deg, #44ff44 0%, #66ff66 100%);
+        }
+
+        .stat-bar.good {
+            background: linear-gradient(90deg, #ffff00 0%, #ffff44 100%);
+        }
+
+        .stat-bar.warning {
+            background: linear-gradient(90deg, #ffaa00 0%, #ffcc44 100%);
+        }
+
+        .stat-bar.critical {
+            background: linear-gradient(90deg, #ff4444 0%, #ff6666 100%);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .status-effects {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .status-effect-badge {
+            display: inline-block;
+            background: rgba(255, 100, 100, 0.3);
+            border: 1px solid rgba(255, 100, 100, 0.5);
+            padding: 2px 6px;
+            margin: 2px;
+            border-radius: 3px;
+            font-size: 10px;
+            color: #ffcccc;
+        }
+
+        /* Loading Screen Styles */
+        #loadingScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loadingScreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+        }
+
+        .loading-subtitle {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+        }
+
+        .loading-bar-container {
+            width: 400px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 100%);
+            width: 0%;
+            transition: width 0.3s ease-out;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8);
+            position: relative;
+        }
+
+        .loading-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .loading-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #e0e0e0;
+        }
+
+        .loading-percentage {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .loading-tips {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #888;
+            max-width: 500px;
+            text-align: center;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <div id="gameContainer">
         <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        
+        <!-- Loading Screen -->
+        <div id="loadingScreen">
+            <div class="loading-title">The Daily Grind</div>
+            <div class="loading-subtitle">Life Simulation Game</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <div class="loading-percentage" id="loadingPercentage">0%</div>
+            <div class="loading-text" id="loadingText">Initializing...</div>
+            <div class="loading-tips" id="loadingTip">
+                Tip: Press E to toggle the asset editor while playing
+            </div>
+        </div>
         <div id="ui">
             <div>FPS: <span id="fps">0</span></div>
             <div>Camera: <span id="camera">0, 0</span></div>
             <div>Mouse: <span id="mouse">0, 0</span></div>
             <div>Mode: <span id="mode">Normal</span></div>
+            <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <div style="color: #FFA726; font-weight: bold;">⏰ Time</div>
+                <div>Day: <span id="day">1</span></div>
+                <div>Time: <span id="time">06:00</span></div>
+                <div>Period: <span id="period">Dawn</span></div>
+            </div>
         </div>
         <div id="controls">
             <div class="control-line"><strong>Controls:</strong></div>
@@ -211,7 +412,8 @@
             <div class="control-line">Left Click - Gather Resources / Place Building</div>
             <div class="control-line">E - Toggle Asset Editor</div>
             <div class="control-line">B - Building Mode</div>
-            <div class="control-line">1/2/3 - Select Building Type</div>
+            <div class="control-line">P - Pause/Resume Time</div>
+            <div class="control-line">1/2/3 - Time Speed (Normal/2x/4x)</div>
         </div>
         <div id="audioControls">
             <div class="audio-title">🔊 Audio Controls</div>
@@ -239,12 +441,72 @@
                 <button class="mute-button" id="muteSfx">🔔 Mute SFX</button>
             </div>
         </div>
+        
+        <!-- Survival Stats Panel -->
+        <div id="survivalStats">
+            <div class="survival-title">💚 Survival Stats</div>
+            
+            <div class="stat-row">
+                <div class="stat-label">
+                    <span>🍖 Hunger</span>
+                    <span id="hungerValue">100</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar excellent" id="hungerBar" style="width: 100%"></div>
+                </div>
+            </div>
+            
+            <div class="stat-row">
+                <div class="stat-label">
+                    <span>💧 Thirst</span>
+                    <span id="thirstValue">100</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar excellent" id="thirstBar" style="width: 100%"></div>
+                </div>
+            </div>
+            
+            <div class="stat-row">
+                <div class="stat-label">
+                    <span>⚡ Energy</span>
+                    <span id="energyValue">100</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar excellent" id="energyBar" style="width: 100%"></div>
+                </div>
+            </div>
+            
+            <div class="stat-row">
+                <div class="stat-label">
+                    <span>❤️ Health</span>
+                    <span id="healthValue">100</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar excellent" id="healthBar" style="width: 100%"></div>
+                </div>
+            </div>
+            
+            <div class="stat-row">
+                <div class="stat-label">
+                    <span>🧼 Hygiene</span>
+                    <span id="hygieneValue">100</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar excellent" id="hygieneBar" style="width: 100%"></div>
+                </div>
+            </div>
+            
+            <div class="status-effects" id="statusEffects" style="display: none;">
+                <!-- Status effect badges will be dynamically added here -->
+            </div>
+        </div>
     </div>
 
     <!-- Core Engine -->
     <script src="engine/core/Logger.js"></script>
     <script src="engine/core/Engine.js"></script>
     <script src="engine/core/Time.js"></script>
+    <script src="engine/core/TimeSystem.js"></script>
     <script src="engine/core/Input.js"></script>
     
     <!-- Assets & Audio -->
@@ -266,6 +528,7 @@
     <script src="src/world/Biome.js"></script>
     <script src="src/world/World.js"></script>
     <script src="src/entities/Entity.js"></script>
+    <script src="src/entities/SurvivalAttributes.js"></script>
     <script src="src/entities/Player.js"></script>
     <script src="src/entities/Boat.js"></script>
     <script src="src/building/Building.js"></script>

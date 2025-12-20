@@ -11,6 +11,7 @@ class Game {
         this.buildingSystem = null;
         this.isometricRenderer = null;
         this.hoveredTile = null;
+        this.timeSystem = null;
         
         this.initialize();
     }
@@ -21,6 +22,10 @@ class Game {
     initialize() {
         // Create isometric renderer
         this.isometricRenderer = new IsometricRenderer(this.engine.renderer);
+        
+        // Create time system
+        this.timeSystem = new TimeSystem();
+        console.log('⏰ Time system initialized');
         
         // Create world (50x50 tiles) with asset loader
         this.world = new World(50, 50, 64, 32, this.assetLoader);
@@ -47,6 +52,27 @@ class Game {
     }
     
     /**
+     * Start ambient nature sounds
+     * Note: Currently awaiting nature sound assets (birds, wind, rustling leaves, water)
+     * When nature sounds are added to assets/MusicAndSFX/, uncomment the playAmbient calls
+     */
+    startAmbientSounds() {
+        if (!this.audioManager) return;
+        
+        // TODO: Add these ambient sound files to assets/MusicAndSFX/:
+        // - birds.ogg (chirping birds)
+        // - wind.ogg (gentle breeze)
+        // - leaves.ogg (rustling leaves)
+        // - water.ogg (flowing water/stream)
+        
+        // Uncomment when sound files are available:
+        // this.audioManager.playAmbient('ambient_birds', 0.4);
+        // this.audioManager.playAmbient('ambient_wind', 0.3);
+        
+        console.log('🌿 Ambient sound system ready (awaiting nature sound assets)');
+    }
+    
+    /**
      * Spawn boats on water tiles
      */
     spawnBoats() {
@@ -70,9 +96,30 @@ class Game {
      * Update game
      */
     update(deltaTime) {
+        // Update time system
+        if (this.timeSystem) {
+            this.timeSystem.update(deltaTime);
+        }
+        
+        // Handle time controls
+        if (this.engine.input.isKeyPressed('KeyP')) {
+            if (this.timeSystem) {
+                this.timeSystem.togglePause();
+            }
+        }
+        
+        // Handle time speed controls (1-5 keys for different speeds)
+        if (this.engine.input.isKeyPressed('Digit1') && !this.buildingSystem.buildMode) {
+            this.timeSystem.setTimeScale(60); // Normal speed
+        } else if (this.engine.input.isKeyPressed('Digit2') && !this.buildingSystem.buildMode) {
+            this.timeSystem.setTimeScale(120); // 2x speed
+        } else if (this.engine.input.isKeyPressed('Digit3') && !this.buildingSystem.buildMode) {
+            this.timeSystem.setTimeScale(240); // 4x speed
+        }
+        
         // Update player first
         if (this.player) {
-            this.player.update(deltaTime, this.world, this.engine.input);
+            this.player.update(deltaTime, this.world, this.engine.input, this.timeSystem);
             
             // Camera follows player
             const playerScreen = IsometricUtils.tileToScreen(this.player.x, this.player.y, 64, 32);
@@ -224,6 +271,20 @@ class Game {
         document.getElementById('camera').textContent = 
             `${Math.round(camPos.x)}, ${Math.round(camPos.y)}`;
         
+        // Update time display
+        if (this.timeSystem) {
+            document.getElementById('day').textContent = this.timeSystem.currentDay;
+            document.getElementById('time').textContent = this.timeSystem.getTimeString12Hour();
+            const period = this.timeSystem.getPeriod();
+            document.getElementById('period').textContent = 
+                period.charAt(0).toUpperCase() + period.slice(1);
+        }
+        
+        // Update survival stats
+        if (this.player && this.player.survival) {
+            this.updateSurvivalUI(this.player.survival);
+        }
+        
         // Update mouse tile position
         if (this.hoveredTile) {
             const resourceText = this.hoveredTile.isResource ? ' [Resource]' : '';
@@ -235,7 +296,9 @@ class Game {
         
         // Update mode
         let mode = 'Normal';
-        if (this.editorUI && this.editorUI.isVisible()) {
+        if (this.timeSystem && this.timeSystem.isPaused) {
+            mode = '⏸️  PAUSED';
+        } else if (this.editorUI && this.editorUI.isVisible()) {
             mode = '🎨 Editor Mode';
         } else if (this.buildingSystem.buildMode) {
             mode = `Building: ${this.buildingSystem.selectedBuildingType.name}`;
@@ -243,5 +306,44 @@ class Game {
             mode = `Player - Wood: ${this.player.inventory.wood} Stone: ${this.player.inventory.stone}`;
         }
         document.getElementById('mode').textContent = mode;
+    }
+    
+    /**
+     * Update survival stats UI
+     */
+    updateSurvivalUI(survival) {
+        const stats = ['hunger', 'thirst', 'energy', 'health', 'hygiene'];
+        
+        for (const stat of stats) {
+            const value = Math.round(survival[stat]);
+            const statusLevel = survival.getStatusLevel(stat);
+            
+            // Update value text
+            const valueElement = document.getElementById(`${stat}Value`);
+            if (valueElement) {
+                valueElement.textContent = value;
+            }
+            
+            // Update bar
+            const barElement = document.getElementById(`${stat}Bar`);
+            if (barElement) {
+                barElement.style.width = `${value}%`;
+                barElement.className = `stat-bar ${statusLevel}`;
+            }
+        }
+        
+        // Update status effects
+        const statusEffects = survival.getStatusEffects();
+        const statusEffectsContainer = document.getElementById('statusEffects');
+        
+        if (statusEffects.length > 0) {
+            statusEffectsContainer.style.display = 'block';
+            statusEffectsContainer.innerHTML = statusEffects.map(effect => {
+                const displayName = effect.replace(/_/g, ' ').toUpperCase();
+                return `<span class="status-effect-badge">${displayName}</span>`;
+            }).join('');
+        } else {
+            statusEffectsContainer.style.display = 'none';
+        }
     }
 }

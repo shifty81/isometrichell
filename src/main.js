@@ -68,21 +68,57 @@ function setupAudioControls(audioManager) {
     console.log('🎛️  Audio controls initialized');
 }
 
-// Show loading screen
-function showLoadingScreen() {
-    const ui = document.getElementById('ui');
-    ui.innerHTML = '<div style="font-size: 18px; padding: 20px;">Loading assets...</div><div id="loadingProgress">0%</div>';
+// Loading tips to display
+const loadingTips = [
+    "Tip: Press E to toggle the asset editor while playing",
+    "Tip: Use WASD to move your character around the world",
+    "Tip: Press B to enter building mode and create structures",
+    "Tip: Click on trees and rocks to gather resources",
+    "Tip: You can adjust music and SFX volumes in the audio panel",
+    "Tip: The world is procedurally generated with varied biomes",
+    "Tip: Buildings require clear, walkable tiles to be placed",
+    "Tip: Watch your survival stats - hunger, thirst, and energy matter!"
+];
+
+// Update loading screen with progress
+function updateLoadingScreen(progress, text = 'Loading assets...') {
+    const loadingBar = document.getElementById('loadingBar');
+    const loadingPercentage = document.getElementById('loadingPercentage');
+    const loadingText = document.getElementById('loadingText');
+    const loadingTip = document.getElementById('loadingTip');
+    
+    if (loadingBar) {
+        loadingBar.style.width = `${progress * 100}%`;
+    }
+    
+    if (loadingPercentage) {
+        loadingPercentage.textContent = `${Math.floor(progress * 100)}%`;
+    }
+    
+    if (loadingText) {
+        loadingText.textContent = text;
+    }
+    
+    // Rotate tips based on progress
+    if (loadingTip && progress > 0) {
+        const tipIndex = Math.min(
+            Math.floor(progress * loadingTips.length),
+            loadingTips.length - 1
+        );
+        loadingTip.textContent = loadingTips[tipIndex];
+    }
 }
 
-// Hide loading screen and restore UI
+// Hide loading screen with fade out effect
 function hideLoadingScreen() {
-    const ui = document.getElementById('ui');
-    ui.innerHTML = `
-        <div>FPS: <span id="fps">0</span></div>
-        <div>Camera: <span id="camera">0, 0</span></div>
-        <div>Mouse: <span id="mouse">0, 0</span></div>
-        <div>Mode: <span id="mode">Normal</span></div>
-    `;
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        loadingScreen.classList.add('hidden');
+        // Remove from DOM after transition
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }
 }
 
 // Wait for DOM to be ready
@@ -92,26 +128,46 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Get canvas
     const canvas = document.getElementById('gameCanvas');
     
-    // Show loading screen
-    showLoadingScreen();
+    // Show initial loading state
+    updateLoadingScreen(0, 'Initializing...');
     
     try {
         // Create and load assets
         const assetLoader = new AssetLoader();
         
-        // Update progress periodically
+        // Update progress periodically with smooth animation
         const progressInterval = setInterval(() => {
-            const progress = Math.floor(assetLoader.getProgress() * 100);
-            const progressElement = document.getElementById('loadingProgress');
-            if (progressElement) {
-                progressElement.textContent = `${progress}%`;
+            const progress = assetLoader.getProgress();
+            let loadingText = 'Loading assets...';
+            
+            // Provide more specific feedback based on progress
+            if (progress < 0.3) {
+                loadingText = 'Loading ground tiles...';
+            } else if (progress < 0.5) {
+                loadingText = 'Loading decorations...';
+            } else if (progress < 0.7) {
+                loadingText = 'Loading characters...';
+            } else if (progress < 0.9) {
+                loadingText = 'Loading buildings...';
+            } else if (progress < 1.0) {
+                loadingText = 'Loading audio...';
+            } else {
+                loadingText = 'Starting game...';
             }
-        }, 100);
+            
+            updateLoadingScreen(progress, loadingText);
+        }, 50);
         
         await assetLoader.loadAll();
         clearInterval(progressInterval);
         
-        // Hide loading screen
+        // Final update
+        updateLoadingScreen(1.0, 'Ready!');
+        
+        // Short delay to show 100%
+        await new Promise(resolve => setTimeout(resolve, 300));
+        
+        // Hide loading screen with fade
         hideLoadingScreen();
         
         console.log('📦 Assets loaded successfully');
@@ -141,6 +197,8 @@ window.addEventListener('DOMContentLoaded', async () => {
             if (!audioManager.currentMusic) {
                 audioManager.playMusic('music');
                 console.log('🎵 Background music started');
+                // Start ambient sounds after user interaction
+                game.startAmbientSounds();
             }
         }, { once: true });
         
