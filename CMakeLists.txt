@@ -80,6 +80,7 @@ set(ENGINE_SOURCES
     cpp/src/building/BuildingSystem.cpp
     cpp/src/game/Game.cpp
     cpp/src/utils/IsometricUtils.cpp
+    cpp/src/utils/Logger.cpp
     ${GLAD_SOURCES}
 )
 
@@ -100,6 +101,7 @@ set(ENGINE_HEADERS
     cpp/include/building/BuildingSystem.h
     cpp/include/game/Game.h
     cpp/include/utils/IsometricUtils.h
+    cpp/include/utils/Logger.h
 )
 
 # Create executable

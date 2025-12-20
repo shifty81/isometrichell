@@ -22,6 +22,8 @@ function hideLoadingScreen() {
 
 // Wait for DOM to be ready
 window.addEventListener('DOMContentLoaded', async () => {
+    console.log('🎮 The Daily Grind - Life Simulation Game - Starting...');
+    
     // Get canvas
     const canvas = document.getElementById('gameCanvas');
     
@@ -47,14 +49,19 @@ window.addEventListener('DOMContentLoaded', async () => {
         // Hide loading screen
         hideLoadingScreen();
         
+        console.log('📦 Assets loaded successfully');
+        
         // Create engine
         const engine = new Engine(canvas);
+        console.log('⚙️  Engine initialized');
         
         // Create audio manager
         const audioManager = new AudioManager(assetLoader);
+        console.log('🔊 Audio manager initialized');
         
         // Create game with asset loader and audio manager
         const game = new Game(engine, assetLoader, audioManager);
+        console.log('🎯 Game initialized');
         
         // Add game as a scene
         engine.addScene('main', game);
@@ -62,16 +69,19 @@ window.addEventListener('DOMContentLoaded', async () => {
         
         // Start engine
         engine.start();
+        console.log('▶️  Engine started');
         
         // Start background music (with user interaction requirement)
         document.addEventListener('click', () => {
             if (!audioManager.currentMusic) {
                 audioManager.playMusic('music');
+                console.log('🎵 Background music started');
             }
         }, { once: true });
         
-        // Log startup
-        console.log('🎮 The Daily Grind - Life Simulation Game');
+        // Log startup summary
+        console.log('');
+        console.log('✅ Game startup complete!');
         console.log('📦 Assets Loaded:', assetLoader.loadProgress, '/', assetLoader.totalAssets);
         console.log('🗺️  World Size: 30x30 tiles');
         console.log('🏗️  Building system ready');
@@ -82,8 +92,37 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.log('  1/2/3 - Select building type (in build mode)');
         console.log('  Left Click - Place building');
         console.log('  Space - Spawn boat on water');
+        console.log('');
+        console.log('💾 Logs are being captured. Press Ctrl+Shift+L to download logs.');
+        
+        // Add keyboard shortcut to download logs (Ctrl+Shift+L)
+        window.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+                e.preventDefault();
+                if (window.GameLogger) {
+                    window.GameLogger.downloadLogs();
+                    console.log('📥 Log file downloaded');
+                }
+            }
+        });
+        
     } catch (error) {
-        console.error('Failed to initialize game:', error);
-        document.getElementById('ui').innerHTML = '<div style="color: red;">Failed to load game. Check console for details.</div>';
+        console.error('❌ Failed to initialize game:', error);
+        console.error('Stack trace:', error.stack);
+        
+        const ui = document.getElementById('ui');
+        ui.innerHTML = `
+            <div style="color: #ff4444; padding: 20px;">
+                <div style="font-size: 16px; margin-bottom: 10px;">❌ Failed to load game</div>
+                <div style="font-size: 12px; margin-bottom: 10px;">${error.message}</div>
+                <div style="font-size: 10px;">Check browser console for details (F12)</div>
+                <div style="font-size: 10px; margin-top: 10px;">
+                    <button onclick="window.GameLogger && window.GameLogger.downloadLogs()" 
+                            style="padding: 5px 10px; cursor: pointer;">
+                        Download Error Log
+                    </button>
+                </div>
+            </div>
+        `;
     }
 });
