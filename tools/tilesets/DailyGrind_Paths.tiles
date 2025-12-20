@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tilesets>
+  <!-- Paths and Sidewalks Tileset -->
+  <tileset name="DailyGrind_Paths">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="path"/>
+      <property name="movement_speed" value="1.0"/>
+    </properties>
+  </tileset>
+  
+  <!-- Gravel Paths -->
+  <tileset name="DailyGrind_GravelPaths">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="gravel"/>
+      <property name="movement_speed" value="0.95"/>
+      <property name="texture" value="gravel"/>
+    </properties>
+  </tileset>
+  
+  <!-- Concrete Sidewalks -->
+  <tileset name="DailyGrind_Sidewalks">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="sidewalk"/>
+      <property name="movement_speed" value="1.05"/>
+      <property name="texture" value="concrete"/>
+    </properties>
+  </tileset>
+  
+  <!-- Paved Roads -->
+  <tileset name="DailyGrind_Roads">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="road"/>
+      <property name="movement_speed" value="1.1"/>
+      <property name="texture" value="asphalt"/>
+      <property name="vehicle_compatible" value="true"/>
+    </properties>
+  </tileset>
+  
+  <!-- Dirt Paths -->
+  <tileset name="DailyGrind_DirtPaths">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="dirt_path"/>
+      <property name="movement_speed" value="0.9"/>
+      <property name="texture" value="packed_dirt"/>
+    </properties>
+  </tileset>
+  
+  <!-- Stone Paths -->
+  <tileset name="DailyGrind_StonePaths">
+    <properties>
+      <property name="walkable" value="true"/>
+      <property name="type" value="stone_path"/>
+      <property name="movement_speed" value="1.0"/>
+      <property name="texture" value="cobblestone"/>
+    </properties>
+  </tileset>
+</tilesets>

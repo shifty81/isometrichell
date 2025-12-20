@@ -56,19 +56,51 @@ The Daily Grind is a deep life simulation game inspired by Project Zomboid and T
 - [ ] **Hygiene**: Affects social interactions and health
 - [ ] **Body Temperature**: Affected by weather and clothing
 
-### 2.3 Basic Needs UI
+### 2.3 Sims 4-Style Emotion System ⭐ NEW
+- [x] **Moodlet System**: Temporary buffs/debuffs that stack
+  - [x] Survival-based moodlets (Starving, Well Fed, Exhausted, etc.)
+  - [x] Environmental moodlets (Beautiful Sunset, Storm, Cold Night)
+  - [x] Social moodlets (Friend Injured, Successful Romance, Robbed)
+  - [x] Achievement moodlets (Found Medicine, Learned Skill)
+- [x] **Core Emotions**: Dominant emotional states
+  - [x] Survival-focused: Fear, Hope, Calm, Angry, Focused, Exhausted
+  - [x] Social-focused: Affection, Loneliness, Curiosity, Contentment, Jealousy, Distrust
+- [x] **Emotional Modifiers**: Emotions affect gameplay
+  - [x] Angry: +30% melee damage, -20% ranged accuracy, +50% intimidation
+  - [x] Focused: +40% crafting speed, +20% ranged accuracy, +30% scavenging
+  - [x] Fear: +30% movement speed, -30% melee damage, -40% ranged accuracy
+  - [x] Hope: +40% scavenging success, +30% charisma, +20% stamina regen
+  - [x] Calm: +20% ranged accuracy, +20% crafting, +30% stamina regen
+  - [x] Affection: +50% charisma, +30% bartering
+- [x] **Radial Menu System**: Context-sensitive emotional interactions
+  - [x] Emotion-based interaction options (Flirt, Comfort, Rant, etc.)
+  - [x] Visual emotion indicators with color coding
+  - [x] Mouse-controlled radial selection
+  - [x] Keyboard shortcuts support
+- [ ] **Environmental Triggers**: World events affect emotions
+  - [ ] Weather-based triggers (sunset, storm, temperature)
+  - [ ] Time-based triggers (night, day)
+  - [ ] Location-based triggers (safe zones, dangerous areas)
+- [ ] **NPC Emotional Responses**: NPCs react to player emotions
+  - [ ] Emotion contagion (emotional auras)
+  - [ ] Relationship-based emotion changes
+  - [ ] Dynamic dialogue based on emotional states
+
+### 2.4 Basic Needs UI
 - [ ] Status bars for all attributes
 - [ ] Color-coded warnings (green/yellow/red)
 - [ ] Detailed stats panel
 - [ ] Status effect icons
+- [ ] **Emotion display** with moodlet list
+- [ ] **Radial menu** overlay for interactions
 
-### 2.4 Time System
+### 2.5 Time System
 - [ ] Day/night cycle (24-hour system)
 - [ ] Clock display
 - [ ] Time scaling controls
 - [ ] Pause functionality
 
-**Estimated Time**: 2-3 weeks
+**Estimated Time**: 3-4 weeks (extended for emotion system)
 
 ---
 
