@@ -12,6 +12,12 @@ class SurvivalAttributes {
         this.hygiene = 100;     // Affects social interactions and health
         this.temperature = 37;  // Body temperature in Celsius (normal: 36-38)
         
+        // Constants
+        this.SECONDS_PER_HOUR = 3600;
+        this.NORMAL_TEMP = 37;
+        this.HYPOTHERMIA_THRESHOLD = 36;
+        this.HYPERTHERMIA_THRESHOLD = 38.5;
+        
         // Decay rates (per game hour)
         this.hungerDecayRate = 2.0;
         this.thirstDecayRate = 3.5;
@@ -39,7 +45,7 @@ class SurvivalAttributes {
         if (!timeSystem) return;
         
         // Convert real-time delta to game hours
-        const gameHoursPassed = (deltaTime * timeSystem.timeScale) / 3600;
+        const gameHoursPassed = (deltaTime * timeSystem.timeScale) / this.SECONDS_PER_HOUR;
         
         // Apply decay to attributes
         this.hunger = Math.max(0, this.hunger - (this.hungerDecayRate * gameHoursPassed * this.activityMultiplier));
@@ -98,7 +104,6 @@ class SurvivalAttributes {
      * Update body temperature based on environment and time
      */
     updateTemperature(gameHoursPassed, timeSystem) {
-        const targetTemp = 37; // Normal body temperature
         const period = timeSystem.getPeriod();
         
         // Environmental temperature influence
@@ -110,19 +115,19 @@ class SurvivalAttributes {
         }
         
         // Gradually adjust body temperature toward normal
-        const tempDiff = targetTemp - this.temperature;
+        const tempDiff = this.NORMAL_TEMP - this.temperature;
         this.temperature += tempDiff * 0.1 * gameHoursPassed;
         
         // Keep temperature in realistic bounds
         this.temperature = Math.max(35, Math.min(40, this.temperature));
         
         // Hypothermia effects
-        if (this.temperature < 36) {
+        if (this.temperature < this.HYPOTHERMIA_THRESHOLD) {
             this.energy = Math.max(0, this.energy - (2 * gameHoursPassed));
         }
         
         // Hyperthermia effects
-        if (this.temperature > 38.5) {
+        if (this.temperature > this.HYPERTHERMIA_THRESHOLD) {
             this.thirst = Math.max(0, this.thirst - (1 * gameHoursPassed));
         }
     }
@@ -175,9 +180,9 @@ class SurvivalAttributes {
         }
         
         // Temperature status
-        if (this.temperature < 36) {
+        if (this.temperature < this.HYPOTHERMIA_THRESHOLD) {
             this.statusEffects.add('cold');
-        } else if (this.temperature > 38.5) {
+        } else if (this.temperature > this.HYPERTHERMIA_THRESHOLD) {
             this.statusEffects.add('hot');
         }
     }

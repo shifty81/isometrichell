@@ -101,7 +101,10 @@ function updateLoadingScreen(progress, text = 'Loading assets...') {
     
     // Rotate tips based on progress
     if (loadingTip && progress > 0) {
-        const tipIndex = Math.floor((progress * loadingTips.length)) % loadingTips.length;
+        const tipIndex = Math.min(
+            Math.floor(progress * loadingTips.length),
+            loadingTips.length - 1
+        );
         loadingTip.textContent = loadingTips[tipIndex];
     }
 }

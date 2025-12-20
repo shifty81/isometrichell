@@ -117,6 +117,7 @@ class TimeSystem {
         } else if (time >= this.periods.dusk.start && time < this.periods.dusk.end) {
             return 'dusk';
         } else {
+            // Night: 19:00-24:00 and 00:00-5:00
             return 'night';
         }
     }
