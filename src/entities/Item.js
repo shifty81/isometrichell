@@ -57,6 +57,10 @@ class ToolItem extends Item {
         this.efficiency = efficiency; // Multiplier for gathering/crafting speed
         this.requiresToolbox = true; // Most tools require toolbox to carry efficiently
     }
+
+    clone() {
+        return new ToolItem(this.id, this.name, this.description, this.toolType, this.efficiency);
+    }
 }
 
 /**
@@ -70,6 +74,13 @@ class ContainerItem extends Item {
         this.volumeCapacity = capacity * 2; // Volume capacity
         this.contents = [];
         this.isEquipped = false;
+    }
+
+    clone() {
+        const item = new ContainerItem(this.id, this.name, this.description, this.capacity, this.containerType);
+        item.contents = [];
+        item.isEquipped = false;
+        return item;
     }
 
     /**
@@ -125,6 +136,15 @@ class WaterBottleItem extends Item {
         this.isBoiled = false; // Safe to drink
         this.source = null; // 'fountain', 'natural', null
         this.attachments = []; // Filter, purifier, etc.
+    }
+
+    clone() {
+        const item = new WaterBottleItem();
+        item.current = this.current;
+        item.isBoiled = this.isBoiled;
+        item.source = this.source;
+        item.attachments = [...this.attachments];
+        return item;
     }
 
     /**
@@ -225,6 +245,22 @@ class RigItem extends Item {
             container2: null
         };
         this.position = { x: 0, y: 0 }; // World position when deployed
+    }
+
+    clone() {
+        const item = new RigItem();
+        item.isDeployed = false;
+        item.attachmentSlots = {
+            backpack: null,
+            toolbox: null,
+            firstaid: null,
+            hardcase: null,
+            bedroll: null,
+            container1: null,
+            container2: null
+        };
+        item.position = { x: 0, y: 0 };
+        return item;
     }
 
     /**
