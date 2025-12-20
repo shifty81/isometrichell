@@ -321,6 +321,8 @@ Additional documentation is available in the [docs/](docs/) folder:
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md) - Technical architecture documentation
 - [ASSETS.md](docs/ASSETS.md) - Asset management and organization
 - [ASSET_USAGE.md](docs/ASSET_USAGE.md) - Guide to using game assets
+- [ASSET_CATALOG.md](docs/ASSET_CATALOG.md) - Complete asset inventory and organization
+- [TILEZED_INTEGRATION.md](docs/TILEZED_INTEGRATION.md) - Professional map/building editor integration guide
 - [BRANDING.md](docs/BRANDING.md) - Branding guidelines and style
 - [CONVERSATION_SYSTEM.md](docs/CONVERSATION_SYSTEM.md) - Dialogue and conversation system design
 
