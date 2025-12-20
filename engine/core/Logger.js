@@ -142,23 +142,23 @@ class Logger {
         const self = this;
         
         console.log = function(...args) {
-            self.log('LOG', args.join(' '));
+            self.log('LOG', args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' '));
         };
         
         console.error = function(...args) {
-            self.log('ERROR', args.join(' '));
+            self.log('ERROR', args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' '));
         };
         
         console.warn = function(...args) {
-            self.log('WARN', args.join(' '));
+            self.log('WARN', args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' '));
         };
         
         console.info = function(...args) {
-            self.log('INFO', args.join(' '));
+            self.log('INFO', args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' '));
         };
         
         console.debug = function(...args) {
-            self.log('DEBUG', args.join(' '));
+            self.log('DEBUG', args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' '));
         };
     }
     

@@ -91,17 +91,27 @@ class Engine {
             errorDiv.style.borderRadius = '10px';
             errorDiv.style.zIndex = '10000';
             errorDiv.style.fontFamily = 'monospace';
-            errorDiv.innerHTML = `
-                <h3>Game Crashed</h3>
-                <p>Error: ${error.message}</p>
-                <button onclick="location.reload()" style="margin-top: 10px; padding: 10px; cursor: pointer;">
-                    Reload Game
-                </button>
-                <button onclick="window.GameLogger && window.GameLogger.downloadLogs()" 
-                        style="margin-top: 10px; margin-left: 10px; padding: 10px; cursor: pointer;">
-                    Download Error Log
-                </button>
-            `;
+            
+            const heading = document.createElement('h3');
+            heading.textContent = 'Game Crashed';
+            errorDiv.appendChild(heading);
+            
+            const errorMsg = document.createElement('p');
+            errorMsg.textContent = `Error: ${error.message}`;
+            errorDiv.appendChild(errorMsg);
+            
+            const reloadBtn = document.createElement('button');
+            reloadBtn.textContent = 'Reload Game';
+            reloadBtn.style.cssText = 'margin-top: 10px; padding: 10px; cursor: pointer;';
+            reloadBtn.onclick = () => location.reload();
+            errorDiv.appendChild(reloadBtn);
+            
+            const downloadBtn = document.createElement('button');
+            downloadBtn.textContent = 'Download Error Log';
+            downloadBtn.style.cssText = 'margin-top: 10px; margin-left: 10px; padding: 10px; cursor: pointer;';
+            downloadBtn.onclick = () => window.GameLogger && window.GameLogger.downloadLogs();
+            errorDiv.appendChild(downloadBtn);
+            
             document.body.appendChild(errorDiv);
         }
     }
