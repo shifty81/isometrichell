@@ -119,7 +119,7 @@ class Game {
         
         // Update player first
         if (this.player) {
-            this.player.update(deltaTime, this.world, this.engine.input);
+            this.player.update(deltaTime, this.world, this.engine.input, this.timeSystem);
             
             // Camera follows player
             const playerScreen = IsometricUtils.tileToScreen(this.player.x, this.player.y, 64, 32);
@@ -280,6 +280,11 @@ class Game {
                 period.charAt(0).toUpperCase() + period.slice(1);
         }
         
+        // Update survival stats
+        if (this.player && this.player.survival) {
+            this.updateSurvivalUI(this.player.survival);
+        }
+        
         // Update mouse tile position
         if (this.hoveredTile) {
             const resourceText = this.hoveredTile.isResource ? ' [Resource]' : '';
@@ -301,5 +306,44 @@ class Game {
             mode = `Player - Wood: ${this.player.inventory.wood} Stone: ${this.player.inventory.stone}`;
         }
         document.getElementById('mode').textContent = mode;
+    }
+    
+    /**
+     * Update survival stats UI
+     */
+    updateSurvivalUI(survival) {
+        const stats = ['hunger', 'thirst', 'energy', 'health', 'hygiene'];
+        
+        for (const stat of stats) {
+            const value = Math.round(survival[stat]);
+            const statusLevel = survival.getStatusLevel(stat);
+            
+            // Update value text
+            const valueElement = document.getElementById(`${stat}Value`);
+            if (valueElement) {
+                valueElement.textContent = value;
+            }
+            
+            // Update bar
+            const barElement = document.getElementById(`${stat}Bar`);
+            if (barElement) {
+                barElement.style.width = `${value}%`;
+                barElement.className = `stat-bar ${statusLevel}`;
+            }
+        }
+        
+        // Update status effects
+        const statusEffects = survival.getStatusEffects();
+        const statusEffectsContainer = document.getElementById('statusEffects');
+        
+        if (statusEffects.length > 0) {
+            statusEffectsContainer.style.display = 'block';
+            statusEffectsContainer.innerHTML = statusEffects.map(effect => {
+                const displayName = effect.replace(/_/g, ' ').toUpperCase();
+                return `<span class="status-effect-badge">${displayName}</span>`;
+            }).join('');
+        } else {
+            statusEffectsContainer.style.display = 'none';
+        }
     }
 }

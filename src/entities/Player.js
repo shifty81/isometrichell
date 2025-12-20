@@ -13,12 +13,20 @@ class Player extends Entity {
         this.interactionRange = 1.5; // tiles
         this.isMoving = false;
         this.direction = { x: 0, y: 0 }; // Current movement direction
+        
+        // Initialize survival attributes
+        this.survival = new SurvivalAttributes();
     }
     
     /**
      * Update player
      */
-    update(deltaTime, world, input = null) {
+    update(deltaTime, world, input = null, timeSystem = null) {
+        // Update survival attributes if time system is available
+        if (this.survival && timeSystem) {
+            this.survival.update(deltaTime, timeSystem);
+        }
+        
         // If no input provided, skip movement (entity is being updated by world)
         if (!input) {
             return;
@@ -55,6 +63,11 @@ class Player extends Entity {
         // Store direction for rendering
         if (dx !== 0 || dy !== 0) {
             this.direction = { x: dx, y: dy };
+        }
+        
+        // Set activity multiplier based on movement
+        if (this.survival) {
+            this.survival.setActivity(this.isMoving ? 1.3 : 1.0);
         }
         
         // Apply movement
