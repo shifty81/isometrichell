@@ -2,6 +2,9 @@
 
 # Build script for Isometric Hell C++ Engine
 
+# Enable pipefail to catch errors in pipes
+set -o pipefail
+
 # Save the root directory first
 ROOT_DIR=$(pwd)
 
@@ -36,10 +39,7 @@ cd "$ROOT_DIR/build"
 # Run CMake
 log "Running CMake..."
 log ""
-cmake .. -DCMAKE_BUILD_TYPE=Release 2>&1 | tee -a "$LOG_FILE"
-CMAKE_EXIT_CODE=${PIPESTATUS[0]}
-
-if [ $CMAKE_EXIT_CODE -ne 0 ]; then
+if ! cmake .. -DCMAKE_BUILD_TYPE=Release 2>&1 | tee -a "$LOG_FILE"; then
     log ""
     log "========================================"
     log "ERROR: CMake configuration failed!"
@@ -63,10 +63,7 @@ fi
 log ""
 log "Building..."
 log ""
-cmake --build . --config Release 2>&1 | tee -a "$LOG_FILE"
-BUILD_EXIT_CODE=${PIPESTATUS[0]}
-
-if [ $BUILD_EXIT_CODE -ne 0 ]; then
+if ! cmake --build . --config Release 2>&1 | tee -a "$LOG_FILE"; then
     log ""
     log "========================================"
     log "ERROR: Build failed!"

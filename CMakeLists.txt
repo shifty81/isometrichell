@@ -18,7 +18,7 @@ if(NOT OPENGL_FOUND)
     message(FATAL_ERROR 
         "OpenGL not found!\n"
         "Please install OpenGL development libraries:\n"
-        "  Ubuntu/Debian: sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev\n"
+        "  Ubuntu/Debian: sudo apt-get install libopengl-dev libgl-dev libglu1-mesa-dev\n"
         "  Fedora/RHEL: sudo dnf install mesa-libGL-devel mesa-libGLU-devel\n"
         "  Arch: sudo pacman -S mesa glu\n"
     )
