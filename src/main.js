@@ -3,6 +3,71 @@
  * Initialize and start the game
  */
 
+// Setup audio controls
+function setupAudioControls(audioManager) {
+    // Master volume slider
+    const masterVolume = document.getElementById('masterVolume');
+    const masterVolumeValue = document.getElementById('masterVolumeValue');
+    
+    masterVolume.addEventListener('input', (e) => {
+        const value = e.target.value / 100;
+        audioManager.setMasterVolume(value);
+        masterVolumeValue.textContent = `${e.target.value}%`;
+    });
+    
+    // Music volume slider
+    const musicVolume = document.getElementById('musicVolume');
+    const musicVolumeValue = document.getElementById('musicVolumeValue');
+    
+    musicVolume.addEventListener('input', (e) => {
+        const value = e.target.value / 100;
+        audioManager.setMusicVolume(value);
+        musicVolumeValue.textContent = `${e.target.value}%`;
+    });
+    
+    // SFX volume slider
+    const sfxVolume = document.getElementById('sfxVolume');
+    const sfxVolumeValue = document.getElementById('sfxVolumeValue');
+    
+    sfxVolume.addEventListener('input', (e) => {
+        const value = e.target.value / 100;
+        audioManager.setSfxVolume(value);
+        sfxVolumeValue.textContent = `${e.target.value}%`;
+    });
+    
+    // Mute music button
+    const muteMusicBtn = document.getElementById('muteMusic');
+    muteMusicBtn.addEventListener('click', () => {
+        audioManager.toggleMusicMute();
+        if (audioManager.isMusicMuted) {
+            muteMusicBtn.classList.add('muted');
+            muteMusicBtn.textContent = '🔇 Unmute Music';
+        } else {
+            muteMusicBtn.classList.remove('muted');
+            muteMusicBtn.textContent = '🎵 Mute Music';
+            // Restart music if it was playing
+            if (!audioManager.currentMusic) {
+                audioManager.playMusic('music');
+            }
+        }
+    });
+    
+    // Mute SFX button
+    const muteSfxBtn = document.getElementById('muteSfx');
+    muteSfxBtn.addEventListener('click', () => {
+        audioManager.toggleSfxMute();
+        if (audioManager.isSfxMuted) {
+            muteSfxBtn.classList.add('muted');
+            muteSfxBtn.textContent = '🔇 Unmute SFX';
+        } else {
+            muteSfxBtn.classList.remove('muted');
+            muteSfxBtn.textContent = '🔔 Mute SFX';
+        }
+    });
+    
+    console.log('🎛️  Audio controls initialized');
+}
+
 // Show loading screen
 function showLoadingScreen() {
     const ui = document.getElementById('ui');
@@ -78,6 +143,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                 console.log('🎵 Background music started');
             }
         }, { once: true });
+        
+        // Setup audio controls
+        setupAudioControls(audioManager);
         
         // Log startup summary
         console.log('');

@@ -109,7 +109,7 @@ class Game {
                 
                 if (success && this.audioManager) {
                     // Play interaction sound
-                    this.audioManager.playSFX('sfx_womp');
+                    this.audioManager.playSfx('sfx_womp');
                 }
             }
         }
