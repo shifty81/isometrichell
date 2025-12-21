@@ -36,15 +36,21 @@ A **dual-architecture game development system** combining:
 
 ### 2. Organized Asset System ✅
 
-**Tileset Organization:**
+**Asset Organization:**
 ```
-tilesheets/
-├── ground/          # 5 terrain types × 2 resolutions = 10 tilesets
-├── vegetation/      # Trees with shadows/no shadows × 2 resolutions
-├── vehicles/        # Vehicle collections
-├── buildings/       # (Coming soon)
-├── characters/      # (Coming soon)
-└── props/           # (Coming soon)
+assets/
+├── TBD/                    # 📦 Unintegrated Assets (1,000+ files)
+│   ├── dungeon_pack/      # 747 dungeon tiles
+│   ├── snow_tilesets/     # 528 winter assets
+│   ├── vehicles/          # Vehicle sprites
+│   ├── cave_extras/       # Cave decorations
+│   └── [more categories]  # Other unintegrated assets
+│
+└── [integrated]/          # ✅ Currently Used Assets
+    ├── ground_tiles_sheets/
+    ├── isometric_trees_pack/
+    ├── Charachters/
+    └── MusicAndSFX/
 ```
 
 **Resolution Support:**
@@ -52,6 +58,8 @@ tilesheets/
 - **High-Res**: 128×64 isometric tiles (1024×448px sheets)
 - **Trees**: 64×64 and 128×128 sprite sizes
 - **Future**: 256×128 ultra-high-res support
+
+**TBD Folder**: Contains 1,000+ unintegrated assets organized by category, ready for future integration. See [assets/TBD/README.md](../assets/TBD/README.md)
 
 ### 3. Tiled Map Editor Integration ✅
 
@@ -154,33 +162,58 @@ camera.setZoom(0.5f);  // Zoomed out, renders at 32×16
 ## File Structure Summary
 
 ```
-isometrichell/
-├── cpp/                    # C++ Engine (NEW!)
+TheDailyGrind/
+├── cpp/                    # C++ Engine
 │   ├── include/           # Headers
 │   ├── src/              # Implementation
 │   ├── external/         # Third-party libs (GLAD, stb)
 │   └── shaders/          # GLSL shaders
 │
-├── tilesheets/            # Tiled Configs (NEW!)
-│   ├── ground/           # Terrain tilesets
-│   ├── vegetation/       # Trees, bushes
-│   └── vehicles/         # Vehicle sprites
+├── engine/                # Web Editor - Engine Code
+├── src/                  # Web Editor - Game Code
 │
-├── tiled_maps/            # Tiled Maps (NEW!)
+├── assets/               # Shared Game Assets
+│   ├── TBD/             # 📦 Unintegrated Assets (1,000+ files)
+│   │   ├── dungeon_pack/      # 747 files
+│   │   ├── snow_tilesets/     # 528 files
+│   │   ├── vehicles/          # Vehicle sprites
+│   │   ├── cave_extras/       # Cave decorations
+│   │   ├── hdri_textures/     # HDRI files
+│   │   ├── bricks/            # Brick textures
+│   │   └── loose_files/       # Misc assets
+│   │
+│   └── [integrated]/    # ✅ Currently Used Assets
+│       ├── ground_tiles_sheets/
+│       ├── isometric_trees_pack/
+│       ├── Charachters/
+│       └── MusicAndSFX/
+│
+├── tilesheets/            # Tiled Configs
+│   ├── ground/           # Terrain tilesets
+│   └── vegetation/       # Trees, bushes
+│
+├── tiled_maps/            # Tiled Maps
 │   ├── template_map.tmx       # Standard res template
 │   └── template_map_highres.tmx  # High-res template
 │
-├── engine/                # Web Editor - Engine Code
-├── src/                  # Web Editor - Game Code
-├── assets/               # Shared Game Assets
-├── docs/                 # Documentation (ENHANCED!)
+├── docs/                 # Documentation
+│   ├── visual/          # Visual diagrams for visual learners
+│   ├── DIRECTORY_STRUCTURE.md  # 📋 **REQUIRED READING**
+│   ├── CONTRIBUTING.md         # Contribution guidelines
+│   └── [other docs]
 │
-├── CMakeLists.txt        # CMake config (NEW!)
-├── build-engine.sh       # Build script (NEW!)
-├── launch-engine.sh      # Launch C++ (NEW!)
-├── launch-editor.sh      # Launch web (NEW!)
-└── index.html            # Web editor
+├── CMakeLists.txt        # CMake config
+├── build-engine.sh       # Build script
+├── launch-engine.sh      # Launch C++ engine
+├── launch-editor.sh      # Launch web editor
+└── index.html            # Web editor entry point
 ```
+
+**Key Notes:**
+- **📦 `assets/TBD/`**: Contains 1,000+ unintegrated assets, organized and ready for future use
+- **📋 `docs/DIRECTORY_STRUCTURE.md`**: **REQUIRED READING** - Defines structure and naming conventions
+- **🤝 `docs/CONTRIBUTING.md`**: Guidelines for all contributions
+- **🖼️ `docs/visual/`**: Visual diagrams to help visual learners understand the project
 
 ## Quick Start Guide
 
