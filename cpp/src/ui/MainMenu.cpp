@@ -47,7 +47,6 @@ void MainMenu::createUI() {
     
     // Create menu buttons
     float buttonWidth = 300;
-    float buttonHeight = 50;
     float startY = 250;
     float spacing = 70;
     float centerX = screenWidth / 2 - buttonWidth / 2;
@@ -70,6 +69,7 @@ void MainMenu::createMenuButton(const std::string& text, float x, float y, std::
 }
 
 void MainMenu::update(float deltaTime) {
+    (void)deltaTime; // Unused for now
     // Update button hover states
     for (auto& button : menuButtons) {
         bool wasHovered = button->isHovered();

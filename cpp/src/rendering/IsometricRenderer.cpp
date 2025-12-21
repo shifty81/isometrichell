@@ -94,10 +94,35 @@ glm::vec2 IsometricRenderer::gridToScreen(int gridX, int gridY) const {
     return IsometricUtils::worldToScreen(gridX, gridY, tileWidth, tileHeight);
 }
 
+glm::vec2 IsometricRenderer::tileToScreen(float x, float y) const {
+    // Use the same conversion as gridToScreen but with float coordinates
+    return IsometricUtils::worldToScreen(x, y, tileWidth, tileHeight);
+}
+
 glm::ivec2 IsometricRenderer::screenToGrid(const glm::vec2& screenPos, float screenWidth, float screenHeight) const {
     // Convert screen position to world position using camera
     glm::vec2 worldPos = camera->screenToWorld(screenPos, screenWidth, screenHeight);
     
     // Convert to grid coordinates
     return IsometricUtils::screenToWorld(worldPos.x, worldPos.y, tileWidth, tileHeight);
+}
+
+void IsometricRenderer::drawCircle(float screenX, float screenY, float radius, const glm::vec4& color) {
+    // Draw circle as a colored quad (simplified for now)
+    // In a production system, this would use proper circle rendering
+    renderer->drawColoredQuad(
+        glm::vec2(screenX - radius, screenY - radius),
+        glm::vec2(radius * 2.0f, radius * 2.0f),
+        color
+    );
+}
+
+void IsometricRenderer::drawEllipse(float screenX, float screenY, float radiusX, float radiusY, const glm::vec4& color) {
+    // Draw ellipse as a colored quad (simplified for now)
+    // In a production system, this would use proper ellipse rendering
+    renderer->drawColoredQuad(
+        glm::vec2(screenX - radiusX, screenY - radiusY),
+        glm::vec2(radiusX * 2.0f, radiusY * 2.0f),
+        color
+    );
 }

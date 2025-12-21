@@ -9,6 +9,12 @@ glm::vec2 worldToScreen(int worldX, int worldY, int tileWidth, int tileHeight) {
     return glm::vec2(screenX, screenY);
 }
 
+glm::vec2 worldToScreen(float worldX, float worldY, int tileWidth, int tileHeight) {
+    float screenX = (worldX - worldY) * (tileWidth / 2.0f);
+    float screenY = (worldX + worldY) * (tileHeight / 2.0f);
+    return glm::vec2(screenX, screenY);
+}
+
 glm::ivec2 screenToWorld(float screenX, float screenY, int tileWidth, int tileHeight) {
     float halfTileWidth = tileWidth / 2.0f;
     float halfTileHeight = tileHeight / 2.0f;
