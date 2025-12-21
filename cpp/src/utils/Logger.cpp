@@ -89,7 +89,7 @@ std::string Logger::getTimestamp() {
 #ifdef _MSC_VER
     localtime_s(&timeinfo, &time);
 #else
-    timeinfo = *std::localtime(&time);
+    localtime_r(&time, &timeinfo);
 #endif
     
     std::stringstream ss;
