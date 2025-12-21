@@ -36,7 +36,7 @@ public:
     
     // Setters
     void setType(TileType type);
-    void setOccupied(bool occupied) { this->occupied = occupied; }
+    void setOccupied(bool isOccupied) { this->occupied = isOccupied; }
     void setDecoration(const std::string& deco) { decoration = deco; }
     void setResource(bool res) { resource = res; }
     
