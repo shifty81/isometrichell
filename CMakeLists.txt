@@ -111,6 +111,9 @@ set(ENGINE_SOURCES
     cpp/src/building/Building.cpp
     cpp/src/building/BuildingSystem.cpp
     cpp/src/game/Game.cpp
+    cpp/src/game/GameState.cpp
+    cpp/src/ui/UIRenderer.cpp
+    cpp/src/ui/MainMenu.cpp
     cpp/src/utils/IsometricUtils.cpp
     cpp/src/utils/Logger.cpp
     cpp/src/utils/NoiseGenerator.cpp
@@ -141,6 +144,9 @@ set(ENGINE_HEADERS
     cpp/include/building/Building.h
     cpp/include/building/BuildingSystem.h
     cpp/include/game/Game.h
+    cpp/include/game/GameState.h
+    cpp/include/ui/UIRenderer.h
+    cpp/include/ui/MainMenu.h
     cpp/include/utils/IsometricUtils.h
     cpp/include/utils/Logger.h
     cpp/include/utils/NoiseGenerator.h
