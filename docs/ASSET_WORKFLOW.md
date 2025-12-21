@@ -69,9 +69,32 @@ assets/
 
 ## 🚀 Recommended Workflow: Sprite Sheets
 
-### Step 1: Generate Sprite Sheet Metadata
+### Step 1: Inspect Assets (REQUIRED FIRST STEP)
 
-Create metadata files that describe how to use sprite sheets directly:
+**Before processing any assets, examine them to determine the best approach:**
+
+```bash
+# Inspect specific category
+python3 utils/inspect_assets.py --vehicles
+python3 utils/inspect_assets.py --ground-tiles
+python3 utils/inspect_assets.py --trees
+
+# Inspect specific file or directory
+python3 utils/inspect_assets.py assets/TBD/vehicles/red_vehicles.png
+python3 utils/inspect_assets.py assets/TBD/dungeon_pack/
+```
+
+**The inspector will recommend:**
+- ✅ **Viable as sprite sheet** → Proceed to Step 2 (metadata generation)
+- ⚠️ **Need extraction** → Dimensions don't match standards, extract individual tiles
+- 📝 **Individual tile** → Already small, copy directly
+- 🔍 **Manual review** → Needs human inspection
+
+**Consistency Rule**: Always inspect assets first to ensure consistent handling across the project.
+
+### Step 2: Generate Sprite Sheet Metadata (if viable)
+
+If inspection shows asset is viable as sprite sheet, create metadata:
 
 ```bash
 # Generate all sprite sheet metadata

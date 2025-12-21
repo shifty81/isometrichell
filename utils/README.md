@@ -4,6 +4,40 @@ This directory contains utility scripts for asset management, extraction, and ga
 
 ## 📋 Asset Management Tools
 
+### 🔍 inspect_assets.py (REQUIRED FIRST STEP)
+
+**Purpose**: Examine assets to determine if viable as sprite sheet or need extraction. **Always run this first** before processing any assets for consistency.
+
+**Usage**:
+```bash
+# Inspect specific categories
+python3 utils/inspect_assets.py --vehicles
+python3 utils/inspect_assets.py --ground-tiles
+python3 utils/inspect_assets.py --trees
+
+# Inspect specific file or directory
+python3 utils/inspect_assets.py assets/TBD/vehicles/red_vehicles.png
+python3 utils/inspect_assets.py assets/TBD/dungeon_pack/
+```
+
+**What it does**:
+- Analyzes image dimensions and format
+- Detects possible grid layouts
+- Recommends: sprite sheet, extraction, or individual tile usage
+- Suggests resize if dimensions don't match project standards
+- Provides summary and next steps
+
+**Requirements**:
+- Pillow library: `pip install Pillow`
+
+**Output**: 
+- ✅ Viable as sprite sheet → Use `create_sprite_metadata.py`
+- ⚠️ Need extraction → Use `split_tilesheets.py` or extraction tools
+- 📝 Individual tile → Copy directly to `assets/individual/`
+- 🔍 Manual review needed → Inspect image manually
+
+---
+
 ### ✅ create_sprite_metadata.py (RECOMMENDED)
 
 **Purpose**: Generate metadata files for using sprite sheets directly in the game without extraction. Keeps source images intact and supports animations.
