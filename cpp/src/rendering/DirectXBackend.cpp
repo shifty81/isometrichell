@@ -155,6 +155,8 @@ void DirectXBackend::enableBlending(bool enable) {
 
 void DirectXBackend::setBlendMode(int srcFactor, int dstFactor) {
 #ifdef DIRECTX_AVAILABLE
+    (void)srcFactor; // Unused - requires blend state recreation
+    (void)dstFactor; // Unused - requires blend state recreation
     // Note: Would need to recreate blend state with new factors
     // This is a simplified implementation
     LOG_WARNING("DirectX setBlendMode requires blend state recreation");

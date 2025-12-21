@@ -45,7 +45,7 @@ public:
     int getHeight() const { return height; }
     
     // Set the game instance
-    void setGame(Game* game) { this->game = game; }
+    void setGame(Game* gameInstance) { this->game = gameInstance; }
     
 private:
     // Window management

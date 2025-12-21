@@ -8,6 +8,7 @@ Camera::Camera(float x, float y)
 
 void Camera::update(float deltaTime) {
     // Camera update logic (can be extended for smooth movement, etc.)
+    (void)deltaTime; // Unused - reserved for future smooth movement
 }
 
 void Camera::move(float dx, float dy) {

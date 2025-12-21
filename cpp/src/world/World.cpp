@@ -44,10 +44,13 @@ void World::generate() {
 }
 
 void World::update(float deltaTime) {
+    (void)deltaTime; // Unused - reserved for future weather/day-night cycle
     // World update logic (future: weather, day/night cycle, etc.)
 }
 
 void World::render(Renderer* renderer, IsometricRenderer* isoRenderer, Camera* camera) {
+    (void)renderer; // Unused - using isoRenderer for rendering
+    (void)camera; // Unused - camera handled by renderer
     // Render tiles in isometric order (back to front, left to right)
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {

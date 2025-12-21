@@ -39,8 +39,8 @@ void MainMenu::createUI() {
     backgroundPanel->setColor(glm::vec4(0.05f, 0.05f, 0.1f, 0.95f));
     
     // Create title label
-    float titleX = screenWidth / 2 - 200;
-    float titleY = 100;
+    float titleX = static_cast<float>(screenWidth / 2 - 200);
+    float titleY = 100.0f;
     titleLabel = std::make_unique<UILabel>(titleX, titleY, "THE DAILY GRIND");
     titleLabel->setScale(2.0f);
     titleLabel->setColor(glm::vec3(1.0f, 0.9f, 0.7f));

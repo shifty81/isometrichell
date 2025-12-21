@@ -54,16 +54,16 @@ public:
     void onClick(ClickCallback callback) { clickCallback = callback; }
     void handleClick();
     
-    void setText(const std::string& text) { this->text = text; }
+    void setText(const std::string& txt) { this->text = txt; }
     std::string getText() const { return text; }
     
     void setHovered(bool h) { hovered = h; }
     bool isHovered() const { return hovered; }
     
     // Colors
-    void setColor(const glm::vec3& color) { this->color = color; }
-    void setHoverColor(const glm::vec3& color) { this->hoverColor = color; }
-    void setTextColor(const glm::vec3& color) { this->textColor = color; }
+    void setColor(const glm::vec3& c) { this->color = c; }
+    void setHoverColor(const glm::vec3& c) { this->hoverColor = c; }
+    void setTextColor(const glm::vec3& c) { this->textColor = c; }
     
 private:
     std::string text;
@@ -85,7 +85,7 @@ public:
     
     void render() override;
     
-    void setColor(const glm::vec4& color) { this->color = color; }
+    void setColor(const glm::vec4& c) { this->color = c; }
     glm::vec4 getColor() const { return color; }
     
 private:
@@ -102,11 +102,12 @@ public:
     
     void render() override;
     
-    void setText(const std::string& text) { this->text = text; }
+    void setText(const std::string& txt) { this->text = txt; }
     std::string getText() const { return text; }
     
-    void setColor(const glm::vec3& color) { this->color = color; }
-    void setScale(float scale) { this->scale = scale; }
+    void setColor(const glm::vec3& c) { this->color = c; }
+    glm::vec3 getColor() const { return color; }
+    void setScale(float s) { this->scale = s; }
     
 private:
     std::string text;

@@ -42,7 +42,7 @@ private:
     
     // Setup UI
     void createUI();
-    void createMenuButton(const std::string& text, float y, std::function<void()> callback);
+    void createMenuButton(const std::string& text, float x, float y, std::function<void()> callback);
     
     // Button callbacks
     void onNewGame();

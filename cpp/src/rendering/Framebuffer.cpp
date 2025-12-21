@@ -14,10 +14,10 @@ Framebuffer::~Framebuffer() {
     cleanup();
 }
 
-bool Framebuffer::create(int width, int height, bool withDepth) {
-    this->width = width;
-    this->height = height;
-    this->withDepth = withDepth;
+bool Framebuffer::create(int w, int h, bool depth) {
+    this->width = w;
+    this->height = h;
+    this->withDepth = depth;
     
     // Create framebuffer
     glGenFramebuffers(1, &fbo);
@@ -30,7 +30,7 @@ bool Framebuffer::create(int width, int height, bool withDepth) {
     GLuint textureID;
     glGenTextures(1, &textureID);
     glBindTexture(GL_TEXTURE_2D, textureID);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -40,10 +40,10 @@ bool Framebuffer::create(int width, int height, bool withDepth) {
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureID, 0);
     
     // Create depth renderbuffer if requested
-    if (withDepth) {
+    if (depth) {
         glGenRenderbuffers(1, &rbo);
         glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-        glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
+        glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, w, h);
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
     }
     
@@ -54,7 +54,7 @@ bool Framebuffer::create(int width, int height, bool withDepth) {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     
     if (valid) {
-        std::cout << "Framebuffer created (" << width << "x" << height << ")" << std::endl;
+        std::cout << "Framebuffer created (" << w << "x" << h << ")" << std::endl;
     } else {
         std::cerr << "Failed to create framebuffer" << std::endl;
         cleanup();
@@ -72,13 +72,13 @@ void Framebuffer::unbind() const {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
-void Framebuffer::resize(int width, int height) {
-    if (this->width == width && this->height == height) {
+void Framebuffer::resize(int w, int h) {
+    if (this->width == w && this->height == h) {
         return;
     }
     
     cleanup();
-    create(width, height, withDepth);
+    create(w, h, withDepth);
 }
 
 void Framebuffer::cleanup() {

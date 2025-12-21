@@ -11,9 +11,12 @@ BuildingSystem::BuildingSystem(World* world)
 
 void BuildingSystem::update(float deltaTime) {
     // Building system update logic (future: construction progress, etc.)
+    (void)deltaTime; // Unused - reserved for future construction progress
 }
 
 void BuildingSystem::render(Renderer* renderer, IsometricRenderer* isoRenderer, Camera* camera) {
+    (void)renderer; // Unused - using isoRenderer for rendering
+    (void)camera; // Unused - camera handled by renderer
     // Render all buildings
     for (const auto& building : buildings) {
         isoRenderer->drawIsometricCube(

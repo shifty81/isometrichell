@@ -1,6 +1,8 @@
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
+#include <vector>
+
 /**
  * Game State Enumeration
  * Defines all possible game states

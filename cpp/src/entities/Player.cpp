@@ -24,6 +24,8 @@ Player::~Player() {
 }
 
 void Player::update(float deltaTime, World* world) {
+    (void)deltaTime; // Unused - movement handled by updateWithInput
+    (void)world; // Unused - movement handled by updateWithInput
     // Base update without input (called by world)
     // Player movement is handled by updateWithInput() from Game
 }

@@ -65,11 +65,11 @@ BatchRenderer::~BatchRenderer() {
     }
 }
 
-bool BatchRenderer::initialize(size_t maxQuads) {
-    this->maxQuads = maxQuads;
+bool BatchRenderer::initialize(size_t maxQuadCount) {
+    this->maxQuads = maxQuadCount;
     
     // Reserve space for vertices (4 vertices per quad)
-    vertices.reserve(maxQuads * 4);
+    vertices.reserve(maxQuadCount * 4);
     
     // Reserve space for textures (max 32 texture slots)
     textures.reserve(32);
@@ -155,7 +155,7 @@ void BatchRenderer::drawQuad(
     float texIndex = getTextureIndex(texture);
     
     // Calculate quad vertices with rotation
-    glm::vec2 vertices[4];
+    glm::vec2 quadVertices[4];
     if (rotation != 0.0f) {
         glm::vec2 center = position + size * 0.5f;
         float cos_r = cos(glm::radians(rotation));
@@ -170,16 +170,16 @@ void BatchRenderer::drawQuad(
         
         for (int i = 0; i < 4; ++i) {
             glm::vec2 offset = offsets[i] - size * 0.5f;
-            vertices[i] = center + glm::vec2(
+            quadVertices[i] = center + glm::vec2(
                 offset.x * cos_r - offset.y * sin_r,
                 offset.x * sin_r + offset.y * cos_r
             );
         }
     } else {
-        vertices[0] = position + glm::vec2(0.0f, size.y);
-        vertices[1] = position + glm::vec2(size.x, size.y);
-        vertices[2] = position + glm::vec2(size.x, 0.0f);
-        vertices[3] = position + glm::vec2(0.0f, 0.0f);
+        quadVertices[0] = position + glm::vec2(0.0f, size.y);
+        quadVertices[1] = position + glm::vec2(size.x, size.y);
+        quadVertices[2] = position + glm::vec2(size.x, 0.0f);
+        quadVertices[3] = position + glm::vec2(0.0f, 0.0f);
     }
     
     // Add vertices to batch
@@ -192,7 +192,7 @@ void BatchRenderer::drawQuad(
     
     for (int i = 0; i < 4; ++i) {
         Vertex vertex;
-        vertex.position = glm::vec3(vertices[i], depth);
+        vertex.position = glm::vec3(quadVertices[i], depth);
         vertex.color = color;
         vertex.texCoord = texCoords[i];
         vertex.texIndex = texIndex;
