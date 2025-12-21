@@ -1,6 +1,7 @@
 #include "rendering/Renderer.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
+#include <cmath>
 
 // Default vertex shader source
 static const char* defaultVertexShader = R"(
@@ -201,4 +202,29 @@ bool Renderer::createDefaultShader() {
     }
     
     return true;
+}
+
+void Renderer::drawRect(float x, float y, float width, float height, const glm::vec4& color) {
+    drawColoredQuad(glm::vec2(x, y), glm::vec2(width, height), color);
+}
+
+void Renderer::drawLine(float x1, float y1, float x2, float y2, const glm::vec4& color, float thickness) {
+    // Calculate line direction and length
+    float dx = x2 - x1;
+    float dy = y2 - y1;
+    float length = std::sqrt(dx * dx + dy * dy);
+    
+    if (length < 0.001f) {
+        return; // Line is too short to draw
+    }
+    
+    // Calculate angle of rotation (convert radians to degrees)
+    constexpr float PI = 3.14159265358979323846f;
+    float angle = std::atan2(dy, dx) * 180.0f / PI;
+    
+    // Draw line as a rotated rectangle
+    glm::vec2 position(x1, y1 - thickness / 2.0f);
+    glm::vec2 size(length, thickness);
+    
+    drawColoredQuad(position, size, color, angle);
 }
