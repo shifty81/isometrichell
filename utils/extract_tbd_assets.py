@@ -14,7 +14,30 @@ from pathlib import Path
 
 
 class TBDAssetExtractor:
-    """Extracts and organizes assets from TBD folder."""
+    """
+    Extracts and organizes assets from the assets/TBD/ folder.
+    
+    This class handles extraction of unprocessed assets into individual files
+    that can be used in the game editor and engine. Supports multiple asset
+    types including vehicles, dungeon packs, and snow tilesets.
+    
+    Main Methods:
+        - list_available_assets(): List all asset categories in TBD
+        - extract_vehicles(): Copy vehicle sprite sheets
+        - extract_dungeon_pack(): Extract dungeon pack tiles
+        - extract_snow_tilesets(): Extract snow tileset assets
+        
+    Usage:
+        extractor = TBDAssetExtractor(project_root)
+        extractor.list_available_assets()
+        extractor.extract_vehicles(verify_only=False)
+    
+    Output:
+        Extracted files are placed in assets/individual/{category}/
+    """
+    
+    # Patterns for files to skip during extraction
+    SKIP_PATTERNS = ['collection', 'all']
     
     def __init__(self, project_root):
         self.project_root = Path(project_root)
@@ -118,17 +141,17 @@ class TBDAssetExtractor:
         
         extracted = []
         for sheet in vehicle_sheets:
-            # Skip if it's clearly a collection sheet or has 'all' in the name
-            if 'collection' in sheet.name.lower() or 'all' in sheet.name.lower():
+            # Skip collection sheets and similar files
+            if any(pattern in sheet.name.lower() for pattern in self.SKIP_PATTERNS):
                 print(f"\n  Skipping collection sheet: {sheet.name}")
                 continue
             
             print(f"\n  Found: {sheet.name}")
             
             if not verify_only:
-                # Most vehicle sheets are typically single vehicles or small grids
-                # You would need to inspect each to determine the grid size
-                # For now, we'll just copy individual vehicle files
+                # Note: Vehicle sheets are copied as-is rather than split into grids.
+                # If grid-based extraction is needed, extend the extract_tileset method
+                # or add a separate vehicle-specific extraction method with grid params.
                 
                 output_dir = self.individual_dir / 'vehicles'
                 output_dir.mkdir(parents=True, exist_ok=True)
