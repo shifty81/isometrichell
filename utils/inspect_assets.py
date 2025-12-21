@@ -350,7 +350,7 @@ def main():
     elif args.dungeon:
         dungeon_dir = project_root / 'assets' / 'TBD' / 'dungeon_pack'
         print("\nNote: Dungeon pack contains many files. Inspecting top-level...")
-        inspector.inspect_directory(dungeon_dir, recursive=False)
+        inspector.inspect_directory(dungeon_dir)
     
     elif args.tbd:
         tbd_dir = project_root / 'assets' / 'TBD'
