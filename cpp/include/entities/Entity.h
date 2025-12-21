@@ -33,7 +33,7 @@ public:
     glm::vec2 getVelocity() const { return velocity; }
     
     // Active state
-    void setActive(bool active) { this->active = active; }
+    void setActive(bool isActive) { this->active = isActive; }
     bool isActive() const { return active; }
     
 protected:

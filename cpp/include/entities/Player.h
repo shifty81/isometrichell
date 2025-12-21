@@ -28,8 +28,8 @@ public:
     bool interact(float targetX, float targetY, World* world);
     
     // Inventory
-    int getWood() const { return inventory["wood"]; }
-    int getStone() const { return inventory["stone"]; }
+    int getWood() const { return inventory.at("wood"); }
+    int getStone() const { return inventory.at("stone"); }
     void addWood(int amount) { inventory["wood"] += amount; }
     void addStone(int amount) { inventory["stone"] += amount; }
     

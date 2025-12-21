@@ -19,9 +19,11 @@ public:
     void move(float dx, float dy);
     void setPosition(float x, float y);
     glm::vec2 getPosition() const { return position; }
+    float getX() const { return position.x; }
+    float getY() const { return position.y; }
     
     // Camera speed
-    void setSpeed(float speed) { this->speed = speed; }
+    void setSpeed(float newSpeed) { this->speed = newSpeed; }
     float getSpeed() const { return speed; }
     
     // Get view matrix for 2D rendering
