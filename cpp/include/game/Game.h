@@ -8,6 +8,7 @@ class Engine;
 class World;
 class BuildingSystem;
 class Entity;
+class TextureManager;
 
 /**
  * Main Game Class
@@ -37,6 +38,7 @@ private:
     Engine* engine;
     
     // Game systems
+    std::unique_ptr<TextureManager> textureManager;
     std::unique_ptr<World> world;
     std::unique_ptr<BuildingSystem> buildingSystem;
     std::unique_ptr<Entity> player;

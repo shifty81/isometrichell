@@ -31,8 +31,10 @@ public:
     bool isWalkable() const { return walkable; }
     bool isOccupied() const { return occupied; }
     std::string getDecoration() const { return decoration; }
+    bool hasDecoration() const { return !decoration.empty(); }
     bool isResource() const { return resource; }
     int getTileVariation() const { return tileVariation; }
+    int getVariation() const { return tileVariation; } // Alias for consistency
     
     // Setters
     void setType(TileType type);

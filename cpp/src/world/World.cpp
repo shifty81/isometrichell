@@ -3,15 +3,17 @@
 #include "rendering/Renderer.h"
 #include "rendering/IsometricRenderer.h"
 #include "rendering/Camera.h"
+#include "rendering/TextureManager.h"
 #include "utils/NoiseGenerator.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 #include <sstream>
 
-World::World(int width, int height)
+World::World(int width, int height, TextureManager* textureManager)
     : width(width)
     , height(height)
+    , textureManager(textureManager)
     , noiseGen(std::make_unique<NoiseGenerator>(static_cast<uint32_t>(std::time(nullptr))))
 {
     // Initialize tiles
@@ -51,15 +53,53 @@ void World::update(float deltaTime) {
 void World::render(Renderer* renderer, IsometricRenderer* isoRenderer, Camera* camera) {
     (void)renderer; // Unused - using isoRenderer for rendering
     (void)camera; // Unused - camera handled by renderer
+    
     // Render tiles in isometric order (back to front, left to right)
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {
             const Tile* tile = getTile(x, y);
             if (tile) {
-                isoRenderer->drawIsometricColoredTile(
-                    x, y,
-                    tile->getColor()
-                );
+                // Try to use texture if texture manager is available
+                const Texture* tileTexture = nullptr;
+                
+                if (textureManager) {
+                    // Map tile types to asset names with variations
+                    std::string baseName;
+                    if (tile->getType() == TileType::GRASS) {
+                        baseName = "grass_green";
+                    } else if (tile->getType() == TileType::SAND) {
+                        baseName = "sand";
+                    } else if (tile->getType() == TileType::DIRT) {
+                        baseName = "dirt";
+                    } else if (tile->getType() == TileType::STONE) {
+                        baseName = "stone_path";
+                    }
+                    
+                    // Use the tile's variation index for visual diversity
+                    if (!baseName.empty()) {
+                        tileTexture = textureManager->getTileVariation(baseName, tile->getVariation());
+                    }
+                }
+                
+                // Draw tile with texture or fallback to solid color
+                if (tileTexture) {
+                    isoRenderer->drawIsometricTile(x, y, tileTexture);
+                } else {
+                    // Fallback to colored tiles if texture not available
+                    isoRenderer->drawIsometricColoredTile(x, y, tile->getColor());
+                }
+                
+                // Draw decoration if present
+                if (tile->hasDecoration() && textureManager) {
+                    const Texture* decorTexture = textureManager->getTexture(tile->getDecoration());
+                    if (decorTexture) {
+                        // Draw decoration centered on tile
+                        // Note: Decorations are drawn after tiles for proper layering
+                        // This is a simplified version - a full implementation would use
+                        // depth sorting for proper isometric rendering
+                        isoRenderer->drawIsometricTile(x, y, decorTexture);
+                    }
+                }
             }
         }
     }

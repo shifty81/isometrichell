@@ -96,6 +96,7 @@ set(ENGINE_SOURCES
     cpp/src/rendering/Renderer.cpp
     cpp/src/rendering/Shader.cpp
     cpp/src/rendering/Texture.cpp
+    cpp/src/rendering/TextureManager.cpp
     cpp/src/rendering/Camera.cpp
     cpp/src/rendering/IsometricRenderer.cpp
     cpp/src/rendering/OpenGLBackend.cpp
@@ -128,6 +129,7 @@ set(ENGINE_HEADERS
     cpp/include/rendering/Renderer.h
     cpp/include/rendering/Shader.h
     cpp/include/rendering/Texture.h
+    cpp/include/rendering/TextureManager.h
     cpp/include/rendering/Camera.h
     cpp/include/rendering/IsometricRenderer.h
     cpp/include/rendering/RenderBackend.h

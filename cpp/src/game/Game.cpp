@@ -4,6 +4,7 @@
 #include "rendering/Renderer.h"
 #include "rendering/Camera.h"
 #include "rendering/IsometricRenderer.h"
+#include "rendering/TextureManager.h"
 #include "world/World.h"
 #include "building/BuildingSystem.h"
 #include "entities/Entity.h"
@@ -22,8 +23,24 @@ Game::~Game() {
 bool Game::initialize() {
     std::cout << "Initializing game..." << std::endl;
     
-    // Create world
-    world = std::make_unique<World>(30, 30);
+    // Create texture manager
+    textureManager = std::make_unique<TextureManager>();
+    std::cout << "Loading textures..." << std::endl;
+    
+    // Load ground tiles
+    if (!textureManager->loadGroundTiles()) {
+        std::cout << "Warning: Failed to load ground tiles, using colored tiles as fallback" << std::endl;
+    }
+    
+    // Load decorations
+    if (!textureManager->loadDecorations()) {
+        std::cout << "Warning: Failed to load decorations" << std::endl;
+    }
+    
+    std::cout << "Loaded " << textureManager->getTextureCount() << " textures" << std::endl;
+    
+    // Create world with texture manager
+    world = std::make_unique<World>(30, 30, textureManager.get());
     world->generate();
     
     // Create building system

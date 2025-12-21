@@ -12,6 +12,7 @@ class Renderer;
 class IsometricRenderer;
 class Camera;
 class Texture;
+class TextureManager;
 
 /**
  * World Management
@@ -19,7 +20,7 @@ class Texture;
  */
 class World {
 public:
-    World(int width, int height);
+    World(int width, int height, TextureManager* textureManager = nullptr);
     ~World();
     
     // Initialize world with procedural generation
@@ -54,6 +55,7 @@ private:
     std::vector<std::vector<std::unique_ptr<Tile>>> tiles;
     std::vector<std::vector<std::unique_ptr<Biome>>> biomeMap;
     std::unique_ptr<NoiseGenerator> noiseGen;
+    TextureManager* textureManager; // Not owned by World
     
     // Generate biome map using noise
     void generateBiomeMap();
