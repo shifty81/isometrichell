@@ -205,7 +205,8 @@ void UIRenderer::drawText(const std::string& text, float x, float y, float scale
     const float charHeight = 12.0f * scale;
     
     float currentX = x;
-    for (size_t i = 0; i < text.length(); ++i) {
+    for (char c : text) {
+        (void)c; // Character not used in this placeholder implementation
         // Very simple character rendering as rectangles
         // In a real implementation, this would render actual glyphs
         drawRect(currentX, y, charWidth, charHeight, glm::vec4(color, 1.0f));
