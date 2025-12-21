@@ -22,7 +22,11 @@
 #include <KHR/khrplatform.h>
 
 #ifndef APIENTRY
-#define APIENTRY
+  #if defined(_WIN32)
+    #define APIENTRY __stdcall
+  #else
+    #define APIENTRY
+  #endif
 #endif
 #ifndef APIENTRYP
 #define APIENTRYP APIENTRY *

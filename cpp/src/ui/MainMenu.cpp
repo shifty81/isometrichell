@@ -35,7 +35,7 @@ void MainMenu::createUI() {
     int screenHeight = engine->getHeight();
     
     // Create semi-transparent background panel
-    backgroundPanel = std::make_unique<UIPanel>(0, 0, screenWidth, screenHeight);
+    backgroundPanel = std::make_unique<UIPanel>(0.0f, 0.0f, static_cast<float>(screenWidth), static_cast<float>(screenHeight));
     backgroundPanel->setColor(glm::vec4(0.05f, 0.05f, 0.1f, 0.95f));
     
     // Create title label
@@ -60,7 +60,7 @@ void MainMenu::createUI() {
 }
 
 void MainMenu::createMenuButton(const std::string& text, float x, float y, std::function<void()> callback) {
-    auto button = std::make_unique<UIButton>(x, y, 300, 50, text);
+    auto button = std::make_unique<UIButton>(x, y, 300.0f, 50.0f, text);
     button->setColor(glm::vec3(0.2f, 0.3f, 0.4f));
     button->setHoverColor(glm::vec3(0.3f, 0.5f, 0.6f));
     button->setTextColor(glm::vec3(1.0f, 1.0f, 1.0f));
