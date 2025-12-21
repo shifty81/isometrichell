@@ -180,8 +180,10 @@ void UIRenderer::drawRect(float x, float y, float width, float height, const glm
     glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
     
     // Simple color rendering without shader for now
-    // TODO: Use proper shader
-    glColor4f(color.r, color.g, color.b, color.a);
+    // TODO: Use proper shader-based rendering instead of fixed-function pipeline
+    // Note: glColor4f is deprecated - this is a placeholder until proper UI shaders are implemented
+    // For now, rendering will be white/default until shaders are added
+    (void)color; // Suppress unused parameter warning
     glDrawArrays(GL_TRIANGLES, 0, 6);
     
     glBindVertexArray(0);
@@ -204,6 +206,7 @@ void UIRenderer::drawText(const std::string& text, float x, float y, float scale
     
     float currentX = x;
     for (char c : text) {
+        (void)c; // Character not used in this placeholder implementation
         // Very simple character rendering as rectangles
         // In a real implementation, this would render actual glyphs
         drawRect(currentX, y, charWidth, charHeight, glm::vec4(color, 1.0f));

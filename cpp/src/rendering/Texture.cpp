@@ -52,10 +52,10 @@ bool Texture::loadFromFile(const char* path, bool generateMipmap) {
     return success;
 }
 
-bool Texture::loadFromMemory(unsigned char* data, int width, int height, int channels) {
-    this->width = width;
-    this->height = height;
-    this->channels = channels;
+bool Texture::loadFromMemory(unsigned char* data, int w, int h, int ch) {
+    this->width = w;
+    this->height = h;
+    this->channels = ch;
     
     // Generate texture
     glGenTextures(1, &textureID);
@@ -63,16 +63,16 @@ bool Texture::loadFromMemory(unsigned char* data, int width, int height, int cha
     
     // Determine format
     GLenum format = GL_RGB;
-    if (channels == 1) {
+    if (ch == 1) {
         format = GL_RED;
-    } else if (channels == 3) {
+    } else if (ch == 3) {
         format = GL_RGB;
-    } else if (channels == 4) {
+    } else if (ch == 4) {
         format = GL_RGBA;
     }
     
     // Upload texture data
-    glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+    glTexImage2D(GL_TEXTURE_2D, 0, format, w, h, 0, format, GL_UNSIGNED_BYTE, data);
     
     // Set default texture parameters
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);

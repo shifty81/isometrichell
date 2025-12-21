@@ -212,5 +212,6 @@ bool Engine::initOpenGL() {
 }
 
 void Engine::framebufferSizeCallback(GLFWwindow* window, int width, int height) {
+    (void)window; // Unused - static callback
     glViewport(0, 0, width, height);
 }

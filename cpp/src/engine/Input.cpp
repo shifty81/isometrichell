@@ -69,6 +69,9 @@ bool Input::isMouseButtonReleased(int button) const {
 }
 
 void Input::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    (void)window; // Unused - accessing instance
+    (void)scancode; // Unused - not tracking scancodes
+    (void)mods; // Unused - not tracking modifier keys
     if (!instance) return;
     
     if (key >= 0 && key <= GLFW_KEY_LAST) {
@@ -81,6 +84,8 @@ void Input::keyCallback(GLFWwindow* window, int key, int scancode, int action, i
 }
 
 void Input::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    (void)window; // Unused - accessing instance
+    (void)mods; // Unused - not tracking modifier keys
     if (!instance) return;
     
     if (button >= 0 && button <= GLFW_MOUSE_BUTTON_LAST) {
@@ -93,6 +98,7 @@ void Input::mouseButtonCallback(GLFWwindow* window, int button, int action, int 
 }
 
 void Input::cursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
+    (void)window; // Unused - accessing instance
     if (!instance) return;
     instance->mousePosition = glm::vec2(static_cast<float>(xpos), static_cast<float>(ypos));
 }
