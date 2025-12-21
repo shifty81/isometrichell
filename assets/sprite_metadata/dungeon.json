@@ -1,0 +1,2591 @@
+{
+  "description": "Dungeon pack sprite sheets and tiles",
+  "note": "Contains 747 PNG files - mix of sprite sheets and individual tiles",
+  "sheets": [
+    {
+      "name": "Preview",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Preview.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "Information",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Information.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "Sample",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Sample.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenRight_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSteps_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHalf_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumn_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumn_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrelsStacked_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAged_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSide_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumnIn_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedLeft_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundItemsChairs_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundItemsChairs_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableChairsBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableChairsBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedLeft_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSideUneven_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenCrates_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrates_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stone_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stone_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridge_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridge_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairs_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindowBars_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneRight_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateOpen_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallTop_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsSpiral_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedRight_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneUneven_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planks_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHole_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridge_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridge_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirt_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSideUneven_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneStep_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateBars_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWall_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSteps_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAged_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedLeft_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateClosed_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoor_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsAged_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindowBars_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridge_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridge_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAged_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumnWood_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumnWood_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallCorner_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenRight_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stone_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGate_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneCorner_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateOpen_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsCorner_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneMissingTiles_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumnWood_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumnWood_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorBars_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateBars_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSide_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundChairs_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundChairs_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHalf_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneStep_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumn_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumn_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneCorner_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSideUneven_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneStep_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsSpiral_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumn_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumn_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundChairs_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundChairs_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportBeams_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportBeams_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGate_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateClosed_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneCorner_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneUneven_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneTile_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallCorner_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSideUneven_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumnIn_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSide_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRound_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallArchway_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallCorner_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBlock_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundWindow_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneInset_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHalf_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirtTiles_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateClosed_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsAged_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumnWood_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumnWood_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindow_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksHole_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrels_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenPile_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenPile_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksHole_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateOpen_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumn_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumn_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateBars_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsSpiral_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorOpen_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportBeams_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportBeams_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorOpen_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneLeft_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneTile_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrels_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSide_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableShortChairs_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShortChairs_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrelsStacked_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairs_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundWindow_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedRight_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoor_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneLeft_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableChairsBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableChairsBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsCorner_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneRight_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallCorner_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallTop_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHole_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairs_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneRight_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWall_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorOpen_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planks_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateOpen_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedLeft_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsAged_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneStep_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoor_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirtTiles_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallStructure_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrelsStacked_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneInset_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridgeBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridgeBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindow_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindowBars_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallStructure_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridgeBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridgeBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorBars_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHole_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSteps_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateBars_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumnIn_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRound_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBlock_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumn_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumn_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneInset_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundItemsChairs_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundItemsChairs_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundWindow_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorClosed_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenLeft_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenCrates_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrates_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrelsStacked_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneMissingTiles_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridgeBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridgeBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBeam_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBeam_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableShortChairs_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShortChairs_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planks_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumn_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumn_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirt_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundChairs_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundChairs_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoor_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrels_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorClosed_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundChairs_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundChairs_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneUneven_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableChairsBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableChairsBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedRight_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableChairsBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableChairsBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGateClosed_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsAged_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneRight_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsCorner_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallTop_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallStructure_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWall_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGate_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHole_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksHole_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneTile_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRound_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenLeft_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAged_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBlock_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirtTiles_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneSteps_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneMissingTiles_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planks_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenLeft_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindow_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenPile_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenPile_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallTop_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallArchway_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneCorner_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stone_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenRight_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrels_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenCrates_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrates_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneInset_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirtTiles_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindow_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallArchway_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneLeft_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenPile_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenPile_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridge_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridge_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenPile_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenPile_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumn_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumn_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneTile_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallArchway_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallWindowBars_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorClosed_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorClosed_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableShortChairs_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShortChairs_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorBars_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBlock_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneMissingTiles_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallAgedRight_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundItemsChairs_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundItemsChairs_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumnIn_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorBars_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRound_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallGate_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableShortChairs_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShortChairs_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBeam_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBeam_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridgeBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/bridgeBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenRight_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWall_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallBrokenLeft_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirt_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallStructure_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairs_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "tableRoundItemsChairs_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRoundItemsChairs_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallHalf_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/planksHole_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneUneven_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/dirt_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallRoundWindow_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallDoorOpen_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneColumnWood_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneColumnWood_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsCorner_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stairsSpiral_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneLeft_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenRight_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSteps_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHalf_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrelsStacked_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAged_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSide_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumnIn_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedLeft_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedLeft_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSideUneven_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stone_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stone_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "bridge_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridge_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairs_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindowBars_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneRight_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateOpen_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallTop_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsSpiral_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedRight_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneUneven_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planks_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHole_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirt_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSideUneven_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneStep_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateBars_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWall_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSteps_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAged_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedLeft_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateClosed_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoor_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsAged_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindowBars_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAged_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallCorner_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenRight_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stone_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGate_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneCorner_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateOpen_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsCorner_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneMissingTiles_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorBars_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateBars_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSide_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHalf_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneStep_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneCorner_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSideUneven_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneStep_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsSpiral_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGate_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateClosed_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneCorner_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneUneven_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneTile_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallCorner_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSideUneven_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSideUneven_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumnIn_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSide_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRound_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallArchway_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallCorner_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBlock_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundWindow_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneInset_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHalf_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirtTiles_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateClosed_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsAged_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindow_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksHole_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrels_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksHole_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateOpen_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateBars_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsSpiral_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorOpen_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorOpen_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneLeft_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneTile_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrels_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSide_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSide_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrelsStacked_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairs_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundWindow_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedRight_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoor_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneLeft_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsCorner_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneRight_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallCorner_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallCorner_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallTop_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHole_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairs_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneRight_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWall_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorOpen_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planks_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateOpen_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateOpen_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedLeft_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedLeft_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsAged_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneStep_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneStep_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoor_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirtTiles_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallStructure_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrelsStacked_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneInset_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindow_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindowBars_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallStructure_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorBars_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHole_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSteps_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateBars_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateBars_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumnIn_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRound_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBlock_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneInset_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundWindow_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorClosed_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenLeft_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrelsStacked_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrelsStacked_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneMissingTiles_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundBroken_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planks_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirt_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoor_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoor_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrels_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorClosed_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneUneven_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedRight_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundBroken_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGateClosed_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGateClosed_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsAged_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsAged_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneRight_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneRight_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsCorner_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallTop_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBroken_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBroken_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallStructure_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWall_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGate_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHole_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHole_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksHole_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneTile_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRound_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundBroken_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundBroken_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenLeft_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAged_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAged_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBlock_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirtTiles_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneSteps_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneSteps_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneMissingTiles_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planks_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planks_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenLeft_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindow_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenPile_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenPile_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallTop_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallTop_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallArchway_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneCorner_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneCorner_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stone_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stone_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenRight_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "barrels_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrels_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneInset_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneInset_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirtTiles_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirtTiles_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindow_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindow_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallArchway_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneLeft_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneTile_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneTile_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallArchway_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallArchway_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallWindowBars_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallWindowBars_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorClosed_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorClosed_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorClosed_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorBars_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "woodenSupportsBlock_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBlock_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneMissingTiles_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneMissingTiles_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallAgedRight_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallAgedRight_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallColumnIn_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumnIn_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorBars_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorBars_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRound_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRound_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallGate_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallGate_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenRight_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenRight_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWall_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWall_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallBrokenLeft_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallBrokenLeft_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirt_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallStructure_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallStructure_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairs_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairs_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallHalf_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallHalf_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "planksHole_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/planksHole_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneUneven_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneUneven_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "dirt_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/dirt_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallRoundWindow_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallRoundWindow_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneWallDoorOpen_N",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallDoorOpen_N.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsCorner_S",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsCorner_S.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stairsSpiral_E",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stairsSpiral_E.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    },
+    {
+      "name": "stoneLeft_W",
+      "file": "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneLeft_W.png",
+      "note": "Sprite sheet - dimensions need inspection"
+    }
+  ],
+  "individual_tiles": [
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestOpen_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrel_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRound_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBeam_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestClosed_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestOpen_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrate_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chair_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRound_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrel_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/stoneWallColumn_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestClosed_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrate_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupports_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRound_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestOpen_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportsBeam_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableRound_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestOpen_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrates_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShort_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chair_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportBeams_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShort_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupports_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShort_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupports_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrate_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenCrate_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestClosed_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/tableShort_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chair_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrel_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupportBeams_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chestClosed_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/chair_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/barrel_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Angle/woodenSupports_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumn_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestOpen_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrel_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundItemsChairs_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableChairsBroken_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrates_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRound_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBeam_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridge_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestClosed_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestOpen_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrate_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chair_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRound_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridge_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumnWood_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrel_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumn_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumnWood_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundChairs_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestClosed_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumn_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumn_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundChairs_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportBeams_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrate_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupports_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRound_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumnWood_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenPile_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumn_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportBeams_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShortChairs_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestOpen_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableChairsBroken_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBeam_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRound_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestOpen_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrates_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridgeBroken_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShort_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chair_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridgeBroken_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportBeams_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumn_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundItemsChairs_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShort_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupports_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrates_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridgeBroken_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShort_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBeam_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShortChairs_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupports_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrate_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumn_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundChairs_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrate_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestClosed_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShort_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundChairs_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableChairsBroken_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableChairsBroken_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chair_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrel_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportBeams_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenCrates_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenPile_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridge_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenPile_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chestClosed_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneWallColumn_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShortChairs_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/chair_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundItemsChairs_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableShortChairs_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupportsBeam_N.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/bridgeBroken_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/barrel_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/tableRoundItemsChairs_W.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/woodenSupports_E.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Isometric/stoneColumnWood_S.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run5.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_7_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Pickup7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup6.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Run2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_2_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_4_Idle0.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Run1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Run7.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run8.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_3_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup1.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_0_Pickup4.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Run9.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_1_Pickup3.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_5_Pickup2.png",
+    "TBD/dungeon_pack/Dungeon Pack (2.3)/Characters/Male/Male_6_Pickup5.png"
+  ]
+}

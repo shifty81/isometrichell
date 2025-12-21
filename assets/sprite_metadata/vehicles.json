@@ -1,0 +1,85 @@
+{
+  "description": "Isometric vehicle sprite sheets",
+  "sheets": [
+    {
+      "name": "yellow_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/yellow_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "blue_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/blue_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "white_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/white_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "grey_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/grey_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "red_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/red_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "green_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/green_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "black_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/black_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    },
+    {
+      "name": "orange_vehicles",
+      "file": "assets/TBD/vehicles/isometric_vehicles/orange_vehicles.png",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 8,
+      "total_sprites": 64,
+      "usage": "Vehicle sprites with multiple angles and types for directional movement"
+    }
+  ]
+}

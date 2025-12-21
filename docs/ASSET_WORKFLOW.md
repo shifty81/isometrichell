@@ -1,10 +1,32 @@
-# Asset Extraction and Organization Workflow
+# Asset Management Workflow
 
-This document describes the complete workflow for extracting, organizing, and archiving game assets in The Daily Grind project.
+This document describes two approaches for managing game assets in The Daily Grind project: **Sprite Sheet Usage** (recommended) and **Individual Tile Extraction** (legacy).
 
 ## 📋 Overview
 
-Our asset management system follows a clear pipeline:
+### ✅ Recommended: Sprite Sheet Approach (NEW)
+
+Use sprite sheets directly in the game engine with metadata for optimal performance:
+
+```
+1. Source Sprite Sheets (TBD or main assets/)
+   ↓
+2. Generate Metadata (assets/sprite_metadata/)
+   ↓
+3. Load Sheets Directly in Game Engine
+   ↓
+4. Extract Sprites at Runtime as Needed
+```
+
+**Benefits**:
+- ✅ Source images kept intact
+- ✅ Fewer files, better performance
+- ✅ Supports animations and directional movement
+- ✅ Easier to update and maintain
+
+### ⚠️ Legacy: Individual Tile Extraction
+
+Extract individual tiles for use (old approach):
 
 ```
 1. Tilesets/Source Files (TBD or main assets/)
@@ -20,44 +42,117 @@ Our asset management system follows a clear pipeline:
 
 ```
 assets/
-├── TBD/                        # Unprocessed assets waiting to be integrated
+├── TBD/                        # Unprocessed assets
 │   ├── dungeon_pack/          # 747 dungeon tiles
-│   ├── snow_tilesets/         # 528 winter assets
-│   ├── vehicles/              # Vehicle sprites
+│   ├── snow_tilesets/         # 529 winter assets
+│   ├── vehicles/              # Vehicle sprite sheets (8 sheets × 64 sprites)
 │   └── ...                    # Other categories
 │
-├── individual/                 # Extracted individual tiles (ACTIVE USE)
-│   ├── ground_tiles/          # Individual terrain tiles
-│   ├── trees/                 # Individual tree sprites
-│   ├── vehicles/              # Individual vehicle sprites
-│   ├── dungeon/               # Individual dungeon tiles
-│   ├── snow/                  # Individual snow tiles
-│   └── ...                    # Other categories
+├── sprite_metadata/            # NEW: Metadata for direct sprite sheet usage
+│   ├── vehicles.json          # Vehicle sprite sheet metadata
+│   ├── ground_tiles.json      # Ground tile sheet metadata
+│   ├── trees.json             # Tree sprite sheet metadata
+│   ├── dungeon.json           # Dungeon pack metadata
+│   └── README.md              # Usage documentation
 │
-├── archives/                   # Original tilesets after extraction (ARCHIVED)
-│   ├── ground_tiles_sheets/   # Original ground tile sheets
-│   ├── tree_sheets/           # Original tree sprite sheets
-│   ├── source_files/          # Source .blend files
-│   └── README.md              # Archive documentation
+├── ground_tiles_sheets/        # Ground tile sprite sheets (source)
+├── isometric_trees_pack/       # Tree sprite sheets (source)
 │
-├── ground_tiles_sheets/        # Current ground tile sheets (to be archived)
-├── isometric_trees_pack/       # Current tree sheets (to be archived)
-└── ...                         # Other active asset directories
+├── individual/                 # Legacy: Extracted individual tiles
+│   ├── ground_tiles/          # Previously extracted terrain tiles
+│   ├── trees/                 # Previously extracted tree sprites
+│   └── ...                    # Other extracted categories
+│
+└── archives/                   # Archived originals (git-ignored)
+    └── README.md              # Archive documentation
 ```
 
-## 🔄 Workflow Steps
+## 🚀 Recommended Workflow: Sprite Sheets
 
-### Step 1: List Available Assets in TBD
+### Step 1: Generate Sprite Sheet Metadata
 
-Before extracting, see what's available:
+Create metadata files that describe how to use sprite sheets directly:
+
+```bash
+# Generate all sprite sheet metadata
+python3 utils/create_sprite_metadata.py --all
+
+# Or generate specific categories
+python3 utils/create_sprite_metadata.py --vehicles
+python3 utils/create_sprite_metadata.py --ground-tiles
+python3 utils/create_sprite_metadata.py --trees
+python3 utils/create_sprite_metadata.py --dungeon
+```
+
+This creates JSON metadata files in `assets/sprite_metadata/` that tell the game engine:
+- Where sprite sheets are located
+- Sprite dimensions (e.g., 32x32)
+- Grid layout (e.g., 8x8 = 64 sprites)
+- Usage information
+
+### Step 2: Load Sprite Sheets in Game Engine
+
+Use the metadata to load and use sprite sheets directly:
+
+```javascript
+// Example: Load vehicle sprite sheet
+const metadata = await fetch('assets/sprite_metadata/vehicles.json').then(r => r.json());
+const sheet = new Image();
+sheet.src = metadata.sheets[0].file; // Load red_vehicles.png
+
+// Extract specific sprite at runtime
+const spriteIndex = 5;
+const { sprite_width, sprite_height, cols } = metadata.sheets[0];
+const col = spriteIndex % cols;
+const row = Math.floor(spriteIndex / cols);
+
+ctx.drawImage(
+    sheet,
+    col * sprite_width, row * sprite_height,
+    sprite_width, sprite_height,
+    x, y, sprite_width, sprite_height
+);
+```
+
+See `assets/sprite_metadata/README.md` for complete usage examples.
+
+### Step 3: Implement Animations and Movement
+
+Use sprite indices for directional movement:
+
+```javascript
+// Vehicle moving north: sprites 0-3
+// Vehicle moving east: sprites 4-7
+// Vehicle moving south: sprites 8-11
+// Vehicle moving west: sprites 12-15
+
+const directionFrames = {
+    north: [0, 1, 2, 3],
+    east: [4, 5, 6, 7],
+    south: [8, 9, 10, 11],
+    west: [12, 13, 14, 15]
+};
+
+// Animate vehicle
+let frame = 0;
+setInterval(() => {
+    const spriteIndex = directionFrames[currentDirection][frame];
+    drawSprite(vehicleSheet, spriteIndex);
+    frame = (frame + 1) % 4;
+}, 100);
+```
+
+## 📦 Legacy Workflow: Individual Tile Extraction
+
+This approach extracts individual tiles from sprite sheets. **Not recommended** for new assets but documented for existing extracted tiles.
+
+### Step 1: List Available Assets
 
 ```bash
 python3 utils/extract_tbd_assets.py --list
 ```
 
-This shows all asset categories in the TBD folder and their file counts.
-
-### Step 2: Extract Assets from TBD (Optional)
+### Step 2: Extract to Individual Files (Legacy)
 
 If processing assets from the TBD folder:
 

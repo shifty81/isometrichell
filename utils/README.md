@@ -4,9 +4,45 @@ This directory contains utility scripts for asset management, extraction, and ga
 
 ## 📋 Asset Management Tools
 
-### extract_tbd_assets.py
+### ✅ create_sprite_metadata.py (RECOMMENDED)
+
+**Purpose**: Generate metadata files for using sprite sheets directly in the game without extraction. Keeps source images intact and supports animations.
+
+**Usage**:
+```bash
+# Generate all sprite sheet metadata
+python3 utils/create_sprite_metadata.py --all
+
+# Generate specific categories
+python3 utils/create_sprite_metadata.py --vehicles
+python3 utils/create_sprite_metadata.py --ground-tiles
+python3 utils/create_sprite_metadata.py --trees
+python3 utils/create_sprite_metadata.py --dungeon
+```
+
+**What it does**:
+- Creates JSON metadata files in `assets/sprite_metadata/`
+- Describes sprite sheet layout (grid size, sprite dimensions)
+- Allows game engine to load sheets directly and extract sprites at runtime
+- Supports animations and directional movement
+
+**Benefits**:
+- ✅ Source images kept intact
+- ✅ Fewer files (1 sheet vs 64 individual tiles)
+- ✅ Better performance (fewer HTTP requests)
+- ✅ Supports animations easily
+
+**Output**: Metadata JSON files in `assets/sprite_metadata/`
+
+See `assets/sprite_metadata/README.md` for usage examples in game code.
+
+---
+
+### extract_tbd_assets.py (LEGACY)
 
 **Purpose**: Extract and organize assets from the `assets/TBD/` folder into individual tiles.
+
+**⚠️ Note**: This approach extracts individual files. For sprite sheets (vehicles, tilesets), use `create_sprite_metadata.py` instead for better performance.
 
 **Usage**:
 ```bash
@@ -37,7 +73,7 @@ python3 utils/extract_tbd_assets.py --all
 
 ---
 
-### split_tilesheets.py
+### split_tilesheets.py (LEGACY)
 
 **Purpose**: Split large tileset sheets into individual tile images.
 

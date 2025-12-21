@@ -120,8 +120,18 @@ class TBDAssetExtractor:
         print(f"  Created {tile_num} tiles")
         return tile_num
     
-    def extract_vehicles(self, verify_only=False):
-        """Extract vehicle sprites from TBD/vehicles."""
+    def extract_vehicles(self, verify_only=False, split_sprites=True):
+        """
+        Extract vehicle sprites from TBD/vehicles.
+        
+        Args:
+            verify_only: If True, only show what would be extracted
+            split_sprites: If True, split sprite sheets into individual sprites.
+                          If False, copy entire sheets (legacy behavior).
+        
+        Vehicle sprite sheets (256x256) typically contain 8x8 grids of 32x32 sprites
+        showing different vehicle types and directions for movement and animation.
+        """
         print("\n" + "=" * 70)
         print("Extracting Vehicle Sprites")
         print("=" * 70)
@@ -149,20 +159,36 @@ class TBDAssetExtractor:
             print(f"\n  Found: {sheet.name}")
             
             if not verify_only:
-                # Note: Vehicle sheets are copied as-is rather than split into grids.
-                # If grid-based extraction is needed, extend the extract_tileset method
-                # or add a separate vehicle-specific extraction method with grid params.
-                
-                output_dir = self.individual_dir / 'vehicles'
-                output_dir.mkdir(parents=True, exist_ok=True)
-                
-                dest = output_dir / sheet.name
-                if not dest.exists():
-                    shutil.copy2(str(sheet), str(dest))
-                    print(f"    Copied to: {dest.relative_to(self.project_root)}")
-                    extracted.append(sheet.name)
+                if split_sprites:
+                    # Split sprite sheet into individual 32x32 sprites (8x8 grid = 64 sprites)
+                    # These individual sprites can be used for directional movement and animations
+                    prefix = sheet.stem  # e.g., 'red_vehicles'
+                    tiles = self.extract_tileset(
+                        sheet,
+                        tile_width=32,
+                        tile_height=32,
+                        cols=8,
+                        rows=8,
+                        output_category='vehicles',
+                        prefix=prefix
+                    )
+                    extracted.append(f"{prefix} ({tiles} sprites)")
+                else:
+                    # Legacy: Copy entire sheet as single asset
+                    output_dir = self.individual_dir / 'vehicles'
+                    output_dir.mkdir(parents=True, exist_ok=True)
+                    
+                    dest = output_dir / sheet.name
+                    if not dest.exists():
+                        shutil.copy2(str(sheet), str(dest))
+                        print(f"    Copied to: {dest.relative_to(self.project_root)}")
+                        extracted.append(sheet.name)
             else:
-                print(f"    Would copy to: assets/individual/vehicles/{sheet.name}")
+                if split_sprites:
+                    print(f"    Would split into 64 individual 32x32 sprites")
+                    print(f"    Output: assets/individual/vehicles/{sheet.stem}/")
+                else:
+                    print(f"    Would copy to: assets/individual/vehicles/{sheet.name}")
         
         return extracted
     
@@ -284,6 +310,11 @@ def main():
         action='store_true',
         help='Extract all available assets'
     )
+    parser.add_argument(
+        '--no-split',
+        action='store_true',
+        help='For vehicles: copy entire sprite sheets instead of splitting into individual sprites'
+    )
     
     args = parser.parse_args()
     
@@ -326,7 +357,9 @@ def main():
     results = {}
     
     if extract_vehicles:
-        results['vehicles'] = extractor.extract_vehicles(args.verify_only)
+        # By default, split sprites for animation/direction support
+        split_sprites = not args.no_split
+        results['vehicles'] = extractor.extract_vehicles(args.verify_only, split_sprites=split_sprites)
     
     if extract_dungeon:
         results['dungeon'] = extractor.extract_dungeon_pack(args.verify_only)
