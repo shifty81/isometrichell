@@ -2,26 +2,72 @@
 
 ## Overview
 
-This document catalogs all game assets and their organization. Assets are divided into **integrated** (currently used in-game) and **unintegrated** (stored in `assets/TBD/` for future use).
+This document catalogs all game assets and their organization. Assets are divided into **integrated** (currently used in-game), **unintegrated** (stored in `assets/TBD/`), **individual** (extracted tiles in `assets/individual/`), and **archived** (processed originals in `assets/archives/`).
 
-> **Note**: For unintegrated assets, see [assets/TBD/README.md](../assets/TBD/README.md)
+> **Note**: For the complete asset workflow (extraction, organization, archival), see [ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)
 
 ---
 
 ## 📦 Asset Organization
 
+### Directory Structure
+
+```
+assets/
+├── TBD/                  # Unprocessed assets (180 MB)
+├── individual/           # Extracted individual tiles (28 MB) - ACTIVE USE
+├── archives/             # Archived original tilesets - SPACE SAVING
+├── ground_tiles_sheets/  # Original ground tile sheets
+├── isometric_trees_pack/ # Original tree sprite sheets
+└── [other categories]    # Other integrated assets
+```
+
 ### ✅ Integrated Assets
 
 Assets currently used by the game engines (C++ and/or Web Editor).
+
+### 📁 Individual Tiles
+
+Extracted individual tiles in `assets/individual/` ready for use:
+- **896** Ground tile variants (16 tilesets × 56 tiles)
+- **420** Tree variants (6 tilesets × 70 trees)
+- **8** Vehicle sprite sheets (newly extracted)
+
+See [assets/individual/README.md](../assets/individual/README.md) for details.
 
 ### 📦 Unintegrated Assets (TBD)
 
 Assets stored in `assets/TBD/` for future integration:
 - **747** Dungeon Pack PNG files
-- **528** Snow tileset PNG files
-- Cave extras, vehicles, HDRI textures, and more
+- **529** Snow tileset PNG files  
+- **16** Cave extras
+- **10** Misc sprites
+- **6** HDRI textures
+- Cave extras, vehicles, and more
 
 See [assets/TBD/README.md](../assets/TBD/README.md) for complete inventory.
+
+### 📚 Archived Assets
+
+Original tilesets archived after extraction to conserve space. See [assets/archives/README.md](../assets/archives/README.md).
+
+---
+
+## 🔄 Asset Workflow Quick Reference
+
+```bash
+# 1. Extract assets from TBD
+python3 utils/extract_tbd_assets.py --list
+python3 utils/extract_tbd_assets.py --vehicles
+
+# 2. Split tilesets into individual tiles  
+python3 utils/split_tilesheets.py
+
+# 3. Archive originals to save space
+python3 utils/archive_processed_assets.py --all
+```
+
+See **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** for complete workflow documentation.
 
 ---
 
