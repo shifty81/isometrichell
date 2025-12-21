@@ -13,6 +13,9 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
+# Constant for identifying placeholder entries in the archive log
+PLACEHOLDER_ENTRY_MARKER = '| TBD'
+
 
 class AssetArchiver:
     """Handles archiving of processed asset files."""
@@ -231,7 +234,7 @@ class AssetArchiver:
                 # Keep remaining content
                 separator_line = table_start + 2
                 for i in range(separator_line + 1, len(lines)):
-                    if lines[i].strip() and not lines[i].startswith('| TBD'):
+                    if lines[i].strip() and not lines[i].startswith(PLACEHOLDER_ENTRY_MARKER):
                         new_lines.extend(lines[i:])
                         break
                 

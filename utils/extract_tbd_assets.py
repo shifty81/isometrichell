@@ -9,6 +9,7 @@ into individual tiles that can be used in the game editor and engine.
 import os
 import sys
 import subprocess
+import shutil
 from pathlib import Path
 
 
@@ -134,7 +135,6 @@ class TBDAssetExtractor:
                 
                 dest = output_dir / sheet.name
                 if not dest.exists():
-                    import shutil
                     shutil.copy2(str(sheet), str(dest))
                     print(f"    Copied to: {dest.relative_to(self.project_root)}")
                     extracted.append(sheet.name)
@@ -176,7 +176,6 @@ class TBDAssetExtractor:
                 
                 dest = output_subdir / png.name
                 if not dest.exists():
-                    import shutil
                     shutil.copy2(str(png), str(dest))
                     extracted.append(str(rel_path))
             
@@ -216,7 +215,6 @@ class TBDAssetExtractor:
                 
                 dest = output_subdir / png.name
                 if not dest.exists():
-                    import shutil
                     shutil.copy2(str(png), str(dest))
                     extracted.append(str(rel_path))
             
