@@ -59,6 +59,8 @@ public:
     glm::ivec2 screenToGrid(const glm::vec2& screenPos, float screenWidth, float screenHeight) const;
     
     // Draw simple shapes in isometric space
+    // Note: These are simplified implementations using colored quads
+    // and can be enhanced with proper geometry rendering in the future
     void drawCircle(float screenX, float screenY, float radius, const glm::vec4& color);
     void drawEllipse(float screenX, float screenY, float radiusX, float radiusY, const glm::vec4& color);
     
