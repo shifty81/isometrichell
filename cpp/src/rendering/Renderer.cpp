@@ -218,8 +218,9 @@ void Renderer::drawLine(float x1, float y1, float x2, float y2, const glm::vec4&
         return; // Line is too short to draw
     }
     
-    // Calculate angle of rotation
-    float angle = std::atan2(dy, dx) * 180.0f / 3.14159265f;
+    // Calculate angle of rotation (convert radians to degrees)
+    constexpr float PI = 3.14159265358979323846f;
+    float angle = std::atan2(dy, dx) * 180.0f / PI;
     
     // Draw line as a rotated rectangle
     glm::vec2 position(x1, y1 - thickness / 2.0f);
