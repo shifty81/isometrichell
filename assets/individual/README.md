@@ -178,6 +178,25 @@ python3 utils/split_tilesheets.py
 
 This will re-extract all tiles from the source tilesheet files.
 
+### Complete Asset Workflow
+
+For extracting new assets, archiving originals, and managing the complete workflow:
+
+```bash
+# Extract assets from TBD folder
+python3 utils/extract_tbd_assets.py --list
+python3 utils/extract_tbd_assets.py --vehicles
+
+# Split tilesets into individual tiles
+python3 utils/split_tilesheets.py
+
+# Archive original tilesets to save space
+python3 utils/archive_processed_assets.py --verify-only --all
+python3 utils/archive_processed_assets.py --all
+```
+
+**See**: [docs/ASSET_WORKFLOW.md](../../docs/ASSET_WORKFLOW.md) for the complete extraction and organization guide.
+
 ## 🗺️ Professional Map Editor Integration
 
 These individual tiles can be used with professional map editing tools like **TileZed, WorldEd, and BuildingEd** (from Project Zomboid).
