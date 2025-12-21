@@ -128,17 +128,44 @@ This folder contains game assets that **have not yet been integrated** into the 
 
 When you're ready to integrate assets from this folder:
 
+### Quick Extraction Method
+
+Use the automated extraction tools:
+
+```bash
+# 1. List available assets
+python3 utils/extract_tbd_assets.py --list
+
+# 2. Extract specific category
+python3 utils/extract_tbd_assets.py --vehicles
+python3 utils/extract_tbd_assets.py --dungeon
+python3 utils/extract_tbd_assets.py --snow
+
+# 3. Test extracted assets in the editor
+./launch-editor.sh
+
+# 4. Assets are now in assets/individual/ for use
+```
+
+### Manual Integration Method
+
+For more control over the integration process:
+
 1. **Review the asset files** in the appropriate subfolder
-2. **Create Tiled tileset** (`.tsx` file) in `/tilesheets/` directory
-3. **Add asset loading code** to:
+2. **Extract or copy assets** to `assets/individual/` using extraction tools
+3. **Create Tiled tileset** (`.tsx` file) in `/tilesheets/` directory if needed
+4. **Add asset loading code** to:
    - `engine/assets/AssetLoader.js` (Web Editor)
    - C++ engine asset loader (if applicable)
-4. **Update documentation**:
+5. **Update documentation**:
    - `docs/ASSET_CATALOG.md` - Add to integrated assets
    - `docs/ASSET_USAGE.md` - Document how to use the assets
-5. **Test in both engines** (Web Editor and C++ Engine)
-6. **Move the asset** from `assets/TBD/` to appropriate `assets/` subfolder
+6. **Test in both engines** (Web Editor and C++ Engine)
 7. **Update this README** to reflect the change
+
+### Complete Workflow Guide
+
+See **[docs/ASSET_WORKFLOW.md](../../docs/ASSET_WORKFLOW.md)** for the complete asset extraction, organization, and archival workflow.
 
 ---
 

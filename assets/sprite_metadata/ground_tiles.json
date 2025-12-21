@@ -1,0 +1,165 @@
+{
+  "description": "Isometric ground tile sprite sheets",
+  "sheets": [
+    {
+      "name": "dirt_64x32",
+      "file": "assets/ground_tiles_sheets/dirt_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "dirt_dark_64x32",
+      "file": "assets/ground_tiles_sheets/dirt_dark_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "forest_ground_64x32",
+      "file": "assets/ground_tiles_sheets/forest_ground_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "grass_dry_64x32",
+      "file": "assets/ground_tiles_sheets/grass_dry_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "grass_green_64x32",
+      "file": "assets/ground_tiles_sheets/grass_green_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "grass_medium_64x32",
+      "file": "assets/ground_tiles_sheets/grass_medium_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "sand_64x32",
+      "file": "assets/ground_tiles_sheets/sand_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "stone_path_64x32",
+      "file": "assets/ground_tiles_sheets/stone_path_64x32.png",
+      "sprite_width": 64,
+      "sprite_height": 32,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "Standard resolution isometric ground tiles"
+    },
+    {
+      "name": "dirt_128x64",
+      "file": "assets/ground_tiles_sheets/dirt_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "dirt_dark_128x64",
+      "file": "assets/ground_tiles_sheets/dirt_dark_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "forest_ground_128x64",
+      "file": "assets/ground_tiles_sheets/forest_ground_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "grass_dry_128x64",
+      "file": "assets/ground_tiles_sheets/grass_dry_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "grass_green_128x64",
+      "file": "assets/ground_tiles_sheets/grass_green_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "grass_medium_128x64",
+      "file": "assets/ground_tiles_sheets/grass_medium_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "sand_128x64",
+      "file": "assets/ground_tiles_sheets/sand_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    },
+    {
+      "name": "stone_path_128x64",
+      "file": "assets/ground_tiles_sheets/stone_path_128x64.png",
+      "sprite_width": 128,
+      "sprite_height": 64,
+      "cols": 8,
+      "rows": 7,
+      "total_sprites": 56,
+      "usage": "High resolution isometric ground tiles"
+    }
+  ]
+}

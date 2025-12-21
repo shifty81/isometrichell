@@ -16,6 +16,10 @@ tools/zomboid_editors/
 # worlded.7z
 # zomboid_editors.7z
 
+# Asset archives (original tilesets after extraction)
+assets/archives/
+!assets/archives/README.md
+
 # Logs
 logs/*.log
 logs/*.txt

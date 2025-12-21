@@ -1,0 +1,65 @@
+{
+  "description": "Isometric tree sprite sheets",
+  "sheets": [
+    {
+      "name": "trees_64x32_cloudy",
+      "file": "assets/isometric_trees_pack/sheets/trees_64x32_cloudy.png",
+      "sprite_width": 64,
+      "sprite_height": 64,
+      "cols": 10,
+      "rows": 7,
+      "total_sprites": 70,
+      "usage": "Tree sprites for standard resolution tiles"
+    },
+    {
+      "name": "trees_64x32_no_shadow",
+      "file": "assets/isometric_trees_pack/sheets/trees_64x32_no_shadow.png",
+      "sprite_width": 64,
+      "sprite_height": 64,
+      "cols": 10,
+      "rows": 7,
+      "total_sprites": 70,
+      "usage": "Tree sprites for standard resolution tiles"
+    },
+    {
+      "name": "trees_64x32_shaded",
+      "file": "assets/isometric_trees_pack/sheets/trees_64x32_shaded.png",
+      "sprite_width": 64,
+      "sprite_height": 64,
+      "cols": 10,
+      "rows": 7,
+      "total_sprites": 70,
+      "usage": "Tree sprites for standard resolution tiles"
+    },
+    {
+      "name": "trees_128x64_cloudy",
+      "file": "assets/isometric_trees_pack/sheets/trees_128x64_cloudy.png",
+      "sprite_width": 128,
+      "sprite_height": 128,
+      "cols": 10,
+      "rows": 7,
+      "total_sprites": 70,
+      "usage": "Tree sprites for high resolution tiles"
+    },
+    {
+      "name": "trees_128x64_no_shadow",
+      "file": "assets/isometric_trees_pack/sheets/trees_128x64_no_shadow.png",
+      "sprite_width": 128,
+      "sprite_height": 128,
+      "cols": 10,
+      "rows": 7,
+      "total_sprites": 70,
+      "usage": "Tree sprites for high resolution tiles"
+    },
+    {
+      "name": "trees_128x64_shaded",
+      "file": "assets/isometric_trees_pack/sheets/trees_128x64_shaded.png",
+      "sprite_width": 128,
+      "sprite_height": 128,
+      "cols": 10,
+      "rows": 7,
+      "total_sprites": 70,
+      "usage": "Tree sprites for high resolution tiles"
+    }
+  ]
+}

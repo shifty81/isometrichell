@@ -1,6 +1,33 @@
 # Asset Integration Guide
 
-This guide explains how to integrate your game assets once you upload them to the repository.
+This guide explains how to integrate game assets into The Daily Grind project.
+
+## 📋 Asset Management Overview
+
+The project uses a comprehensive asset management system with three main directories:
+
+- **`assets/TBD/`** - Unprocessed assets (180 MB) waiting to be integrated
+- **`assets/individual/`** - Extracted individual tiles (28 MB) for active use  
+- **`assets/archives/`** - Archived original tilesets to conserve space
+
+### Complete Asset Workflow
+
+For extracting, organizing, and archiving assets, see:
+**[docs/ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - Complete asset extraction and organization guide
+
+### Quick Asset Commands
+
+```bash
+# Extract assets from TBD folder
+python3 utils/extract_tbd_assets.py --list
+python3 utils/extract_tbd_assets.py --vehicles
+
+# Split tilesets into individual tiles
+python3 utils/split_tilesheets.py
+
+# Archive originals after extraction
+python3 utils/archive_processed_assets.py --all
+```
 
 ## Asset Directory Structure
 

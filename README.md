@@ -299,15 +299,33 @@ The isometric rendering system handles:
 - **Buildings**: Placeable structures with collision
 - **Building System**: Handles placement logic and validation
 
-## 🎨 Adding Assets
+## 🎨 Asset Management
 
-The `assets/` directory is ready for your game assets:
+The project uses a comprehensive asset management workflow:
 
-1. **Sprites** (`assets/sprites/`): Character sprites, entity graphics
-2. **Tiles** (`assets/tiles/`): Terrain tiles, water animations
-3. **Audio** (`assets/audio/`): Sound effects, background music
+### Asset Organization
 
-Once you upload your assets, we can integrate them into the rendering system.
+- **`assets/TBD/`** - Unprocessed assets waiting to be integrated (180 MB)
+- **`assets/individual/`** - Extracted individual tiles for active use (28 MB)
+- **`assets/archives/`** - Archived original tilesets to conserve space (git-ignored)
+
+### Asset Workflow
+
+```bash
+# 1. List available assets
+python3 utils/extract_tbd_assets.py --list
+
+# 2. Extract assets from TBD folder
+python3 utils/extract_tbd_assets.py --vehicles
+
+# 3. Split tilesets into individual tiles
+python3 utils/split_tilesheets.py
+
+# 4. Archive original tilesets after extraction
+python3 utils/archive_processed_assets.py --all
+```
+
+See **[docs/ASSET_WORKFLOW.md](docs/ASSET_WORKFLOW.md)** for the complete asset extraction and organization guide.
 
 ## 🔧 Extending the Engine
 
