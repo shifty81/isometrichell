@@ -2,7 +2,28 @@
 
 ## Overview
 
-This document catalogs all game assets and their organization into Tiled-compatible tilesheets.
+This document catalogs all game assets and their organization. Assets are divided into **integrated** (currently used in-game) and **unintegrated** (stored in `assets/TBD/` for future use).
+
+> **Note**: For unintegrated assets, see [assets/TBD/README.md](../assets/TBD/README.md)
+
+---
+
+## 📦 Asset Organization
+
+### ✅ Integrated Assets
+
+Assets currently used by the game engines (C++ and/or Web Editor).
+
+### 📦 Unintegrated Assets (TBD)
+
+Assets stored in `assets/TBD/` for future integration:
+- **747** Dungeon Pack PNG files
+- **528** Snow tileset PNG files
+- Cave extras, vehicles, HDRI textures, and more
+
+See [assets/TBD/README.md](../assets/TBD/README.md) for complete inventory.
+
+---
 
 ## Asset Categories
 
@@ -87,22 +108,24 @@ This document catalogs all game assets and their organization into Tiled-compati
 ### 5. Vehicles
 
 #### Location
-- **Source**: `assets/isometric_vehicles/`
-- **Tiled Config**: `tilesheets/vehicles/`
+- **Source**: `assets/TBD/vehicles/` (Not yet integrated)
+- **Tiled Config**: To be created in `tilesheets/vehicles/`
 
 #### Vehicle Collections
 
-| Collection | File | Vehicles Included |
-|------------|------|-------------------|
-| All Vehicles | collection_vehicles.png | Multiple vehicle types |
-| Red | red_vehicles.png | Red cars, trucks |
-| Blue | blue_vehicles.png | Blue vehicles |
-| Green | green_vehicles.png | Green vehicles |
-| Yellow | yellow_vehicles.png | Yellow vehicles |
-| Orange | orange_vehicles.png | Orange vehicles |
-| Black | black_vehicles.png | Black vehicles |
-| White | white_vehicles.png | White vehicles |
-| Grey | grey_vehicles.png | Grey vehicles |
+| Collection | File | Vehicles Included | Status |
+|------------|------|-------------------|---------|
+| All Vehicles | collection_vehicles.png | Multiple vehicle types | 📦 In TBD |
+| Red | red_vehicles.png | Red cars, trucks | 📦 In TBD |
+| Blue | blue_vehicles.png | Blue vehicles | 📦 In TBD |
+| Green | green_vehicles.png | Green vehicles | 📦 In TBD |
+| Yellow | yellow_vehicles.png | Yellow vehicles | 📦 In TBD |
+| Orange | orange_vehicles.png | Orange vehicles | 📦 In TBD |
+| Black | black_vehicles.png | Black vehicles | 📦 In TBD |
+| White | white_vehicles.png | White vehicles | 📦 In TBD |
+| Grey | grey_vehicles.png | Grey vehicles | 📦 In TBD |
+
+**Status**: Not yet integrated, stored in `assets/TBD/vehicles/`
 
 ### 6. Special Tilesets
 
@@ -157,26 +180,26 @@ This document catalogs all game assets and their organization into Tiled-compati
 
 ## Tiled Integration Status
 
-### ✅ Completed Tilesets
+### ✅ Completed Tilesets (Integrated)
 
 - [x] Ground tiles (grass, dirt, sand, stone, forest)
 - [x] Trees (shaded and no-shadow variants)
-- [x] Vehicles collection
 
-### 🔄 In Progress
+### 📦 Available in TBD (Not Yet Integrated)
 
-- [ ] Buildings and structures
-- [ ] Characters and NPCs
-- [ ] Props and decorations
-- [ ] Special themed tilesets (snow, greenlands)
+- [ ] Vehicles collection - `assets/TBD/vehicles/`
+- [ ] Buildings and structures - Various locations in TBD
+- [ ] Characters and NPCs - Need organization
+- [ ] Props and decorations - `assets/TBD/misc_sprites/`
+- [ ] Special themed tilesets:
+  - [ ] Snow/winter - `assets/TBD/snow_tilesets/` (528 files)
+  - [ ] Dungeon - `assets/TBD/dungeon_pack/` (747 files)
+  - [ ] Cave extras - `assets/TBD/cave_extras/`
+  - [ ] Greenlands - `assets/TBD/loose_files/`
 
-### 📋 To Be Created
+### 📋 Integration Priorities
 
-- [ ] Bush/shrub collection tileset
-- [ ] Rock and natural decoration tileset
-- [ ] Building interiors
-- [ ] Character animation sheets
-- [ ] UI elements tileset
+See [assets/TBD/README.md](../assets/TBD/README.md) for integration workflow and priorities.
 
 ## Tileset Creation Guidelines
 

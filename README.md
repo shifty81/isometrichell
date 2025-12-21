@@ -1,6 +1,24 @@
-# The Daily Grind - 2D Life Simulation Game
+# 🎮 The Daily Grind - 2D Life Simulation Game
 
-An isometric 2D life simulation game inspired by Project Zomboid and The Sims, featuring deep survival mechanics, complex AI, and social interactions. Experience the daily grind of life - work, relationships, survival, and personal growth - all built with custom technology.
+> An isometric 2D life simulation game inspired by Project Zomboid and The Sims, featuring deep survival mechanics, complex AI, and social interactions. Experience the daily grind of life - work, relationships, survival, and personal growth - all built with custom technology.
+
+[![License](https://img.shields.io/badge/license-Open%20Source-blue.svg)](LICENSE)
+[![Project Status](https://img.shields.io/badge/status-Active%20Development-green.svg)](docs/ROADMAP.md)
+[![Documentation](https://img.shields.io/badge/docs-Comprehensive-brightgreen.svg)](docs/)
+
+---
+
+## 📚 **Quick Links for Visual Learners**
+
+| Document | Purpose | Visual Aids |
+|----------|---------|-------------|
+| 📋 **[DIRECTORY_STRUCTURE.md](docs/DIRECTORY_STRUCTURE.md)** | **REQUIRED READING** - File organization & naming conventions | ✅ Trees & Diagrams |
+| 🤝 **[CONTRIBUTING.md](docs/CONTRIBUTING.md)** | How to contribute to this project | ✅ Checklists & Examples |
+| 🎨 **[ASSET_CATALOG.md](docs/ASSET_CATALOG.md)** | Complete asset inventory | ✅ Tables & Categories |
+| 🏗️ **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** | Technical architecture | ✅ System Diagrams |
+| 🗺️ **[ROADMAP.md](docs/ROADMAP.md)** | Development roadmap | ✅ Phase Breakdown |
+
+---
 
 ## 🎮 Dual Architecture
 
@@ -169,59 +187,89 @@ Then open your browser to `http://localhost:8000`
 
 ## 📁 Project Structure
 
+> **📋 For complete structure details and naming conventions, see [DIRECTORY_STRUCTURE.md](docs/DIRECTORY_STRUCTURE.md)**
+
 ```
-isometrichell/
-├── cpp/                        # C++ Engine Source
-│   ├── include/               # Header files
-│   │   ├── engine/           # Core engine systems
-│   │   ├── rendering/        # OpenGL rendering
-│   │   ├── world/            # Game world
-│   │   ├── entities/         # Game entities
-│   │   ├── building/         # Building system
-│   │   └── utils/            # Utilities
-│   ├── src/                  # Implementation files
-│   ├── external/             # Third-party libraries
-│   │   ├── glad/            # OpenGL loader
-│   │   └── stb/             # Image loading
-│   └── shaders/              # GLSL shaders
+TheDailyGrind/
 │
-├── engine/                    # Web Editor - Engine
-│   ├── core/                 # Core systems
-│   │   ├── Engine.js        # Main game loop
-│   │   ├── Time.js          # Time management
-│   │   └── Input.js         # Input handling
-│   ├── assets/               # Asset management
-│   │   └── AssetLoader.js   # Asset loading system
-│   ├── audio/                # Audio management
-│   │   └── AudioManager.js  # Audio system
-│   └── rendering/            # Rendering systems
-│       ├── Renderer.js      # Base renderer
-│       ├── IsometricRenderer.js # Isometric rendering
-│       └── Camera.js        # Camera system
+├── 🎨 assets/                     # Shared Game Assets
+│   ├── 📦 TBD/                    # ⚠️ Unintegrated Assets (See TBD/README.md)
+│   │   ├── dungeon_pack/         # 747 dungeon tiles (not yet integrated)
+│   │   ├── snow_tilesets/        # 528 winter assets (not yet integrated)
+│   │   ├── cave_extras/          # Cave decorations
+│   │   ├── vehicles/             # Vehicle sprites
+│   │   └── [more categories]     # Other unintegrated assets
+│   │
+│   ├── ✅ ground_tiles_sheets/    # Integrated terrain tiles
+│   ├── ✅ isometric_trees_pack/   # Integrated trees and vegetation
+│   ├── ✅ Charachters/            # Integrated character sprites
+│   ├── ✅ MusicAndSFX/            # Integrated audio files
+│   └── ✅ [other integrated]/     # Other integrated assets
 │
-├── src/                      # Web Editor - Game Code
-│   ├── world/               # World management
-│   ├── entities/            # Game entities
-│   ├── building/            # Building system
-│   └── Game.js              # Main game logic
+├── 💻 cpp/                        # C++ OpenGL Game Engine
+│   ├── include/                  # Header files (.h, .hpp)
+│   │   ├── engine/              # Core engine systems
+│   │   ├── rendering/           # OpenGL rendering
+│   │   ├── world/               # Game world
+│   │   ├── entities/            # Game entities
+│   │   └── building/            # Building system
+│   ├── src/                     # Implementation files (.cpp)
+│   ├── external/                # Third-party libraries (GLAD, STB)
+│   └── shaders/                 # GLSL shader files
 │
-├── assets/                   # Shared Game Assets
-│   ├── ground_tiles_sheets/ # Terrain tiles
-│   ├── isometric_trees_pack/# Trees and vegetation
-│   ├── Charachters/         # Character sprites
-│   ├── MusicAndSFX/         # Audio files
-│   └── [other asset folders]
+├── 💻 engine/                     # Web Editor - Core Engine
+│   ├── core/                    # Game loop, time, input
+│   ├── assets/                  # Asset loading system
+│   ├── audio/                   # Audio management
+│   └── rendering/               # Rendering systems
 │
-├── docs/                     # Documentation
-│   ├── CPP_BUILD.md         # C++ build instructions
-│   ├── ROADMAP.md           # Development roadmap
-│   └── [other docs]
+├── 💻 src/                        # Web Editor - Game Logic
+│   ├── world/                   # World management
+│   ├── entities/                # Game entities
+│   ├── building/                # Building system
+│   └── Game.js                  # Main game coordinator
 │
-├── CMakeLists.txt            # CMake configuration
-├── build-engine.sh           # Build script for C++ engine
-├── launch-engine.sh          # Launch C++ engine
-├── launch-editor.sh          # Launch web editor
-├── index.html                # Web editor entry point
+├── 📚 docs/                       # Documentation
+│   ├── 🖼️ visual/                # Visual diagrams (for visual learners)
+│   ├── DIRECTORY_STRUCTURE.md   # **REQUIRED READING** 📋
+│   ├── CONTRIBUTING.md          # Contribution guidelines 🤝
+│   ├── ARCHITECTURE.md          # Technical architecture 🏗️
+│   ├── ASSET_CATALOG.md         # Complete asset inventory 🎨
+│   ├── ROADMAP.md               # Development roadmap 🗺️
+│   └── [other documentation]    # Additional guides
+│
+├── 🗺️ tilesheets/                 # Tiled Map Editor Configurations
+│   ├── ground/                  # Terrain tilesets
+│   ├── vegetation/              # Trees, bushes, plants
+│   └── [categories]/            # Other tileset categories
+│
+├── 🗺️ tiled_maps/                 # Tiled Map Files
+│   ├── templates/               # Template maps
+│   └── levels/                  # Game levels
+│
+├── 🛠️ tools/                      # Development tools
+├── 🛠️ utils/                      # Utility scripts
+│
+├── 📄 CMakeLists.txt             # CMake build configuration
+├── 🚀 build-engine.sh            # Build C++ engine script
+├── 🚀 launch-engine.sh           # Launch C++ engine script
+├── 🚀 launch-editor.sh           # Launch web editor script
+└── 📄 index.html                 # Web editor entry point
+```
+
+### 🎯 Key Structure Notes
+
+- **📦 `assets/TBD/`**: Contains assets NOT YET integrated into the game
+  - See [assets/TBD/README.md](assets/TBD/README.md) for complete inventory
+  - Move assets here when adding but not immediately integrating
+  
+- **✅ Integrated Assets**: Assets currently used by the game engines
+  - Referenced in `engine/assets/AssetLoader.js`
+  - Configured in `tilesheets/` for Tiled
+  
+- **💻 Dual Code Structure**: C++ engine + Web editor share assets
+  
+- **📚 Visual Documentation**: `docs/visual/` folder for diagrams and visual aids
 
 ## 🔧 Development Workflow
 
@@ -360,21 +408,75 @@ See [ROADMAP.md](docs/ROADMAP.md) for detailed development plan.
 
 ## 🤝 Contributing
 
-This is a custom game engine built from scratch. Contributions are welcome! The architecture is designed to be extensible and easy to understand.
+**Before contributing, please read:**
+1. 📋 **[DIRECTORY_STRUCTURE.md](docs/DIRECTORY_STRUCTURE.md)** - **REQUIRED** - Directory structure and naming conventions
+2. 🤝 **[CONTRIBUTING.md](docs/CONTRIBUTING.md)** - Contribution guidelines and process
+3. 🗺️ **[ROADMAP.md](docs/ROADMAP.md)** - See what we're working on
+
+### Key Contribution Rules
+
+✅ **MUST** follow directory structure and naming conventions  
+✅ **MUST** place unintegrated assets in `assets/TBD/`  
+✅ **MUST** update documentation with changes  
+✅ **MUST** include visual aids for visual learners (diagrams, screenshots)  
+✅ **MUST** adhere to code style guidelines  
+
+This project emphasizes **organization, consistency, and visual clarity**. Every pull request should maintain these standards.
+
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the complete guide.
 
 ## 📚 Documentation
 
-Additional documentation is available in the [docs/](docs/) folder:
+> **📋 Start with [DIRECTORY_STRUCTURE.md](docs/DIRECTORY_STRUCTURE.md) to understand the project organization**
 
-- [ROADMAP.md](docs/ROADMAP.md) - Detailed development roadmap
-- [BUILD_DEPENDENCIES.md](docs/BUILD_DEPENDENCIES.md) - Required dependencies and installation guide
-- [ARCHITECTURE.md](docs/ARCHITECTURE.md) - Technical architecture documentation
-- [ASSETS.md](docs/ASSETS.md) - Asset management and organization
-- [ASSET_USAGE.md](docs/ASSET_USAGE.md) - Guide to using game assets
-- [ASSET_CATALOG.md](docs/ASSET_CATALOG.md) - Complete asset inventory and organization
-- [TILEZED_INTEGRATION.md](docs/TILEZED_INTEGRATION.md) - Professional map/building editor integration guide
-- [BRANDING.md](docs/BRANDING.md) - Branding guidelines and style
-- [CONVERSATION_SYSTEM.md](docs/CONVERSATION_SYSTEM.md) - Dialogue and conversation system design
+### Core Documentation
+
+| Document | Description | Visual Aids |
+|----------|-------------|-------------|
+| 📋 [DIRECTORY_STRUCTURE.md](docs/DIRECTORY_STRUCTURE.md) | **⚠️ REQUIRED** - Directory structure & naming conventions | ✅ |
+| 🤝 [CONTRIBUTING.md](docs/CONTRIBUTING.md) | How to contribute to this project | ✅ |
+| 🏗️ [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Technical architecture documentation | ✅ |
+| 🗺️ [ROADMAP.md](docs/ROADMAP.md) | Detailed development roadmap | ✅ |
+| 📊 [PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md) | Complete project overview | ✅ |
+
+### Asset Documentation
+
+| Document | Description |
+|----------|-------------|
+| 🎨 [ASSET_CATALOG.md](docs/ASSET_CATALOG.md) | Complete asset inventory and organization |
+| 📖 [ASSET_USAGE.md](docs/ASSET_USAGE.md) | Guide to using game assets |
+| 🎨 [ASSETS.md](docs/ASSETS.md) | Asset management overview |
+| 📦 [assets/TBD/README.md](assets/TBD/README.md) | Unintegrated assets inventory |
+
+### Technical Guides
+
+| Document | Description |
+|----------|-------------|
+| 🔨 [CPP_BUILD.md](docs/CPP_BUILD.md) | C++ engine build instructions |
+| 📦 [BUILD_DEPENDENCIES.md](docs/BUILD_DEPENDENCIES.md) | Required dependencies and installation |
+| 🧪 [TESTING_GUIDE.md](docs/TESTING_GUIDE.md) | Testing procedures and guidelines |
+| ⚡ [QUICK_TEST.md](QUICK_TEST.md) | 2-minute feature test |
+
+### Editor Integration
+
+| Document | Description |
+|----------|-------------|
+| 🗺️ [TILED_GUIDE.md](docs/TILED_GUIDE.md) | Tiled Map Editor usage guide |
+| 🏗️ [TILEZED_INTEGRATION.md](docs/TILEZED_INTEGRATION.md) | TileZed/BuildingEd integration |
+| 🌍 [WORLDEDIT_TILEZED_SETUP.md](docs/WORLDEDIT_TILEZED_SETUP.md) | WorldEd/TileZed setup instructions |
+
+### Feature Documentation
+
+| Document | Description |
+|----------|-------------|
+| 💬 [CONVERSATION_SYSTEM.md](docs/CONVERSATION_SYSTEM.md) | Dialogue and conversation system design |
+| 🎨 [BRANDING.md](docs/BRANDING.md) | Branding guidelines and style |
+| 🔍 [LINE_OF_SIGHT_SYSTEM.md](docs/LINE_OF_SIGHT_SYSTEM.md) | Vision and line-of-sight system |
+| 🎨 [RENDERING_SYSTEM.md](docs/RENDERING_SYSTEM.md) | Rendering architecture |
+
+### Visual Documentation
+
+All visual diagrams and flowcharts are in [`docs/visual/`](docs/visual/) to help visual learners understand the project structure.
 
 ## 📝 License
 
